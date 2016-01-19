@@ -1,4 +1,4 @@
-$(document).ready(function(){	
+$(document).ready(function(){
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -75,5 +75,33 @@ $(document).ready(function(){
     // };
 
     // var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+    $( "#datepicker-inline" ).datepicker({
+        altField: "#actualDate",
+        onSelect: function() {
+            dateChange();
+            $("#date-popup").click();
+           
+        }
+    });
+
+    $( "#actualDate" ).datepicker({
+        onSelect: function() {
+            dateChange();
+        }
+    });
+
+    $("#actualDate").change(function(){
+        dateChange();
+    });
 
 });
+var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
+function dateChange() {
+    var arr = $("#actualDate").val().split(".");
+    if(arr[0] !="" && arr[0] <= 31 && arr[1] <=12 && arr[2] <= 2050) {
+        $("#date-text").text(parseInt(arr[0])+" "+months[parseInt(arr[1])]+" "+arr[2]);
+    } else {
+        $("#date-text").text("");
+        $("#actualDate").val("");
+    }
+}

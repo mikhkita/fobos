@@ -1,42 +1,11 @@
 @charset "utf-8";
 
-@font-face {
-	font-family: 'PFL';
-	src: url('../fonts/pdfintextcondpro-light-webfont.eot');
-    src: url('../fonts/pdfintextcondpro-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pdfintextcondpro-light-webfont.woff') format('woff'),
-         url('../fonts/pdfintextcondpro-light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'PFR';
-	src: url('../fonts/pfdintextcondpro-regular-webfont.eot');
-    src: url('../fonts/pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfdintextcondpro-regular-webfont.woff') format('woff'),
-         url('../fonts/pfdintextcondpro-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'PFM';
-	src: url('../fonts/pfdintextcondpro-medium-webfont.eot');
-    src: url('../fonts/pfdintextcondpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfdintextcondpro-medium-webfont.woff') format('woff'),
-         url('../fonts/pfdintextcondpro-medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 html,
 body {
 	position: relative;
 }
 body {
-	min-width: 1000px;
+	min-width: 750px;
 	text-align: center;
 	font-family: 'Verdana',arial;
 	overflow-x: hidden;
@@ -100,7 +69,7 @@ input.error,textarea.error{
 }
 .b-block{
 	position: relative;
-	width: 960px;
+	width: 690px;
 	margin: 0px auto;
 }
 .b-absolute{
@@ -143,27 +112,32 @@ input:-moz-placeholder {
 
 	}
 		.b-1 h1{
-			font-size: 12px;
+			font-size: 24px;
 			color: #565454;
 			text-align: left;
 			padding-top: 25px;
+			text-align: left;
 		}
 		.b-1 .b-main-menu{
-			margin-top: 230px;
+			margin-top: 130px;
+			text-align: left;
 		}
 			.b-1 .b-main-menu>li{
-				float: left;
-				margin-left: 110px;
+				float: none;
+				margin-left: 0px;
 				position: relative;
+				display: block;
+				margin-bottom: 20px;
 			}
 				.b-1 .b-main-menu span{
 					color: #FFF;
-					font-size: 30px;
+					font-size: 55px;
 					text-transform: uppercase;
 					padding-bottom: 2px;
 					display: block;
 					border-bottom: 3px solid #FFF;
 					cursor: pointer;
+					display: inline-block;
 				}
 				.b-1 .b-main-menu li:hover span{
 					color: #F00;
@@ -190,43 +164,51 @@ input:-moz-placeholder {
 							text-decoration: underline;
 						}
 		.b-1-bottom{
-			margin-top: 80px;
-			padding-bottom: 20px;
+			margin-top: 0;
+			height: 545px;
+			padding-bottom: 0;
 		}
 			.b-1-bottom>.left{
-				margin-top: 65px;
-			}
+
+margin-top: 20px;
+}
 				.b-1-bottom>.left .left{
-					font-size: 188px;
+					font-size: 333px;
 					color: #FFF;
 					font-family: "arial";
 					font-weight: bold;
 				}
 				.b-1-bottom>.left .right{
-					margin-left: 15px;
-					font-size: 30px;
+					margin-left: 0px;
+					font-size: 45px;
 					font-family: "arial";
 					color: #FFF;
 				}
 					.b-1-bottom>.left .right span{
-						font-size: 140px;
+						font-size: 200px;
 						display: block;
-						line-height: 105px;
-						margin-top: 42px;
+						line-height: 135px;
+						margin-top: 130px;
+						font-weight: bold;
 					}
 		.b-1-bottom>.right{
 			/*margin-top: 88px;*/
+			width: 100%;
+			/* position: relative; */
+			margin-top: -205px;
 		}
 			.b-1-bottom>.right .b-red-button{
 				float: left;
 				border-radius: 3px;
-				margin-left: 5px;
+				margin-left: 0;
 				cursor: pointer;
-				height: 86px;
+				height: 122px;
 				overflow: hidden;
+				width: 49%;
 			}
 			.b-1-bottom>.right .b-red-button {
-				padding-top: 156px;
+				padding-top: 196px;
+				width: 50%;
 			}
 			.b-1-bottom>.right .b-red-button:hover .b-but-2{
 				/*background-color: #D00;*/
@@ -241,23 +223,23 @@ input:-moz-placeholder {
 				}
 				.b-1-bottom>.right .b-red-button .b-but-1{
 					padding: 26px;
-					width: 190px;
+					width: 98%;
 					background-color: #f00;
-					
+					box-sizing: border-box;
 				}
 				.b-1-bottom>.right .b-red-button .b-but-1:hover {
-					-webkit-transform: translateY(-137px);
-					-moz-transform: translateY(-137px);
-					-ms-transform: translateY(-137px);
-					-o-transform: translateY(-137px);
-					transform: translateY(-137px);
+					-webkit-transform: translateY(-196px);
+					-moz-transform: translateY(-196px);
+					-ms-transform: translateY(-196px);
+					-o-transform: translateY(-196px);
+					transform: translateY(-196px);
 				}
 				.b-1-bottom>.right .b-red-button .b-but-2:hover {
-					-webkit-transform: translateY(-136px);
-					-moz-transform: translateY(-136px);
-					-ms-transform: translateY(-136px);
-					-o-transform: translateY(-136px);
-					transform: translateY(-136px);
+					-webkit-transform: translateY(-165px);
+					-moz-transform: translateY(-165px);
+					-ms-transform: translateY(-165px);
+					-o-transform: translateY(-165px);
+					transform: translateY(-165px);
 				}
 				.b-1-bottom>.right .b-red-button .b-but-2:hover p {
 					display: none;
@@ -266,25 +248,28 @@ input:-moz-placeholder {
 						display: block;
 						text-align: left;
 						color: #fff;
-						margin-bottom: 2px;
+						margin-bottom: 5px;
+						font-size: 28px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 input {
 						width: 100%;
 						border-radius: 2px;
 						border: 1px solid #fff;
-						padding: 7px;
+						padding: 12px;
 						box-sizing: border-box;
 						margin-bottom: 12px;
+						font-size: 28px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 input.error {
 						background-color: rgb(255,155,255);
 						border: 1px solid #fff !important;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 a {
-						width: 100%;					
-						padding: 12px 0 13px;						
-						border: 2px solid #fff;						
+						width: 100%;
+						padding: 12px 0 13px;
+						border: 2px solid #fff;
 						box-sizing: border-box;
+						font-size: 28px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 a:hover {
 						background-color: #fff;
@@ -321,18 +306,17 @@ input:-moz-placeholder {
 					}
 					.b-1-bottom>.right .b-red-button .b-but p{
 						text-align: left;
-						font-size: 14px;
+						font-size: 28px;
 						color: #FFF;
 						position: relative;
 						margin-bottom: 26px;
-						
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 p {
 						padding-left: 45px;
-						margin-left: 22px;
+						margin-left: 32px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-2 p {
-						padding-left: 98px;
+						padding-left: 113px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 p:before {
 						position: absolute;
@@ -340,11 +324,12 @@ input:-moz-placeholder {
 						font-size: 0;
 						background-position: 50% 50%;
 						background-repeat: no-repeat;
-						left: 0px;
-						top: -2px;
+						background-size: 50px 51px;
+						left: -17px;
+						top: 9px;
 						background-image: url('../i/hand-mobile.png');
-						width: 35px;
-						height: 36px;
+						width: 50px;
+						height: 51px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-2 p:before {
 						position: absolute;
@@ -352,17 +337,18 @@ input:-moz-placeholder {
 						font-size: 0;
 						background-position: 50% 50%;
 						background-repeat: no-repeat;
-						left: 33px;
-						top: -2px;
+						background-size: 75px 55px;
+						left: 22px;
+						top: 7px;
 						background-image: url('../i/two-hands.png');
-						width: 53px;
-						height: 39px;
+						width: 75px;
+						height: 55px;
 					}
 				#datepicker-inline {
-					height: 170px;
+					height: 235px;
 				}
 				div.ui-datepicker{
-					font-size:12px;
+					font-size:17px;
 				}
 .b-2{
 	padding-bottom: 85px;
@@ -371,7 +357,7 @@ input:-moz-placeholder {
 
 	}
 		h2.b-title{
-			font-size: 40px;
+			font-size: 55px;
 			text-transform: uppercase;
 			padding-top: 60px;
 			padding-bottom: 40px;
@@ -381,7 +367,7 @@ input:-moz-placeholder {
 		}
 		.b-2 p{
 			text-align: left;
-			font-size: 14px;
+			font-size: 28px;
 		}
 .b-3{
 	background-position: 50% 50%;
@@ -397,36 +383,39 @@ input:-moz-placeholder {
 			color: #FFF;
 		}
 		.b-3 .b-about-list{
-			padding-top: 120px;
-			width: 910px;
-			margin-left: 50px;
+			padding-top: 50px;
+			width: 100%;
+			margin-left: 0;
 		}
 			.b-3 .b-about-list li{
 				float: left;
-				width: 25%;
-				text-align: left;
+				width: 50%;
+				text-align: center;
+				margin-bottom: 50px;
 			}
 				.b-3 .b-about-list li img{
 					margin-bottom: 11px;
+					width: 80px;
 				}
 				.b-3 .b-about-list li p{
 					color: #FFF;
-					font-size: 14px;
+					font-size: 28px;
 					text-transform: uppercase;
-					min-height: 80px;
+					min-height: 0;
+					margin-bottom: 25px;
 				}
 				.b-3 .b-about-list li b{
 					color: #000000;
-					font-size: 48px;
+					font-size: 75px;
 					font-weight: bold;
 				}
 					.b-3 .b-about-list li b span{
-						font-size: 12px;
+						font-size: 20px;
 						display: inline-block;
 						text-align: left;
 						vertical-align: top;
-						margin-top: 7px;
-						margin-left: 8px;
+						margin-top: 11px;
+						margin-left: 11px;
 					}
 .b-4{
 	background-color: #e0e0e0;
@@ -440,17 +429,17 @@ input:-moz-placeholder {
 		.b-4 .b-block-1 .b-tabs{
 			display: inline-block;
 			margin-left: 4px;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 			.b-4 .b-block-1 .b-tabs li{
 				cursor: pointer;
 				border-radius: 3px;
 				background-color: #f00;
 				color: #FFF;
-				font-size: 10px;
+				font-size: 20px;
 				text-transform: uppercase;
-				padding: 5px 20px;
-				margin-right: 4px;
+				padding: 8px 32px;
+				margin-right: 8px;
 				float: left;
 			}
 			.b-4 .b-block-1 .b-tabs li.active{
@@ -468,7 +457,7 @@ input:-moz-placeholder {
 			margin-bottom: 20px;
 		}
 			.b-4 .b-block-1 .b-mac p{
-				font-size: 24px;
+				font-size: 30px;
 				text-align: left;
 				margin: 40px 50px;
 				color: #FFF;
@@ -491,14 +480,14 @@ input:-moz-placeholder {
 		}
 			.b-4 .b-block-2 .b-video-list li{
 				float: left;
-				width: 25%;
+				width: 50%;
 				box-sizing: border-box;
 				border-left: 1px solid #1d1e23;
 				text-align: left;
 				padding-left: 30px;
 			}
 				.b-4 .b-block-2 .b-video-list li a{
-					font-size: 14px;
+					font-size: 26px;
 					position: relative;
 					display: block;
 				}
@@ -509,12 +498,13 @@ input:-moz-placeholder {
 						position: absolute;
 						content: "s";
 						font-size: 0px;
-						width: 37px;
-						height: 37px;
-						right: 25px;
-						top: 8px;
+						width: 60px;
+						height: 60px;
+						right: 22px;
+						top: 16px;
 						background-position: 50% 50%;
 						background-repeat: no-repeat;
+						background-size: 60px;
 						background-image: url('../i/play-red.png');
 						opacity: 0.000001;
 					}
@@ -525,7 +515,7 @@ input:-moz-placeholder {
 	background-position: 50% 50%;
 	background-size: cover;
 	background-image: url('../i/back-5.jpg');
-	padding-bottom: 130px;
+	padding-bottom: 100px;
 }
 	.b-5 .b-block{
 
@@ -536,32 +526,36 @@ input:-moz-placeholder {
 		}
 		.b-5 .b-service-list{
 			display: inline-block;
-			margin-top: 90px;
+			margin-top: 50px;
+			text-align: center;
 		}
 			.b-5 .b-service-list li{
-				float: left;
-				margin-right: 100px;
-				width: 210px;
+				float: none;
+				margin-right: 0;
+				width: 49%;
 				color: #FFF;
+				display: inline-block;
+				margin-bottom: 80px;
 			}
 			.b-5 .b-service-list li:last-child{
 				margin-right: 0px;
-				width: 190px;
+				width: 49%;
 			}
 				.b-5 .b-service-list li img{
 					margin-bottom: 15px;
+					width: 150px;
 				}
 				.b-5 .b-service-list li h3{
-					font-size: 24px;
+					font-size: 35px;
 					font-weight: bold;
 					color: #F00;
 					margin-bottom: 40px;
 				}
 				.b-5 .b-service-list li p{
-					text-align: left;
+					text-align: center;
 					font-style: italic;
 					color: #cccccc;
-					font-size: 12px;
+					font-size: 24px;
 					margin-left: 5px;
 				}
 .b-6{
@@ -572,14 +566,15 @@ input:-moz-placeholder {
 	}
 		.b-6 h2.b-title{
 			color: #666666;
-			padding-bottom: 100px;
+			padding-bottom: 80px;
 		}
 		.b-6 .b-partners{
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
+			background-size: contain;
 			background-image: url('../i/partners.jpg');
-			width: 886px;
-			height: 244px;
+			width: 690px;
+			height: 190px;
 			display: inline-block;
 		}
 .b-7{
@@ -592,9 +587,9 @@ input:-moz-placeholder {
 
 	}
 		.b-7 p{
-			font-size: 14px;
-			color: #FFF;
-			width: 850px;
+			font-size: 28px;
+			/* color: #FFF; */
+			width: 100%;
 			display: inline-block;
 			text-align: left;
 			padding-top: 40px;
@@ -604,7 +599,7 @@ input:-moz-placeholder {
 			background-color: #F00;
 			border-radius: 3px;
 			padding: 25px 50px;
-			font-size: 18px;
+			font-size: 32px;
 			color: #FFF;
 			display: inline-block;
 		}
@@ -626,7 +621,7 @@ input:-moz-placeholder {
 			padding-top: 55px;
 		}
 		.b-8 .b-white-block h3{
-			font-size: 16px;
+			font-size: 30px;
 			color: #666666;
 			padding-bottom: 40px;
 		}
@@ -647,17 +642,20 @@ input:-moz-placeholder {
 				margin-top: 3px;
 			}
 		.b-8 .b-back h3{
-			font-size: 30px;
+			font-size: 40px;
 			color: #000000;
 			margin-bottom: 60px;
 		}
 		.b-8 .b-back .b-checkboxes{
 			display: inline-block;
 			margin-bottom: 75px;
+			text-align: left;
 		}
 			.b-8 .b-back .b-checkboxes li{
-				float: left;
-				margin-right: 100px;
+				float: none;
+				margin-right: 0;
+				width: 100%;
+				margin-bottom: 30px;
 			}
 			.b-8 .b-back .b-checkboxes li:last-child{
 				margin-right: 0px;
@@ -671,7 +669,7 @@ input:-moz-placeholder {
 				.b-8 .b-back .b-checkboxes li label{
 					cursor: pointer;
 					font-weight: bold;
-					font-size: 16px;
+					font-size: 28px;
 					color: #333333;
 					margin-left: 10px;
 				}
@@ -688,63 +686,69 @@ input:-moz-placeholder {
 
 	}
 		.b-9 h3{
-			text-align: left;
-			font-size: 30px;
+			text-align: center;
+			font-size: 50px;
 			color: #FFF;
-			width: 272px;
+			width: 100%;
+			margin-bottom: 40px;
 		}
 		.b-9 .right{
 			color: #FFF;
 			text-align: left;
+			/* width: 100%; */
+			margin-right: 140px;
 		}
 			.b-9 .right .b-phone-contact{
-				font-size: 18px;
-				margin-bottom: 15px;
+				font-size: 32px;
+				margin-bottom: 25px;
 				position: relative;
 			}
 				.b-9 .right .b-phone-contact:after{
 					position: absolute;
 					content: "s";
 					font-size: 0px;
-					width: 28px;
-					height: 30px;
-					left: -55px;
+					width: 42px;
+					height: 45px;
+					left: -70px;
 					top: -4px;
 					background-position: 50% 50%;
+					background-size: 42px 45px;
 					background-repeat: no-repeat;
 					background-image: url('../i/b-9/1.png');
 				}
 			.b-9 .right .b-email-contact{
-				font-size: 14px;
-				margin-bottom: 10px;
+				font-size: 28px;
+				margin-bottom: 25px;
 				position: relative;
 			}
 				.b-9 .right .b-email-contact:after{
 					position: absolute;
 					content: "s";
 					font-size: 0px;
-					width: 29px;
-					height: 29px;
-					left: -54px;
-					top: 4px;
+					width: 44px;
+					height: 44px;
+					left: -70px;
+					top: 14px;
 					background-position: 50% 50%;
+					background-size: 44px;
 					background-repeat: no-repeat;
 					background-image: url('../i/b-9/2.png');
 				}
 			.b-9 .right .b-place-contact{
-				font-size: 14px;
+				font-size: 28px;
 				position: relative;
 			}
 				.b-9 .right .b-place-contact:after{
 					position: absolute;
 					content: "s";
 					font-size: 0px;
-					width: 22px;
-					height: 33px;
-					left: -49px;
-					top: 1px;
+					width: 33px;50:33px;
+					height: 50px;
+					left: -65px;
+					top: 12px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
+					background-size: 33px 50px;
 					background-image: url('../i/b-9/3.png');
 				}
 .b-10{
@@ -762,45 +766,57 @@ input:-moz-placeholder {
 	}
 		.b-11 .b-footer-menu-cont{
 
-		}
+}
 			.b-11 .b-footer-menu-cont .b-footer-menu{
-				margin-left: 50px;
+				margin-left: 0;
+				width: 100%;
+				margin-bottom: 20px;
 			}
 				.b-11 .b-footer-menu-cont .b-footer-menu li{
-					float: left;
-					margin-right: 20px;
+					float: none;
+					margin-right: 0;
+					margin-bottom: 15px;
 				}
 					.b-11 .b-footer-menu-cont .b-footer-menu li a{
 						color: #333333;
 						text-decoration: underline;
+						font-size: 28px;
 					}
 						.b-11 .b-footer-menu-cont .b-footer-menu li a:hover{
 							text-decoration: none;
 						}
 			.b-11 .b-footer-menu-cont .right{
-				margin-right: 50px;
+				margin-right: 0;
+				text-align: center;
+				width: 100%;
 			}
 				.b-11 .b-footer-menu-cont .right a{
 
-				}
+}
 					.b-11 .b-footer-menu-cont .right a:hover{
 						opacity: 0.8;
 					}
 					.b-11 .b-footer-menu-cont .right a img{
 
-					}
+width: 40px;
+
+}
 		.b-11 .b-footer-cont{
 			margin-top: 50px;
 			padding-bottom: 25px;
+			text-align: center;
 		}
 			.b-11 .b-footer-cont .b-book-cont{
-				margin-left: 50px;
+				margin-left: 0;
 				padding-left: 40px;
-				font-size: 12px;
+				font-size: 26px;
 				text-decoration: underline;
-				text-align: left;
+				text-align: center;
 				position: relative;
-				width: 60px;
+				margin-bottom: 20px;
+				display: inline-block;
+				float: none !important;
+				width: 215px;
 			}
 				.b-11 .b-footer-cont .b-book-cont:after{
 					position: absolute;
@@ -815,17 +831,19 @@ input:-moz-placeholder {
 					background-image: url('../i/book.png');
 				}
 			.b-11 .b-footer-cont .b-copy-cont{
-				font-size: 12px;
-				margin-left: 100px;
-				text-align: left;
+				font-size: 26px;
+				margin-left: 0;
+				text-align: center;
 			}
 			.b-11 .b-footer-cont .b-dev-cont{
-				font-size: 12px;
+				font-size: 26px;
 				margin-top: 15px;
-				margin-right: 48px;
+				margin-right: 0;
+				text-align: center;
+				width: 100%;
 			}
 				.b-11 .b-footer-cont .b-dev-cont a{
-					font-size: 12px;
+					font-size: 26px;
 					text-decoration: underline;
 				}
 					.b-11 .b-footer-cont .b-dev-cont a:hover{

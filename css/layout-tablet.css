@@ -194,8 +194,10 @@ input:-moz-placeholder {
 			padding-bottom: 20px;
 		}
 			.b-1-bottom>.left{
-				margin-top: 65px;
-			}
+
+margin-top: 45px;
+
+}
 				.b-1-bottom>.left .left{
 					font-size: 188px;
 					color: #FFF;
@@ -226,7 +228,7 @@ input:-moz-placeholder {
 				overflow: hidden;
 			}
 			.b-1-bottom>.right .b-red-button {
-				padding-top: 156px;
+				padding-top: 137px;
 			}
 			.b-1-bottom>.right .b-red-button:hover .b-but-2{
 				/*background-color: #D00;*/
@@ -253,11 +255,11 @@ input:-moz-placeholder {
 					transform: translateY(-137px);
 				}
 				.b-1-bottom>.right .b-red-button .b-but-2:hover {
-					-webkit-transform: translateY(-136px);
-					-moz-transform: translateY(-136px);
-					-ms-transform: translateY(-136px);
-					-o-transform: translateY(-136px);
-					transform: translateY(-136px);
+					-webkit-transform: translateY(-137px);
+					-moz-transform: translateY(-137px);
+					-ms-transform: translateY(-137px);
+					-o-transform: translateY(-137px);
+					transform: translateY(-137px);
 				}
 				.b-1-bottom>.right .b-red-button .b-but-2:hover p {
 					display: none;
@@ -359,7 +361,7 @@ input:-moz-placeholder {
 						height: 39px;
 					}
 				#datepicker-inline {
-					height: 170px;
+					height: 200px;
 				}
 				div.ui-datepicker{
 					font-size:12px;
@@ -691,7 +693,6 @@ input:-moz-placeholder {
 			text-align: left;
 			font-size: 30px;
 			color: #FFF;
-			width: 272px;
 		}
 		.b-9 .right{
 			color: #FFF;
@@ -800,7 +801,6 @@ input:-moz-placeholder {
 				text-decoration: underline;
 				text-align: left;
 				position: relative;
-				width: 60px;
 			}
 				.b-11 .b-footer-cont .b-book-cont:after{
 					position: absolute;
