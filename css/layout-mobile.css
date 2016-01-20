@@ -104,7 +104,7 @@ input:-moz-placeholder {
 
 			}
 .b-1{
-	background-position: 50% 50%;
+	background-position: 100% 50%;
 	background-size: cover;
 	background-image: url('../i/back-1.jpg');
 }
@@ -113,10 +113,10 @@ input:-moz-placeholder {
 	}
 		.b-1 h1{
 			font-size: 24px;
-			color: #565454;
 			text-align: left;
 			padding-top: 25px;
 			text-align: left;
+			color: #FFF;
 		}
 		.b-1 .b-main-menu{
 			margin-top: 130px;
@@ -368,6 +368,7 @@ margin-top: 20px;
 		.b-2 p{
 			text-align: left;
 			font-size: 28px;
+			line-height: 44px;
 		}
 .b-3{
 	background-position: 50% 50%;
@@ -539,7 +540,7 @@ margin-top: 20px;
 			}
 			.b-5 .b-service-list li:last-child{
 				margin-right: 0px;
-				width: 49%;
+				width: 54%;
 			}
 				.b-5 .b-service-list li img{
 					margin-bottom: 15px;
@@ -554,6 +555,7 @@ margin-top: 20px;
 				.b-5 .b-service-list li p{
 					text-align: center;
 					font-style: italic;
+					line-height: 35px;
 					color: #cccccc;
 					font-size: 24px;
 					margin-left: 5px;
@@ -581,7 +583,8 @@ margin-top: 20px;
 	background-position: 50% 50%;
 	background-size: cover;
 	background-image: url('../i/back-7.jpg');
-	padding-bottom: 35px;
+	padding-bottom: 65px;
+	padding-top: 15px;
 }
 	.b-7 .b-block{
 
@@ -593,6 +596,7 @@ margin-top: 20px;
 			display: inline-block;
 			text-align: left;
 			padding-top: 40px;
+			line-height: 44px;
 			padding-bottom: 25px;
 		}
 		a.b-red-butt{
