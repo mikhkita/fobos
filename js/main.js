@@ -165,6 +165,20 @@ $(document).ready(function(){
         return false;
     });
 
+    $(".b-next-butt").click(function(){
+        var obj = $(this).closest(".b-back");
+        obj.hide();
+        var curr = "#"+obj.attr("id");
+        var check = obj.find("input:checked").val();
+        var next = $(this).attr("data-next");
+        $(".b-white-block h3").hide();
+        $(".b-white-block ul li[data-block='"+curr+"']").addClass("active").text(check);
+        $(".b-white-block ul").css("display","inline-block");
+        
+        $(next).show();
+        return false;
+    });
+
 });
 
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    

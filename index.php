@@ -170,6 +170,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="b-tab" id="audio-tab">
 					<div></div>
+					<audio src="sound.mp3" controls></audio>
 				</div>
 				<div class="b-tab" id="text-tab">
 					<div class="tab-text" id="text-1">
@@ -263,22 +264,116 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="b b-8">
 		<div class="b-block b-white-block">
 			<h2 class="b-title">ваша Прибыль</h2>
-			<h3>Выберите оптимальное для Вас инвестиционное решение </h3>
+			<h3>Выберите оптимальное для Вас инвестиционное решение</h3>
+			<ul class="nav clearfix">
+				<li data-block="#invest-1">Компания</li>
+				<li data-block="#invest-2">Валюта</li>
+				<li data-block="#invest-3">Срок</li>
+				<li data-block="#invest-4">Риск-профиль</li>
+				<li data-block="#invest-5">Объем инвеcтиций</li>
+				<li data-block="#invest-6">Ожидаемая прибыль</li>
+			</ul>
 		</div>
-		<div class="b-back">
+		<div class="b-back" id="invest-1">
 			<div class="b-block">
 				<div class="b-icon">
-					<img src="i/b-8/1-icon.png" alt="">
+					<i class="sprite sprite-icon-1"></i>
 					<p>Вы</p>
 				</div>
 				<h3>Кем из предложенных ниже Инвесторов Вы являетесь?</h3>
 				<ul class="clearfix b-checkboxes">
-					<li><input type="checkbox" id="id-1"><label for="id-1">Частное лицо</label></li>
-					<li><input type="checkbox" id="id-2"><label for="id-2">Компания</label></li>
-					<li><input type="checkbox" id="id-3"><label for="id-3">Финансовый институт</label></li>
+					<li><input type="radio" name="invest" id="id-1" value="Частное лицо" checked><label for="id-1">Частное лицо</label></li>
+					<li><input type="radio" name="invest" id="id-2" value="Компания"><label for="id-2">Компания</label></li>
+					<li><input type="radio" name="invest" id="id-3" value="Финансовый институт"><label for="id-3">Финансовый институт</label></li>
 				</ul>
 				<div>
-					<a href="#" class="b-red-butt b-next-butt fancy" data-block="#b-popup-1">Далее</a>
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-2">Далее</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-back" id="invest-2">
+			<div class="b-block">
+				<div class="b-icon">
+					<i class="sprite sprite-icon-2"></i>
+					<p>Валюта</p>
+				</div>
+				<h3>В какой валюте Вы хотите Инвестировать?</h3>
+				<ul class="clearfix b-checkboxes">
+					<li><input type="radio" name="currency" id="id-4" value="Рубли" checked><label for="id-4">Рубли</label></li>
+					<li><input type="radio" name="currency" id="id-5" value="Доллары"><label for="id-5">Доллары</label></li>
+					<li><input type="radio" name="currency" id="id-6" value="Евро"><label for="id-6">Евро</label></li>
+					<li><input type="radio" name="currency" id="id-7" value="Иная валюта"><label for="id-7">Иная валюта</label></li>
+				</ul>
+				<div>
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-3">Далее</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-back" id="invest-3">
+			<div class="b-block">
+				<div class="b-icon">
+					<i class="sprite sprite-icon-3"></i>
+					<p>Срок</p>
+				</div>
+				<h3>На какой срок Вы готовы инвестировать?</h3>
+				<ul class="clearfix b-checkboxes">
+					<li><input type="radio" name="time" id="id-8" value="Краткосрочный" checked><label for="id-8">Краткосрочный<span>(до 1 месяца)</span></label></li>
+					<li><input type="radio" name="time" id="id-9" value="Среднесрочный"><label for="id-9">Среднесрочный<span>(от 1 месяца до полугода)</span></label></li>
+					<li><input type="radio" name="time" id="id-10" value="Долгосрочный"><label for="id-10">Долгосрочный<span>(более года)</span></label></li>
+				</ul>
+				<div>
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-4">Далее</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-back" id="invest-4">
+			<div class="b-block">
+				<div class="b-icon">
+					<i class="sprite sprite-icon-4"></i>
+					<p>Риск-профиль</p>
+				</div>
+				<h3>Выберите Ваш Риск-Профиль</h3>
+				<ul class="clearfix b-checkboxes">
+					<li><input type="radio" name="risk" id="id-11" value="Консервативный" checked><label for="id-11">Консервативный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>
+					<li><input type="radio" name="risk" id="id-12" value="Умеренный"><label for="id-12">Умеренный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>
+					<li><input type="radio" name="risk" id="id-13" value="Агрессивный"><label for="id-13">Агрессивный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>
+				</ul>
+				<div>
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-5">Далее</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-back" id="invest-5">
+			<div class="b-block">
+				<div class="b-icon">
+					<i class="sprite sprite-icon-5"></i>
+					<p>Объем инвестиций</p>
+				</div>
+				<h3>Какой Ваш предполагаемый Объем Инвестиций?</h3>
+				<ul class="clearfix b-checkboxes">
+					<li><input type="radio" name="size" id="id-14" value="До 1 000 000" checked><label for="id-14">До 1 000 000</label></li>
+					<li><input type="radio" name="size" id="id-15" value="от 1 000 000 до 10 000 000"><label for="id-15">от 1 000 000 до 10 000 000</label></li>
+					<li><input type="radio" name="size" id="id-16" value="Более 10 000 000"><label for="id-16">Более 10 000 000</label></li>
+				</ul>
+				<div>
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-6">Далее</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-back" id="invest-6">
+			<div class="b-block">
+				<div class="b-icon">
+					<i class="sprite sprite-icon-6"></i>
+					<p>Ожидаемая прибыль</p>
+				</div>
+				<h3>Какую прибыль Вы ожидаете от инвестиций?</h3>
+				<ul class="clearfix b-checkboxes">
+					<li><input type="radio" name="profit" id="id-17" value="1% - 15%" checked><label for="id-17">1% - 15%</label></li>
+					<li><input type="radio" name="profit" id="id-18" value="15% - 20%"><label for="id-18">15% - 20%</label></li>
+					<li><input type="radio" name="profit" id="id-19" value="20% - и более"><label for="id-19">20% - и более</label></li>
+				</ul>
+				<div>
+					<!-- <a href="#" class="b-red-butt b-next-butt" data-next="#invest-6">Далее</a> -->
 				</div>
 			</div>
 		</div>

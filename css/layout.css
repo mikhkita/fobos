@@ -521,13 +521,13 @@ input:-moz-placeholder {
 			width: 300px;
 			height: 441px;
 		}
-		.b-4 .b-block-1 #audio-tab.b-tab > div {
-			background-position: 0% 50%;
+		.b-4 .b-block-1 #audio-tab.b-tab audio {
+/*			background-position: 0% 50%;
 			background-repeat: no-repeat;
-			background-image: url('../i/player.png');
+			background-image: url('../i/player.png');*/
 			position: absolute;
 			width: 532px;
-			height: 40px;
+			/*height: 40px;*/
 			top: 160px;
 			left: 50%;
 			margin-left: -266px;
@@ -667,8 +667,8 @@ input:-moz-placeholder {
 		}
 			.b-5 .b-service-list li{
 				float: left;
-				margin-right: 100px;
-				width: 210px;
+				margin-right: 138px;
+    			width: 215px;
 				color: #FFF;
 			}
 			.b-5 .b-service-list li:last-child{
@@ -790,12 +790,66 @@ input:-moz-placeholder {
 			color: #666666;
 			padding-bottom: 40px;
 		}
+	.b-8 .b-white-block .nav {
+		margin-top: 25px;
+		margin-bottom: 20px;
+		display: none;
+	}
+		.b-8 .b-white-block .nav li {
+			position: relative;
+			font-size: 12px;
+			color: #cccccc;
+			float: left;
+			margin-right: 25px;
+		}
+		.b-8 .b-white-block .nav li:nth-child(n+2):before {
+			position: absolute;
+			content: "";
+			font-size: 0;
+			width: 4px;
+			height: 6px;
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			background-image: url('../i/nav.png');
+			top: 5px;
+    		left: -14px;
+		}
+		.b-8 .b-white-block .nav li:last-child {
+			margin-right: 0;
+		}
+		.b-8 .b-white-block .nav li.active {
+			color: #000;
+		}
+		.b-8 .b-white-block .nav li.active:nth-child(n+2):before {
+			background-position: -4px 50%;
+		}
 	.b-8 .b-back{
 		background-position: 50% 50%;
 		background-size: cover;
-		background-image: url('../i/b-8/1-back.jpg');
+		
 		padding-bottom: 80px;
+		display: none;
 	}
+	.b-8 #invest-1.b-back {
+		background-image: url('../i/b-8/1-back.jpg');
+		display: block;
+	}
+	.b-8 #invest-2.b-back {
+		background-image: url('../i/b-8/2-back.jpg');
+	}
+	.b-8 #invest-3.b-back {
+		background-image: url('../i/b-8/3-back.jpg');
+	}
+	.b-8 #invest-4.b-back {
+		background-image: url('../i/b-8/4-back.jpg');
+	}
+	.b-8 #invest-5.b-back {
+		background-image: url('../i/b-8/5-back.jpg');
+	}
+	.b-8 #invest-6.b-back {
+		background-image: url('../i/b-8/6-back.jpg');
+	}
+
 		.b-8 .b-back .b-icon{
 			padding-top: 65px;
 			margin-bottom: 40px;
@@ -806,6 +860,48 @@ input:-moz-placeholder {
 				text-transform: uppercase;
 				margin-top: 3px;
 			}
+			.b-8 .b-back .b-icon .sprite {
+    			background-image: url('../i/spritesheet.png');
+			    background-repeat: no-repeat;
+			    display: inline-block;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-1 {
+			    width: 89px;
+			    height: 89px;
+			    background-position: 0 0;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-2 {
+			    width: 90px;
+			    height: 91px;
+			    background-position: -89px 0;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-3 {
+			    width: 90px;
+			    height: 91px;
+			    background-position: -179px 0;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-4 {
+			    width: 90px;
+			    height: 91px;
+			    background-position: -269px 0;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-5 {
+			    width: 89px;
+			    height: 89px;
+			    background-position: -359px 0;
+			}
+
+			.b-8 .b-back .b-icon .sprite.sprite-icon-6 {
+			    width: 89px;
+			    height: 89px;
+			    background-position: -448px 0;
+			}
+
 		.b-8 .b-back h3{
 			font-size: 30px;
 			color: #000000;
@@ -818,22 +914,60 @@ input:-moz-placeholder {
 			.b-8 .b-back .b-checkboxes li{
 				float: left;
 				margin-right: 100px;
+				cursor: pointer;
 			}
 			.b-8 .b-back .b-checkboxes li:last-child{
 				margin-right: 0px;
-				cursor: pointer;
+				
 			}
 				.b-8 .b-back .b-checkboxes li input{
-					position: relative;
-					cursor: pointer;
-					top: -2px;
+					display: none;
 				}
 				.b-8 .b-back .b-checkboxes li label{
 					cursor: pointer;
 					font-weight: bold;
 					font-size: 16px;
 					color: #333333;
-					margin-left: 10px;
+					padding-left: 29px;
+					position: relative;
+					display: block;
+					text-align: left;
+				}
+				.b-8 .b-back .b-checkboxes li label span {
+					font-size: 12px;
+					color: #333333;
+					max-width: 220px;
+					display: block;
+					margin-top: 5px;
+    				font-weight: 500;
+				}
+				.b-8 .b-back .b-checkboxes li label:before {
+					position: absolute;
+					content: "";
+					font-size: 0;
+					width: 17px;
+					height: 17px;
+					border: 1px solid rgb(204, 204, 204);
+					border-radius: 3px;
+					background-color: #fff;
+					top: 0px;
+					left: 0px;
+				}
+				.b-8 .b-back .b-checkboxes li label:after {
+					position: absolute;
+					content: "";
+					font-size: 0;
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					background-image: url('../i/check.png');
+					width: 12px;
+					height: 12px;
+					top: 3px;
+					left: 4px;
+					display: none;
+				}
+				.b-8 .b-back .b-checkboxes li input:checked + label:after {
+					display: block;
 				}
 		.b-8 .b-back a.b-red-butt{
 			width: 240px;
