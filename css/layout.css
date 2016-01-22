@@ -398,17 +398,56 @@ input:-moz-placeholder {
 		}
 		.b-3 .b-about-list{
 			padding-top: 120px;
-			width: 930px;
-			margin-left: 30px;
+			width: 890px;
+			margin-left: 35px;
 		}
-			.b-3 .b-about-list .slide-about{
-				float: left;
-				width: 240px;
-				text-align: left;
+			.b-3 .b-about-list .slick-arrow {
+				position: absolute;
+				width: 38px;
+				height: 74px;
+				background-image: url('../i/arrows.png');
+				background-repeat: no-repeat;
+				top: 93px;
+				cursor: pointer;
 			}
-			.b-3 .b-about-list .slide-about:nth-child(4n) {
-				width: 210px;
+			.b-3 .b-about-list .slick-arrow.slick-disabled {
+				display: none !important;
+			}
+			.b-3 .b-about-list .slick-arrow.slick-prev {
+				background-position: 0% 50%;
+				left: -35px;
+			}
+			.b-3 .b-about-list .slick-arrow.slick-next {
+				background-position: -38px 50%;
+				right: -35px;
+			}
+
+			.b-3 .b-about-list .slide-about{
+				text-align: left;
+				padding-left: 10px;
+				overflow: hidden;
 			}	
+
+				.b-3 .b-about-list .slide-about >span {
+					font-size: 12px;
+					color: red;
+					display: inline-block;
+					margin-bottom: 85px;
+					position: relative;
+				}
+				.b-3 .b-about-list .slide-about >span:after {
+					position: absolute;
+					content: "";
+					font-size: 0;
+					width: 150px;
+					height: 9px;
+					background-position: 50%;
+					background-image: url('../i/strip.png');
+					background-repeat: repeat-x;
+					top: 3px;
+					right: -158px;
+				}
+
 				.b-3 .b-about-list .slide-about img{
 					margin-bottom: 11px;
 				}
@@ -536,7 +575,7 @@ input:-moz-placeholder {
 			width: 100%;
 			text-align: left;
 			padding: 0 30px;
-			margin-top: 79px;
+			margin-top: 80px;
 
 		}
 			.b-4 .b-block-1 #text-tab.b-tab .tab-text {
@@ -583,6 +622,118 @@ input:-moz-placeholder {
 				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p {
 					display: block;
 				}
+		.b-4 .b-block-1 .full-text {
+			margin-top: 80px;
+			display: none;
+		}
+		.b-4 .b-block-1 .full-text .text-back{
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.b-4 .b-block-1 .full-text .text-left {
+			text-align: left;
+		}
+		.b-4 .b-block-1 .full-text .text-right {
+			text-align: right;
+		}
+			.b-4 .b-block-1 .full-text .text-back > div {
+				background-color: rgba(0,0,0,0.4);
+			}
+				.b-4 .b-block-1 .full-text .text-block {
+					padding: 55px 45px 75px;
+					background-color: #fff;
+				}
+				.b-4 .b-block-1 .full-text .text-block h3{
+					font-size: 18px;
+					color: #333333;
+					line-height: 1.2;
+					margin-bottom: 25px;
+					font-weight: bold;
+				}
+				.b-4 .b-block-1 .full-text .text-block  h3.big {
+					font-size: 24px;
+				}
+				.b-4 .b-block-1 .full-text .text-block  p{
+					font-size: 14px;
+					font-style: italic;
+					color: #333333;
+					line-height: 1.714;
+				}
+				.b-4 .b-block-1 .full-text .text-back > div h3,.b-4 .b-block-1 .full-text .text-back > div p {
+					color: #fff;
+				}
+			.b-4 .b-block-1 .full-text .text-back > div:hover {
+				background-color: rgba(255,255,255,0.6);
+			}
+				.b-4 .b-block-1 .full-text .text-back > div:hover h3,.b-4 .b-block-1 .full-text .text-back > div:hover p {
+					color: #333333;
+				}
+			.b-4 .b-block-1 .full-text .text-footer {
+				padding: 40px 45px 20px;
+				background-position: 50% 50%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-image: url('../i/text-footer.jpg');
+			}
+				.b-4 .b-block-1 .full-text .text-footer h3{
+					color: #fff;
+				}
+				.b-4 .b-block-1 .full-text .text-footer p {
+					color: #cccccc;
+				}
+				.b-4 .b-block-1 .full-text .text-footer ul {
+					margin-top: 70px;
+				}
+					.b-4 .b-block-1 .full-text .text-footer ul li {
+						font-size: 14px;
+						position: relative;
+						color: #cccccc;
+						
+					}
+
+					.b-4 .b-block-1 .full-text .text-footer ul li.phone {
+						font-size: 18px;
+					}
+						.b-4 .b-block-1 .full-text .text-footer ul li:before {
+							position: absolute;
+							font-size: 0;
+							content: "";
+							background-position: 50%;
+							background-repeat: no-repeat;
+							left: 50%;
+							top: -45px;
+						}
+					.b-4 .b-block-1 .full-text .text-footer ul li:nth-child(1) {
+						float: left;
+						margin-right: 200px;
+					}
+					.b-4 .b-block-1 .full-text .text-footer ul li:nth-child(2) {
+						float: left;
+					}
+					.b-4 .b-block-1 .full-text .text-footer ul li:last-child {
+						margin-right: 0;
+						float: right;
+					}
+						.b-4 .b-block-1 .full-text .text-footer ul li:nth-child(1):before {
+							width: 28px;
+							height: 30px;
+							margin-left: -14px;
+							background-image: url('../i/text-mobile.png');
+						}
+						.b-4 .b-block-1 .full-text .text-footer ul li:nth-child(2):before {
+							width: 29px;
+							height: 29px;
+							margin-left: -15px;
+							background-image: url('../i/text-mail.png');
+						}
+						.b-4 .b-block-1 .full-text .text-footer ul li:last-child:before {
+							width: 22px;
+							height: 33px;
+							margin-left: -11px;
+							background-image: url('../i/text-map.png');
+						}
+
 	.b-4 .b-block-2{
 		background-color: #FFF;
 	}
@@ -597,6 +748,7 @@ input:-moz-placeholder {
 					border-left: 1px solid #1d1e23;
 					text-align: left;
 					margin: 30px 0;
+
 				}
 				.b-4 .b-block-2 .b-video-list .slide span{
 					font-size: 14px;
@@ -634,6 +786,7 @@ input:-moz-placeholder {
 				height: 34px;
 				background-image: url('../i/arrows.png');
 				background-repeat: no-repeat;
+				background-size: 36px 34px;
 				top: 38px;
 				cursor: pointer;
 			}
@@ -791,7 +944,7 @@ input:-moz-placeholder {
 			padding-bottom: 40px;
 		}
 	.b-8 .b-white-block .nav {
-		margin-top: 25px;
+		margin-top: 20px;
 		margin-bottom: 20px;
 		display: none;
 	}
@@ -1187,7 +1340,19 @@ input:-moz-placeholder {
 	right: 30px;
 	top: 26px;
 }
-			
+@media (min-width: 1100px) {
+	.b-3 .b-about-list {
+		width: 930px;
+		margin-left: 30px;
+	}
+	.b-3 .b-about-list .slick-arrow.slick-next {
+		right: -65px;
+	}
+	.b-3 .b-about-list .slick-arrow.slick-prev {
+		left: -65px;
+	}
+}
+
 @media screen and (max-width: 1250px){
 	
 }
