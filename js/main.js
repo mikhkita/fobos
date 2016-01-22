@@ -94,7 +94,79 @@ $(document).ready(function(){
         dateChange();
     });
 
+    $(".b-video-list").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: '<span class="slick-arrow slick-prev"></span>',
+        nextArrow: '<span class="slick-arrow slick-next"></span>',
+        asNavFor: "#text-tab"
+    });
+
+    $("#text-tab").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows:false,
+        asNavFor: ".b-video-list"
+    });
+
+    $( ".tab-text" ).hover(
+      function() {
+        $(".slide").eq($( this ).index()).addClass("hover");
+      }, function() {
+        $(".slide").eq($( this ).index()).removeClass( "hover" );
+      }
+    );
+
+    $( ".slide" ).hover(
+      function() {
+        $(".tab-text").eq($( this ).index()).addClass("hover");
+      }, function() {
+        $(".tab-text").eq($( this ).index()).removeClass( "hover" );
+      }
+    );
+
+    $( "#tabs" ).tabs({
+        activate: function( event, ui ) {
+            $("#video-tab a").show();
+            $(".iframe").empty();
+            $(".iframe").css("background","none");
+            $("#text-tab").slick('setPosition');   
+            // var selectedTab = $("#tabs").tabs('option', 'active');
+            // if(selectedTab == 2) {
+            //     $(".slide .text").show();
+            // }
+        }
+    });
+
+    $(".slide").click(function(){
+        if(!$(this).hasClass("active")) {
+            $(".slide").removeClass("active");
+            $(this).addClass("active");
+            $("#video-tab p").html($(this).find("span").html());
+            $("#video-tab a").attr("data-video",$(this).find("span").attr("data-video"));
+            var selectedTab = $("#tabs").tabs('option', 'active');
+            if(selectedTab == 0) {
+                $("#video-tab a").hide();
+                $(".iframe").css("background","#000");
+                $(".iframe").html('<iframe width="100%" height="277" src="'+$(this).find("span").attr("data-video")+'?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+            } else {
+                $("#video-tab a").show();
+                $(".iframe").empty();
+                $(".iframe").css("background","none");
+            }
+        }
+    });
+    $("#video-tab a").click(function(){
+        $(this).hide();
+        $(".iframe").css("background","#000");
+        $(".iframe").html('<iframe width="100%" height="277" src="'+$(this).attr("data-video")+'?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        return false;
+    });
+
 });
+
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
 function dateChange() {
     var arr = $("#actualDate").val().split(".");

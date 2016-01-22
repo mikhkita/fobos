@@ -13,6 +13,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery-ui.theme.css" type="text/css">
+	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
@@ -40,6 +41,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/datepicker-ru.js"></script>
 	<script type="text/javascript" src="js/KitProgress.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
@@ -125,53 +127,93 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="b b-3">
 		<div class="b-block">
 			<h2 class="b-title">О нас</h2>
-			<ul class="b-about-list clearfix">
-				<li>
+			<div class="b-about-list clearfix">
+				<div class="slide-about">
+					<p>Январь 2014</p>
 					<img src="i/b-3/1.png" alt="">
 					<p>сотрудников</p>
 					<b>7</b>
-				</li>
-				<li>
+				</div>
+				<div class="slide-about">
 					<img src="i/b-3/2.png" alt="">
 					<p>Инвесторов</p>
 					<b>30</b>
-				</li>
-				<li>
+				</div>
+				<div class="slide-about">
 					<img src="i/b-3/3.png" alt="">
 					<p>Объем<br>собственных<br>средств</p>
 					<b>726<span>миллионов<br>рублей</span></b>
-				</li>
-				<li>
+				</div>
+				<div class="slide-about">
 					<img src="i/b-3/4.png" alt="">
 					<p>Суммарный<br>объем клиентских<br>средств</p>
 					<b>2<span>миллиарда<br>рублей</span></b>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="b b-4">
 		<div class="b-block b-block-1">
 			<h2 class="b-title">Наше мнение</h2>
-			<div>
+			<div id="tabs">
+				<div>
 				<ul class="b-tabs clearfix">
-					<li class="active">Видео</li>
-					<li>Аудио</li>
-					<li>Статьи</li>
+					<li><a href="#video-tab">Видео</a></li>
+					<li><a href="#audio-tab">Аудио</a></li>
+					<li><a href="#text-tab">Статьи</a></li>
 				</ul>
-			</div>
-			<div class="b-mac">
-				<p>Тенденции<br>фондовых<br>рынков</p>
-				<a href="#" class="b-play-butt"><img src="i/play.png" alt=""></a>
+				</div>
+				<div class="b-tab" id="video-tab">
+					<p>Кто<br>управляет<br>кризисом?</p>
+					<a href="#" class="b-play-butt" data-video="https://www.youtube.com/embed/RgKAFK5djSk"></a>
+					<div class="iframe"></div>
+				</div>
+				<div class="b-tab" id="audio-tab">
+					<div></div>
+				</div>
+				<div class="b-tab" id="text-tab">
+					<div class="tab-text" id="text-1">
+						<div>
+							<h3>Кто управляет кризисом</h3>
+							<p>В настоящее время рынок Forex является одним из очень немногих способов приумножить свои капиталы. Причем этот достаточно большому количеству людей со всей планеты. Рынок Форекс является достаточно</p>
+						</div>
+					</div>
+					<div class="tab-text" id="text-2">
+						<div>
+							<h3>Кто управляет кризисом</h3>
+							<p>В настоящее время рынок Forex является одним из очень немногих способов приумножить свои капиталы. Причем этот достаточно большому количеству людей со всей планеты. Рынок Форекс является достаточно</p>
+						</div>
+					</div>
+					<div class="tab-text" id="text-3">
+						<div>
+							<h3>Кто управляет кризисом</h3>
+							<p>В настоящее время рынок Forex является одним из очень немногих способов приумножить свои капиталы. Причем этот достаточно большому количеству людей со всей планеты. Рынок Форекс является достаточно</p>
+						</div>
+					</div>
+					<div class="tab-text" id="text-4">
+						<div>
+							<h3>Кто управляет кризисом</h3>
+							<p>В настоящее время рынок Forex является одним из очень немногих способов приумножить свои капиталы. Причем этот достаточно большому количеству людей со всей планеты. Рынок Форекс является достаточно</p>
+						</div>
+					</div>
+					<div class="tab-text" id="text-5">
+						<div>
+							<h3>Кто управляет кризисом</h3>
+							<p>В настоящее время рынок Forex является одним из очень немногих способов приумножить свои капиталы. Причем этот достаточно большому количеству людей со всей планеты. Рынок Форекс является достаточно</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="b-block-2">
 			<div class="b-block">
-				<ul class="b-video-list clearfix">
-					<li><a href="#">Кто<br>управляет<br>кризисом?</a></li>
-					<li><a href="#">Как заработать<br>на скачке<br>курса?</a></li>
-					<li><a href="#">Основные ошибки<br>начинающего<br>брокера.</a></li>
-					<li><a href="#">С чего<br>начать бизнес<br>на Форекс?</a></li>
-				</ul>
+				<div class="b-video-list clearfix">
+					<div class="slide active"><div><span data-video="https://www.youtube.com/embed/RgKAFK5djSk">Кто<br>управляет<br>кризисом?</span></div></div>
+					<div class="slide"><div><span data-video="https://www.youtube.com/embed/YQHsXMglC9A">Как заработать<br>на скачке<br>курса?</span></div></div>
+					<div class="slide"><div><span data-video="https://www.youtube.com/embed/09R8_2nJtjg">Основные ошибки<br>начинающего<br>брокера.</span></div></div>
+					<div class="slide"><div><span data-video="https://www.youtube.com/embed/yzTuBuRdAyA">С чего<br>начать бизнес<br>на Форекс?</span></div></div>
+					<div class="slide"><div><span data-video="https://www.youtube.com/embed/uxpDa-c-4Mc">С чего<br>начать бизнес<br>на Форекс-2?</span></div></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -180,19 +222,28 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<h2 class="b-title">услуги</h2>
 			<ul class="b-service-list clearfix">
 				<li>
-					<img src="i/b-5/1.png" alt="">
-					<h3>Физическим<br>лицам</h3>
-					<p>Вы - успешный деловой  человек, имеющий возможность позволить себе размещать временно свободные денежные средства<br>с целью получения дополнительного дохода. </p>
+					<div>
+						<div class="img"></div>
+						<!-- <img src="i/b-5/1.png" alt=""> -->
+						<h3>Физическим<br>лицам</h3>
+						<p>Вы - успешный деловой  человек, имеющий возможность позволить себе размещать временно свободные денежные средства<br>с целью получения дополнительного дохода. </p>
+					</div>
 				</li>
 				<li>
-					<img src="i/b-5/2.png" alt="">
+					<div>
+					<div class="img"></div>
+					<!-- <img src="i/b-5/2.png" alt=""> -->
 					<h3>Юридическим<br>лицам</h3>
 					<p>А, может быть, Вы - признанная компания, безусловный лидер своего рынка, заботящаяся об эффективности своей работы и финансовых ресурсов.</p>
+					</div>
 				</li>
 				<li>
-					<img src="i/b-5/3.png" alt="">
+					<div>
+					<div class="img"></div>
+					<!-- <img src="i/b-5/3.png" alt=""> -->
 					<h3>Финансовым<br>институтам</h3>
 					<p>Или же Вы - незыблемый Финансовый Институт,<br>ответственно подходящий ко<br>всем бизнес процессам и,<br>прежде всего, к инвестициям. </p>
+					</div>
 				</li>
 			</ul>
 		</div>

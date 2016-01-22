@@ -439,14 +439,13 @@ margin-top: 20px;
 				color: #FFF;
 				font-size: 20px;
 				text-transform: uppercase;
-				padding: 8px 32px;
+				
 				margin-right: 8px;
 				float: left;
 			}
-			.b-4 .b-block-1 .b-tabs li.active{
-				cursor: default;
-				background-color: #333;
-			}
+				.b-4 .b-block-1 .b-tabs li a {
+					padding: 8px 32px;
+				}
 		.b-4 .b-block-1 .b-mac{
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
@@ -466,12 +465,17 @@ margin-top: 20px;
 			.b-4 .b-block-1 .b-mac a.b-play-butt{
 				display: block;
 				position: absolute;
+				background-position: 0% 50%;
+				background-repeat: no-repeat;
+				background-image: url('../i/play.png');
+				width: 73px;
+				height: 73px;
 				left: 50%;
 				margin-left: -37px;
 				top: 120px;
 			}
 			.b-4 .b-block-1 .b-mac a.b-play-butt:hover{
-				opacity: 0.8;
+				background-position: -73px 50%;
 			}
 	.b-4 .b-block-2{
 		background-color: #FFF;
