@@ -590,8 +590,8 @@ input:-moz-placeholder {
 					box-sizing: border-box;	
 					height: inherit;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover > div  {
-					background-color: rgba(0,0,0,0.4);
+				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active > div  {
+					background-color: rgba(0,0,0,0.4); 
 				}
 			.b-4 .b-block-1 #text-tab.b-tab #text-1 {
 				background-image: url('../i/text-1.jpg');
@@ -619,7 +619,7 @@ input:-moz-placeholder {
 					display: none;
 					font-style: italic;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p {
+				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active p {
 					display: block;
 				}
 		.b-4 .b-block-1 .full-text {

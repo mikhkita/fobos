@@ -343,7 +343,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-block-2">
 			<div class="b-block">
 				<div class="b-video-list clearfix">
-					<div class="slide active"><div><span data-video="https://www.youtube.com/embed/RgKAFK5djSk">Кто<br>управляет<br>кризисом?</span></div></div>
+					<div class="slide"><div><span data-video="https://www.youtube.com/embed/RgKAFK5djSk">Кто<br>управляет<br>кризисом?</span></div></div>
 					<div class="slide"><div><span data-video="https://www.youtube.com/embed/YQHsXMglC9A">Как заработать<br>на скачке<br>курса?</span></div></div>
 					<div class="slide"><div><span data-video="https://www.youtube.com/embed/09R8_2nJtjg">Основные ошибки<br>начинающего<br>брокера.</span></div></div>
 					<div class="slide"><div><span data-video="https://www.youtube.com/embed/yzTuBuRdAyA">С чего<br>начать бизнес<br>на Форекс?</span></div></div>

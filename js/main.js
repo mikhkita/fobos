@@ -148,6 +148,7 @@ $(document).ready(function(){
             // }
             $(".full-text").hide();
             $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"80px");
+            $(".tab-text,.slide").removeClass("active");
         }
     });
 
@@ -168,13 +169,19 @@ $(document).ready(function(){
                 $(".iframe").css("background","none");
             }
             if(selectedTab == 2) {
+                $(".full-text").hide();
                 var number = $(this).index()+1;
-                $("#full-text-"+number).slideDown();
+                $("#full-text-"+number).show();
+                $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"0px");
+                $("body, html").animate({
+                    scrollTop : $("#full-text-"+number).offset().top
+                },800);
             }
         }
     });
     $("#video-tab a").click(function(){
         $(this).hide();
+        $(".slide").eq(0).addClass("active");
         $(".iframe").css("background","#000");
         $(".iframe").html('<iframe width="100%" height="277" src="'+$(this).attr("data-video")+'?autoplay=1" frameborder="0" allowfullscreen></iframe>');
         return false;
@@ -195,14 +202,18 @@ $(document).ready(function(){
     });
 
     $(".tab-text").click(function(){
-        $(".full-text").hide();
-        $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"0px");
-        var number = $(this).index()+1;
-        $("#full-text-"+number).show();
-        $("body, html").animate({
-            scrollTop : $("#full-text-"+number).offset().top
-        },800);
-
+        if(!$(this).hasClass("active")) {
+            $(".tab-text,.slide").removeClass("active");
+            $(".slide").eq($(this).index()).addClass("active");
+            $(this).addClass("active");
+            $(".full-text").hide();
+            $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"0px");
+            var number = $(this).index()+1;
+            $("#full-text-"+number).show();
+            $("body, html").animate({
+                scrollTop : $("#full-text-"+number).offset().top
+            },800);
+        }
     });
 
 });
