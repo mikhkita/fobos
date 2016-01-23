@@ -54,9 +54,29 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<li class="v" style="margin-left:480px"></li>
 		<li class="v" ></li>
 	</ul> -->
+	
 	<div class="b b-0">
-		<div class="b-block">
-			<a href="#" class="b-logo-left"><img src="i/logo.png" alt=""></a>
+		<div class="b-block clearfix">
+			<a href="#" class="left b-logo-left"><img src="i/logo.png" alt=""></a>
+			<ul class=" clearfix right">
+				<li class="date"></li>
+				<li class="usd">
+					<div><b>$</b><span class="value">0</span> Руб</div>
+					<div class="update"><span>0</span></div>
+				</li>
+				<li class="eur">
+					<div><b>€</b><span class="value">0</span> Руб</div>
+					<div class="update"><span>0</span></div>
+				</li>
+				<li class="micex">
+					<div><b>ММВБ</b><span class="value">0</span></div>
+					<div class="update"><span>0</span>%</div>
+				</li>
+				<li class="rtsi">
+					<div><b>РТС</b><span class="value">0</span></div>
+					<div class="update"><span>0</span>%</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<div class="b b-1">
@@ -130,31 +150,31 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-about-list clearfix">
 				<div class="slide-about">
 					<span>Январь 2012</span>
-					<img src="i/b-3/1.png" alt="">
+					<div style="background-image: url('i/b-3/1.png');"></div>
 					<p>сотрудников</p>
 					<b>7</b>
 				</div>
 				<div class="slide-about">
 					<span>Март 2013</span>
-					<img src="i/b-3/2.png" alt="">
+					<div style="background-image: url('i/b-3/2.png');"></div>
 					<p>Инвесторов</p>
 					<b>30</b>
 				</div>
 				<div class="slide-about">
 					<span>Январь 2014</span>
-					<img src="i/b-3/3.png" alt="">
+					<div style="background-image: url('i/b-3/3.png');"></div>
 					<p>Объем<br>собственных<br>средств</p>
 					<b>726<span>миллионов<br>рублей</span></b>
 				</div>
 				<div class="slide-about">
 					<span>Июль 2014</span>
-					<img src="i/b-3/4.png" alt="">
+					<div style="background-image: url('i/b-3/4.png');"></div>
 					<p>Суммарный<br>объем клиентских<br>средств</p>
 					<b>2<span>миллиарда<br>рублей</span></b>
 				</div>
 				<div class="slide-about">
 					<span>Июль 2014</span>
-					<img src="i/b-3/4.png" alt="">
+					<div style="background-image: url('i/b-3/4.png');"></div>
 					<p>Суммарный<br>объем клиентских<br>средств</p>
 					<b>2<span>миллиарда<br>рублей</span></b>
 				</div>
@@ -179,7 +199,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="b-tab" id="audio-tab">
 					<div></div>
-					<audio src="sound.mp3" controls></audio>
+					<audio src="1.mp3" controls></audio>
 				</div>
 				<div class="b-tab full-text" id="full-text-1">
 					<div class="text-back" style="background-image: url('i/text-image-1.jpg');">
@@ -343,11 +363,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-block-2">
 			<div class="b-block">
 				<div class="b-video-list clearfix">
-					<div class="slide"><div><span data-video="https://www.youtube.com/embed/RgKAFK5djSk">Кто<br>управляет<br>кризисом?</span></div></div>
-					<div class="slide"><div><span data-video="https://www.youtube.com/embed/YQHsXMglC9A">Как заработать<br>на скачке<br>курса?</span></div></div>
-					<div class="slide"><div><span data-video="https://www.youtube.com/embed/09R8_2nJtjg">Основные ошибки<br>начинающего<br>брокера.</span></div></div>
-					<div class="slide"><div><span data-video="https://www.youtube.com/embed/yzTuBuRdAyA">С чего<br>начать бизнес<br>на Форекс?</span></div></div>
-					<div class="slide"><div><span data-video="https://www.youtube.com/embed/uxpDa-c-4Mc">С чего<br>начать бизнес<br>на Форекс-2?</span></div></div>
+					<div class="slide"><div><span data-audio="1.mp3" data-video="https://www.youtube.com/embed/RgKAFK5djSk">Кто<br>управляет<br>кризисом?</span></div></div>
+					<div class="slide"><div><span data-audio="2.mp3" data-video="https://www.youtube.com/embed/YQHsXMglC9A">Как заработать<br>на скачке<br>курса?</span></div></div>
+					<div class="slide"><div><span data-audio="1.mp3" data-video="https://www.youtube.com/embed/09R8_2nJtjg">Основные ошибки<br>начинающего<br>брокера.</span></div></div>
+					<div class="slide"><div><span data-audio="2.mp3" data-video="https://www.youtube.com/embed/yzTuBuRdAyA">С чего<br>начать бизнес<br>на Форекс?</span></div></div>
+					<div class="slide"><div><span data-audio="1.mp3" data-video="https://www.youtube.com/embed/uxpDa-c-4Mc">С чего<br>начать бизнес<br>на Форекс-2?</span></div></div>
 				</div>
 			</div>
 		</div>
@@ -356,7 +376,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-block">
 			<h2 class="b-title">услуги</h2>
 			<ul class="b-service-list clearfix">
-				<li>
+				<li data-block="#fiz">
 					<div>
 						<div class="img"></div>
 						<!-- <img src="i/b-5/1.png" alt=""> -->
@@ -364,23 +384,76 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<p>Вы - успешный деловой  человек, имеющий возможность позволить себе размещать временно свободные денежные средства<br>с целью получения дополнительного дохода. </p>
 					</div>
 				</li>
-				<li>
+				<li data-block="#yr">
 					<div>
-					<div class="img"></div>
-					<!-- <img src="i/b-5/2.png" alt=""> -->
-					<h3>Юридическим<br>лицам</h3>
-					<p>А, может быть, Вы - признанная компания, безусловный лидер своего рынка, заботящаяся об эффективности своей работы и финансовых ресурсов.</p>
+						<div class="img"></div>
+						<!-- <img src="i/b-5/2.png" alt=""> -->
+						<h3>Юридическим<br>лицам</h3>
+						<p>А, может быть, Вы - признанная компания, безусловный лидер своего рынка, заботящаяся об эффективности своей работы и финансовых ресурсов.</p>
 					</div>
 				</li>
-				<li>
+				<li data-block="#fin">
 					<div>
-					<div class="img"></div>
-					<!-- <img src="i/b-5/3.png" alt=""> -->
-					<h3>Финансовым<br>институтам</h3>
-					<p>Или же Вы - незыблемый Финансовый Институт,<br>ответственно подходящий ко<br>всем бизнес процессам и,<br>прежде всего, к инвестициям. </p>
+						<div class="img"></div>
+						<!-- <img src="i/b-5/3.png" alt=""> -->
+						<h3>Финансовым<br>институтам</h3>
+						<p>Или же Вы - незыблемый Финансовый Институт, ответственно подходящий ко всем бизнес процессам и, прежде всего, к инвестициям.</p>
 					</div>
 				</li>
 			</ul>
+			<div class="service-cont">
+				<div class="service" id="fiz">
+					<div class="clearfix">
+						<h4>Готовые торговые стратегии</h4>
+						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
+						<a href="#" class="b-red-butt">К стратегиям</a>
+					</div>
+					<div class="clearfix">
+						<h4>Индивидуальные инвестиционные решения</h4>
+						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
+						<a href="#" class="b-red-butt">Пример решений</a>
+					</div>
+					<div class="clearfix">
+						<h4>Структурные продукты</h4>
+						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
+						<a href="#" class="b-red-butt">Обзор продуктов</a>
+					</div>
+				</div>
+				<div class="service" id="yr">
+					<div class="clearfix">
+						<h4>Готовые торговые стратегии</h4>
+						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
+						<a href="#" class="b-red-butt">К стратегиям</a>
+					</div>
+					<div class="clearfix">
+						<h4>Индивидуальные инвестиционные решения</h4>
+						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
+						<a href="#" class="b-red-butt">Пример решений</a>
+					</div>
+					<div class="clearfix">
+						<h4>Структурные продукты</h4>
+						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
+						<a href="#" class="b-red-butt">Обзор продуктов</a>
+					</div>
+				</div>
+				<div class="service" id="fin">
+					<div class="clearfix">
+						<h4>Готовые торговые стратегии</h4>
+						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
+						<a href="#" class="b-red-butt">К стратегиям</a>
+					</div>
+					<div class="clearfix">
+						<h4>Индивидуальные инвестиционные решения</h4>
+						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
+						<a href="#" class="b-red-butt">Пример решений</a>
+					</div>
+					<div class="clearfix">
+						<h4>Структурные продукты</h4>
+						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
+						<a href="#" class="b-red-butt">Обзор продуктов</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="b b-6">
@@ -466,7 +539,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<i class="sprite sprite-icon-4"></i>
 					<p>Риск-профиль</p>
 				</div>
-				<h3>Выберите Ваш Риск-Профиль</h3>
+				<h3>Выберите Ваш Риск&ndash;Профиль</h3>
 				<ul class="clearfix b-checkboxes">
 					<li><input type="radio" name="risk" id="id-11" value="Консервативный" checked><label for="id-11">Консервативный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>
 					<li><input type="radio" name="risk" id="id-12" value="Умеренный"><label for="id-12">Умеренный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var myWidth,myHeight;
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -75,6 +76,37 @@ $(document).ready(function(){
     // };
 
     // var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+    if(myWidth < 1000) {
+        $(".b-main-menu li").click(function(){
+            if(!$(this).hasClass("active")) {
+                $(".b-main-menu li.active").removeClass("active").find("ul").slideUp();
+                $(this).addClass("active").find("ul").slideDown();
+            }
+        });
+    }
+
+    if($(".b-0 .b-block ul:visible").length) {
+        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
+        $.ajax({
+            type: "GET",
+            url: "quotes.php",
+            success: function(msg){
+                var obj = $.parseJSON(msg);
+                $.each(obj, function(i, item) {
+                    $("li."+i+" .value").text(item.val);
+                    
+                    if(item.change.indexOf("-") == -1) {
+                       $("li."+i+" .update").removeClass("down"); 
+                       $("li."+i+" .update span").text("+ "+item.change);
+                    } else {
+                        $("li."+i+" .update span").text(item.change);
+                        $("li."+i+" .update").addClass("down");
+                    }
+                });
+            }
+        });
+    }
+
     $( "#datepicker-inline" ).datepicker({
         altField: "#actualDate",
         onSelect: function() {
@@ -94,32 +126,57 @@ $(document).ready(function(){
         dateChange();
     });
 
-    $(".b-video-list").slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        prevArrow: '<span class="slick-arrow slick-prev"></span>',
-        nextArrow: '<span class="slick-arrow slick-next"></span>',
-        asNavFor: "#text-tab"
-    });
-
-    $("#text-tab").slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        arrows:false,
-        asNavFor: ".b-video-list"
-    });
-
-
-    $(".b-about-list").slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        prevArrow: '<span class="slick-arrow slick-prev"></span>',
-        nextArrow: '<span class="slick-arrow slick-next"></span>'
-    });
-
+    if(myWidth < 1000) {
+        $(".b-video-list").slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            asNavFor: "#text-tab"
+        }); 
+    } else {
+        $(".b-video-list").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: '<span class="slick-arrow slick-prev"></span>',
+            nextArrow: '<span class="slick-arrow slick-next"></span>',
+            asNavFor: "#text-tab"
+        });
+    }
+    if(myWidth < 1000) {
+        $("#text-tab").slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows:false,
+            asNavFor: ".b-video-list"
+        });
+    } else {
+        $("#text-tab").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows:false,
+            asNavFor: ".b-video-list"
+        });
+    }
+    if(myWidth < 1000) {
+        $(".b-about-list").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false
+        });
+    } else {
+        $(".b-about-list").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: '<span class="slick-arrow slick-prev"></span>',
+            nextArrow: '<span class="slick-arrow slick-next"></span>'
+        });
+    }
     $( ".tab-text" ).hover(
       function() {
         $(".slide").eq($( this ).index()).addClass("hover");
@@ -154,7 +211,7 @@ $(document).ready(function(){
 
     $(".slide").click(function(){
         if(!$(this).hasClass("active")) {
-            $(".slide").removeClass("active");
+            $(".slide.active").removeClass("active");
             $(this).addClass("active");
             $("#video-tab p").html($(this).find("span").html());
             $("#video-tab a").attr("data-video",$(this).find("span").attr("data-video"));
@@ -176,6 +233,10 @@ $(document).ready(function(){
                 $("body, html").animate({
                     scrollTop : $("#full-text-"+number).offset().top
                 },800);
+            }
+            if(selectedTab == 1) {
+                $("#audio-tab audio").remove();
+                $("#audio-tab").append('<audio src="'+$(this).find("span").attr("data-audio")+'" controls></audio>')
             }
         }
     });
@@ -203,7 +264,7 @@ $(document).ready(function(){
 
     $(".tab-text").click(function(){
         if(!$(this).hasClass("active")) {
-            $(".tab-text,.slide").removeClass("active");
+            $(".tab-text.active,.slide.active").removeClass("active");
             $(".slide").eq($(this).index()).addClass("active");
             $(this).addClass("active");
             $(".full-text").hide();
@@ -215,7 +276,18 @@ $(document).ready(function(){
             },800);
         }
     });
-
+    if(myWidth >= 1000) {
+        $(".b-service-list li").click(function(){
+            if(!$(this).hasClass("active")) {
+                if(!$(".service-cont:visible").length) $(".service-cont").slideDown();
+                $(".b-service-list li.active").removeClass("active");
+                $(".service").hide();
+                $(this).addClass("active");
+                var block = $(this).attr("data-block");
+                $(block).slideDown();
+            }
+        });
+    }
 });
 
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
