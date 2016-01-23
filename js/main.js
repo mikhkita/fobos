@@ -42,6 +42,28 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
     
+    if($(".b-0 .b-block ul:visible").length) {
+        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
+        $.ajax({
+            type: "GET",
+            url: "quotes.php",
+            success: function(msg){
+                var obj = $.parseJSON(msg);
+                $.each(obj, function(i, item) {
+                    $("li."+i+" .value").text(item.val);
+                    
+                    if(item.change.indexOf("-") == -1) {
+                       $("li."+i+" .update").removeClass("down"); 
+                       $("li."+i+" .update span").text("+ "+item.change);
+                    } else {
+                        $("li."+i+" .update span").text(item.change);
+                        $("li."+i+" .update").addClass("down");
+                    }
+                });
+            }
+        });
+    }
+
 	var myPlace = new google.maps.LatLng(55.754407, 37.625151);
     var myOptions = {
         zoom: 16,
@@ -85,27 +107,7 @@ $(document).ready(function(){
         });
     }
 
-    if($(".b-0 .b-block ul:visible").length) {
-        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
-        $.ajax({
-            type: "GET",
-            url: "quotes.php",
-            success: function(msg){
-                var obj = $.parseJSON(msg);
-                $.each(obj, function(i, item) {
-                    $("li."+i+" .value").text(item.val);
-                    
-                    if(item.change.indexOf("-") == -1) {
-                       $("li."+i+" .update").removeClass("down"); 
-                       $("li."+i+" .update span").text("+ "+item.change);
-                    } else {
-                        $("li."+i+" .update span").text(item.change);
-                        $("li."+i+" .update").addClass("down");
-                    }
-                });
-            }
-        });
-    }
+    
 
     $( "#datepicker-inline" ).datepicker({
         altField: "#actualDate",

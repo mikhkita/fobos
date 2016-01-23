@@ -79,6 +79,29 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			</ul>
 		</div>
 	</div>
+	<script>
+		if($(".b-0 .b-block ul:visible").length) {
+	        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
+	        $.ajax({
+	            type: "GET",
+	            url: "quotes.php",
+	            success: function(msg){
+	                var obj = $.parseJSON(msg);
+	                $.each(obj, function(i, item) {
+	                    $("li."+i+" .value").text(item.val);
+	                    
+	                    if(item.change.indexOf("-") == -1) {
+	                       $("li."+i+" .update").removeClass("down"); 
+	                       $("li."+i+" .update span").text("+ "+item.change);
+	                    } else {
+	                        $("li."+i+" .update span").text(item.change);
+	                        $("li."+i+" .update").addClass("down");
+	                    }
+	                });
+	            }
+	        });
+    	}
+	</script>
 	<div class="b b-1">
 		<div class="b-block">
 			<h1>Профессиональный участник рынка ценных бумаг</h1>
@@ -627,7 +650,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	</div>
 	<div style="display:none;">
 		<div id="b-popup-1">
-			<div class="b-popup" >
+			<div class="b-popup">
 				<div class="b-head">Вы выбрали дату</div>
 				<div class="b-popup-back">
 					<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
@@ -638,7 +661,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="b-popup-form">
 							<input type="text" class="b-input-name" id="name" name="name" placeholder="Представьтесь пожалуйста" required/>
-							<input type="text" id="phone" name="phone" placeholder="Ваш телефон для связи" required/>
+							<input type="text" id="phone" name="phone" placeholder="Ваш телефон" required/>
 							<input type="text" name="email" placeholder="Ваш email" required/>
 							<input type="hidden" name="subject" value="Заказ"/>
 							<a class="ajax b-red-butt" onclick="$('#b-form-1').submit(); return false;" >Назначить встречу</a>
@@ -649,16 +672,14 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div id="b-popup-2">
 			<div class="b-thanks b-popup">
-				<h3>Спасибо!</h3>
-				<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				<h3>Вы оставили заявку</h3>
+				<h4>В ближайшее время мы свяжемся с Вами</h4>
 			</div>
 		</div>
 		<div id="b-popup-error">
 			<div class="b-thanks b-popup">
 				<h3>Ошибка отправки!</h3>
 				<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-				<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 			</div>
 		</div>
 	</div>

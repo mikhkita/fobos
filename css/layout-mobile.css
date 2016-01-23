@@ -1367,14 +1367,15 @@ width: 40px;
 						text-decoration: none;
 					}
 .b-popup{
-
+	width: 690px;
 }
 	.b-popup .b-head{
 		color: #FFF;
 		text-align: left;
-		border-radius: 3px 3px 0px 0px ;
+		border-radius: 3px 3px 0px 0px;
 		padding: 28px 50px;
 		background-color: #555555;
+		font-size: 28px;
 	}
 	.b-popup .b-popup-back{
 		background-position: 50% 50%;
@@ -1386,33 +1387,34 @@ width: 40px;
 			margin-bottom: 30px;	
 		}
 			.b-popup .b-data-cont h3{
-				font-size: 24px;
+				font-size: 38px;
 				color: #F00;
 			}
 			.b-popup .b-data-cont input{
 				border: 1px solid #e1e1e1;
 				border-radius: 4px / 5px;
-				font-size: 12px;
+				font-size: 26px;
 				color: #4b4b4b;
 				background-color: #fff;
-				padding: 5px 10px;
-				margin-right: 2px;
+				padding: 7px 10px;
+				width: 170px;
 			}
 		.b-popup .b-popup-form{
-			width: 402px;
+			width: 100%;
 		}
 			.b-popup .b-popup-form input[type="text"]{
 				border: 1px solid #e1e1e1;
 				border-radius: 4px / 5px;
-				font-size: 12px;
+				font-size: 26px;
 				color: #4b4b4b;
 				background-color: #fff;
-				padding: 5px 10px;
-				width: 176px;
+				padding: 7px 10px;
+				width: 270px;
 				margin-bottom: 15px;
 			}
 			.b-popup .b-popup-form input[type="text"].b-input-name{
-				width: 378px;
+				width: 100%;
+				box-sizing: border-box;
 			}
 			.b-popup .b-popup-form a.b-red-butt{
 				margin-top: 30px;
@@ -1428,7 +1430,36 @@ width: 40px;
 	right: 30px;
 	top: 26px;
 }
-			
+.b-thanks {
+	width: 690px;
+	text-align: left;
+	border-radius: 3px;
+}
+	.b-thanks h3 {
+		padding: 27px 37px;
+		color: #fff;
+		background: red;
+		font-size: 28px;
+		border-radius: 3px;
+	}
+	.b-thanks h4 {
+		padding: 50px 110px;
+		font-size: 38px;
+		color: rgb(58, 58, 58);
+		position: relative;
+	}
+		.b-thanks h4:before {
+			position: absolute;
+			content: "";
+			font-size: 0;
+			width: 53px;
+			height: 54px;
+			top: 60px;
+			left: 40px;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			background-image: url("../i/thanks.png");
+		}			
 @media screen and (max-width: 1250px){
 	
 }
