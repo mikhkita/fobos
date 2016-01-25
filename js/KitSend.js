@@ -126,7 +126,7 @@ $(document).ready(function(){
 				success: function(msg){
 					var $form;
 					if( msg == "1" ){
-						$form = $thanks;
+						$form = $thanks.clone();
 					}else{
 						$form = $("#b-popup-error");
 					}
