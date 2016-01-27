@@ -504,6 +504,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				<li data-block="#invest-6">Ожидаемая прибыль</li>
 			</ul>
 		</div>
+		<div class="b-back" id="invest-final">
+			<div class="b-block">
+				<h4>Ваша стратегия «Рациональная»</h4>
+			</div>
+		</div>
 		<div class="b-back" id="invest-1">
 			<div class="b-block">
 				<div class="b-icon">
@@ -603,10 +608,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<li><input type="radio" name="profit" id="id-19" value="20% - и более"><label for="id-19">20% - и более</label></li>
 				</ul>
 				<div>
-					<!-- <a href="#" class="b-red-butt b-next-butt" data-next="#invest-6">Далее</a> -->
+					<a href="#" class="b-red-butt b-next-butt" data-next="#invest-final">Далее</a>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	<div class="b b-9">
 		<div class="b-block clearfix">

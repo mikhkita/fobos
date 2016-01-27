@@ -1054,7 +1054,7 @@ input:-moz-placeholder {
 	}
 	.b-8 #invest-1.b-back {
 		background-image: url('../i/b-8/1-back.jpg');
-		display: block;
+		
 	}
 	.b-8 #invest-2.b-back {
 		background-image: url('../i/b-8/2-back.jpg');
@@ -1070,6 +1070,10 @@ input:-moz-placeholder {
 	}
 	.b-8 #invest-6.b-back {
 		background-image: url('../i/b-8/6-back.jpg');
+	}
+	.b-8 #invest-final.b-back {
+		background-image: url('../i/b-8/final-back.jpg');
+		display: block;
 	}
 
 		.b-8 .b-back .b-icon{
@@ -1194,6 +1198,13 @@ input:-moz-placeholder {
 		.b-8 .b-back a.b-red-butt{
 			width: 240px;
 			box-sizing: border-box;
+		}
+		.b-8 .b-back h4{
+			font-size: 24px;
+			color: #000000;
+			font-weight: bold;
+			padding-top: 35px;
+			padding-bottom: 60px;
 		}
 .b-9{
 	background-position: 50% 50%;
