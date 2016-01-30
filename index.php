@@ -81,9 +81,9 @@ $back = rand(1,4);
 		</div>
 	</div>
 	<? if( !$mobile ): ?>
-		<div class="b b-1" style="background-image: url('../i/back-main-<?=$back?>.jpg');">
+		<div class="b b-1" style="background-image: url('i/back-main-<?=$back?>.jpg');">
 	<? else: ?>
-		<div class="b b-1" style="background-image: url('../i/back-main-<?=$back?>-mobile.jpg');">
+		<div class="b b-1" style="background-image: url('i/back-main-<?=$back?>-mobile.jpg');">
 	<? endif; ?>
 		<div class="b-block">
 			<h1>Профессиональный участник рынка ценных бумаг</h1>
