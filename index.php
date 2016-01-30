@@ -30,7 +30,7 @@ $back = rand(1,4);
     
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
 	<script type="text/javascript" src="js/jssor.js"></script>
 	<script type="text/javascript" src="js/jssor.slider.js"></script>
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
@@ -80,29 +80,6 @@ $back = rand(1,4);
 			</ul>
 		</div>
 	</div>
-	<script>
-		if($(".b-0 .b-block ul:visible").length) {
-	        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
-	        $.ajax({
-	            type: "GET",
-	            url: "quotes.php",
-	            success: function(msg){
-	                var obj = $.parseJSON(msg);
-	                $.each(obj, function(i, item) {
-	                    $("li."+i+" .value").text(item.val);
-	                    
-	                    if(item.change.indexOf("-") == -1) {
-	                       $("li."+i+" .update").removeClass("down"); 
-	                       $("li."+i+" .update span").text("+ "+item.change);
-	                    } else {
-	                        $("li."+i+" .update span").text(item.change);
-	                        $("li."+i+" .update").addClass("down");
-	                    }
-	                });
-	            }
-	        });
-    	}
-	</script>
 	<? if( !$mobile ): ?>
 		<div class="b b-1" style="background-image: url('../i/back-main-<?=$back?>.jpg');">
 	<? else: ?>
@@ -748,9 +725,67 @@ $back = rand(1,4);
 							<p>Под риском мы всегда понимаем потерю средств в инвестиционном процессе в результате его выхода из-под контроля. Одна из главных задач в нашей работе – не допустить возникновения таких ситуаций. Контроль над рисками не отделим от процесса получения прибыли!</p>
 						</li>
 					</ul>
-
 				</div>
 				<div class="sol-butt"><a href="#" class="b-red-butt fancy" data-block="#b-popup-1">Готовые решения</a></div>
+			</div>
+			<div class="faq">
+				<div class="b-block">
+					<h4>Остались вопросы?</h4>
+					<div id="accordion">
+						<h5>Какие у меня гарантии получения прибыли?</h5>
+						<div>
+							<p>Для повышения доходности под залог портфеля привлекаются средства через режим РЕПО с ЦК «ММВБ» гарантирует исполнение обязательств контрагентами. При ставке ЦБ в 11 %, дополнительный спред годовых при построении портфеля с плечом в диапазоне от 2 до 3.5. При покупке бумаг с низкой (до 1 года) безопасно для инвестора с точки зрения внезапного повышения ставки ЦБ и обесценения портфеля ввиду доходности.Данную стратегию также можно отнести к наименее рискованной.</p>
+						</div>
+						<h5>Как я буду выводить свою прибыль?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h5>Сколько раз в год я буду получать прибыль?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h5>А что, если?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h5>Могу ли я менять стратегии прибыли?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h5>Могу ли я передумать?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+						<h5>Могу ли я вам доврять?</h5>
+						<div>
+							<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+						</div>
+					</div>
+					<h4>Заполните заявку для получения консультации</h4>
+					<form action="kitsend.php" method="POST" id="b-form-ticket" data-block="#b-popup-2">
+						<div class="clearfix">
+							<label>Ваш город</label><input type="text" name="1">
+							<input type="hidden" name="1-name" value="Город">
+						</div>
+						<div class="clearfix">
+							<label>Ваше имя</label><input type="text" name="name">
+						</div>
+						<div class="clearfix">
+							<label>Вы</label><select name="2"><option>Частное лицо</option></select>
+							<input type="hidden" name="2-name" value="Клиент">
+						</div>
+						<div class="clearfix">
+							<label>Телефон для&nbsp;связи</label><input type="text" name="phone" required>
+						</div>
+						<div class="clearfix">
+							<label>Электронная почта</label><input type="text" name="email">
+						</div>
+						<input type="hidden" name="subject" value="Заявка">
+						<div class="form-butt">
+							<a class="ajax b-red-butt" onclick="$('#b-form-ticket').submit(); return false;" >Отправить заявку</a>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -809,7 +844,7 @@ $back = rand(1,4);
 							<input type="text" class="b-input-name" id="name" name="name" placeholder="Представьтесь пожалуйста" required/>
 							<input type="text" id="phone" name="phone" placeholder="Ваш телефон" required/>
 							<input type="text" name="email" placeholder="Ваш email" required/>
-							<input type="hidden" name="subject" value="Заказ"/>
+							<input type="hidden" name="subject" value="Назначить встречу"/>
 							<a class="ajax b-red-butt" onclick="$('#b-form-1').submit(); return false;" >Назначить встречу</a>
 						</div>
 					</form>

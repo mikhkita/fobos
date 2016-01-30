@@ -303,6 +303,32 @@ $(document).ready(function(){
             }
         });
     }
+    $( "#accordion" ).accordion({
+        collapsible: true,
+        heightStyle: "content"
+    });
+
+    if($(".b-0 .b-block ul:visible").length) {
+            $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
+            $.ajax({
+                type: "GET",
+                url: "quotes.php",
+                success: function(msg){
+                    var obj = $.parseJSON(msg);
+                    $.each(obj, function(i, item) {
+                        $("li."+i+" .value").text(item.val);
+                        
+                        if(item.change.indexOf("-") == -1) {
+                           $("li."+i+" .update").removeClass("down"); 
+                           $("li."+i+" .update span").text("+ "+item.change);
+                        } else {
+                            $("li."+i+" .update span").text(item.change);
+                            $("li."+i+" .update").addClass("down");
+                        }
+                    });
+                }
+            });
+        }
 });
 
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
