@@ -6,12 +6,18 @@ body {
 }
 body {
 	min-width: 1000px;
+	width: 1000px;
 	text-align: center;
 	font-family: 'Verdana',arial;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	color: #333333;
 	font-size: 14px;
+	-webkit-transform-origin: 0% 0%;
+       -moz-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+       	 -o-transform-origin: 0% 0%;
+    		transform-origin: 0% 0%;
 }
 a{
 	text-decoration: none;

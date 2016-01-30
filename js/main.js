@@ -12,6 +12,15 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        var k = (myWidth > 768)?(myWidth/960):1;
+        $("body").css({
+            "-webkit-transform" : "scale("+k+")",
+               "-moz-transform" : "scale("+k+")",
+                "-ms-transform" : "scale("+k+")",
+                 "-o-transform" : "scale("+k+")",
+                    "transform" : "scale("+k+")"
+        });
     }
     $(window).resize(resize);
     resize();
