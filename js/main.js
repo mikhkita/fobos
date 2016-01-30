@@ -119,6 +119,7 @@ $(document).ready(function(){
     });
 
     $( "#actualDate" ).datepicker({
+        autoSize: true,
         onSelect: function() {
             dateChange();
         }
@@ -127,7 +128,7 @@ $(document).ready(function(){
     $("#actualDate").change(function(){
         dateChange();
     });
-
+    dateChange();
     if(myWidth < 1000) {
         $(".b-video-list").slick({
             slidesToShow: 2,
@@ -168,7 +169,8 @@ $(document).ready(function(){
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: false,
-            arrows: false
+            prevArrow: '<span class="slick-arrow slick-prev"></span>',
+            nextArrow: '<span class="slick-arrow slick-next"></span>'
         });
     } else {
         $(".b-about-list").slick({
