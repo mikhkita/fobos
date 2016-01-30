@@ -1895,16 +1895,7 @@ padding: 21px 28px;
 		}
 
 @media (min-width: 1100px) {
-	.b-3 .b-about-list {
-		width: 942px;
-		margin-left: 18px;
-	}
-	.b-3 .b-about-list .slick-arrow.slick-next {
-		right: -58px;
-	}
-	.b-3 .b-about-list .slick-arrow.slick-prev {
-		left: -58px;
-	}
+
 }
 
 @media screen and (max-width: 1250px){
