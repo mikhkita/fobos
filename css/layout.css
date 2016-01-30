@@ -772,6 +772,7 @@ width: 100%;
 							background-position: 50%;
 							background-repeat: no-repeat;
 							left: 50%;
+							background-size: contain;
 							top: -45px;
 						}
 					.b-4 .b-block-1 .full-text .text-footer ul li:nth-child(1) {
@@ -844,6 +845,7 @@ width: 100%;
 						top: 12px;
 						background-position: 50% 50%;
 						background-repeat: no-repeat;
+						background-size: contain;
 						background-image: url('../i/play-red.png');
 						opacity: 0.000001;
 					}
@@ -857,7 +859,7 @@ width: 100%;
 				background-image: url('../i/arrows.png');
 				background-repeat: no-repeat;
 				background-size: 36px 34px;
-				top: 44px;
+				top: 41px;
 				cursor: pointer;
 			}
 			.b-4 .b-block-2 .b-video-list .slick-arrow.slick-disabled {
@@ -910,6 +912,7 @@ width: 100%;
 				}
 				.b-5 .b-service-list li .img{
 					background-repeat: no-repeat;
+					background-size: 194px 112px;
 					height: 112px;
 					margin: 0 auto 25px;
 				}
@@ -920,18 +923,20 @@ width: 100%;
 
 				.b-5 .b-service-list li:nth-child(1) .img {
 					background-image: url('../i/b-5/1.png');
-					background-position: -112px 50%;
+					background-position: -113px 50%;
+					background-size: 224px 112px;
 					width: 112px;
 				}
 				.b-5 .b-service-list li:nth-child(2) .img {
 					background-image: url('../i/b-5/2.png');
-					background-position: -97px 50%;
+					background-position: -98px 50%;
 					width: 97px;
 				}
 				.b-5 .b-service-list li:nth-child(3) .img {
 					background-image: url('../i/b-5/3.png');
 					background-position: -113px 50%;
 					width: 113px;
+					background-size: 226px 112px;
 				}
 				.b-5 .b-service-list li:not(.active):hover .img{
 					background-position: 0% 50%;
@@ -1100,7 +1105,7 @@ padding: 19px 40px 20px;
 	.b-8 .b-back{
 		background-position: 50% 50%;
 		background-size: cover;
-		padding-bottom: 80px;
+		padding-bottom: 83px;
 		display: none;
 	}
 	.b-8 #invest-1.b-back {
@@ -1126,7 +1131,7 @@ padding: 19px 40px 20px;
 		
 	}
 	.b-8 #invest-final.b-back .final-back{
-		background-position: 50% 50%;
+		background-position: 50% 0%;
 		background-size: cover;
 		background-image: url('../i/b-8/final-back.jpg');
 		padding-bottom: 19px;
@@ -1144,44 +1149,45 @@ padding: 19px 40px 20px;
 			}
 			.b-8 .b-back .b-icon .sprite {
     			background-image: url('../i/spritesheet.png');
-			    background-repeat: no-repeat;
-			    display: inline-block;
-			}
+    			background-size: 541px 90px;
+    			background-repeat: no-repeat;
+    			display: inline-block;
+   }
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-1 {
-			    width: 89px;
-			    height: 89px;
+			    width: 90px;
+			    height: 90px;
 			    background-position: 0 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-2 {
 			    width: 90px;
-			    height: 91px;
-			    background-position: -89px 0;
+			    height: 90px;
+			    background-position: -90px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-3 {
 			    width: 90px;
-			    height: 91px;
-			    background-position: -179px 0;
+			    height: 90px;
+			    background-position: -180px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-4 {
 			    width: 90px;
-			    height: 91px;
-			    background-position: -269px 0;
+			    height: 90px;
+			    background-position: -270px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-5 {
-			    width: 89px;
-			    height: 89px;
-			    background-position: -359px 0;
+			    width: 90px;
+			    height: 90px;
+			    background-position: -361px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-6 {
-			    width: 89px;
-			    height: 89px;
-			    background-position: -448px 0;
+			    width: 90px;
+			    height: 90px;
+			    background-position: -451px 0;
 			}
 
 		.b-8 .b-back h3{
@@ -1430,54 +1436,102 @@ margin-bottom: 25px;
 				background-repeat: no-repeat;
 				background-position: 50% 0%;
 			}
-			.b-8 .b-back .solution-back div {
+			.b-8 .b-back .solution-back .sol-text {
 
 padding-bottom: 74px;
 
 }
-			.b-8 .b-back .solution-back div:nth-child(2n){
+			.b-8 .b-back .solution-back .sol-text:nth-child(2n){
 				
 background-color: rgba(0,0,0,0.45);
 			}
-			.b-8 .b-back .solution-back div:nth-child(2n+1){
+			.b-8 .b-back .solution-back .sol-text:nth-child(2n+1){
 				
 background-color: rgba(0,0,0,0.25);
 			}
 
-				.b-8 .b-back .solution-back div h5 {
+				.b-8 .b-back .solution-back .sol-text h5 {
 					font-size: 30px;
 					color: #fff;
 					padding-top: 68px;
 					margin-bottom: 48px;
 					position: relative;
 				}
-					.b-8 .b-back .solution-back div h5:before {
+					.b-8 .b-back .solution-back .sol-text h5:before {
 						position: absolute;
 						font-size: 0;
 						content: "";
 						background-position: 50%;
 						background-image: url('../i/sol-icon-1.png');
+						background-size: contain;
+						background-repeat: no-repeat;
 						width: 36px;
 						height: 36px;
 						top: 30px;
 						left: 50%;
 						margin-left: -18px;
 					}
-					.b-8 .b-back .solution-back div:nth-child(2) h5:before {
+					.b-8 .b-back .solution-back .sol-text:nth-child(2) h5:before {
 						background-image: url('../i/sol-icon-2.png');
 					}
-				.b-8 .b-back .solution-back div p {
+				.b-8 .b-back .solution-back .sol-text p {
 					color: rgb(204,204,204);
 					font-style: italic;
 					line-height: 1.75;
-					width: 420px;
+					width: 390px;
 					margin: 0 auto;
 				}
-			.b-8 .b-back .solution-back div:hover {
+			.b-8 .b-back .solution-back .sol-text:hover {
 				background: none;
 			}
-			.b-8 .b-back .solution-back div:hover p {
+			.b-8 .b-back .solution-back .sol-text:hover p {
 				color: #000;
+			}
+		.b-8 .b-back .solution-back .solution-black {
+			background-color: #000;
+		}
+		.b-8 .b-back .solution-back ul {
+			
+width: 960px;
+			
+margin: 0 auto;
+		}
+			.b-8 .b-back .solution-back ul li {
+				font-weight: bold;
+				color: #fff;
+				position: relative;
+				float: left;
+				padding: 26px 26px 33px;
+				margin-right: 61px;
+				cursor: pointer;
+			}
+			.b-8 .b-back .solution-back ul li:last-child {
+				float: right;
+				margin-right: 57px;
+			}
+				.b-8 .b-back .solution-back ul li:hover {
+					color: red;
+				}
+				.b-8 .b-back .solution-back ul li p {
+					display: none;
+					position: absolute;
+					top: 92px;
+					left: 50%;
+					margin-left: -120px;
+					width: 240px;
+					color: #000;
+					line-height: 1.2;
+					font-size: 12px;
+					font-weight: 500;
+				}
+					.b-8 .b-back .solution-back ul li:hover p {
+						display: block;
+					}
+			.b-8 .b-back .solution-back .sol-butt {
+				
+padding: 147px 0 39px;
+				
+background-color: rgba(255,255,255,0.4);
 			}
 .b-9{
 	background-position: 50% 50%;
@@ -1516,6 +1570,7 @@ background-color: rgba(0,0,0,0.25);
 					top: -7px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
+					background-size: contain;
 					background-image: url('../i/b-9/1.png');
 				}
 			.b-9 .right .b-email-contact{
@@ -1533,6 +1588,7 @@ background-color: rgba(0,0,0,0.25);
 					top: 2px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
+					background-size: contain;
 					background-image: url('../i/b-9/2.png');
 				}
 			.b-9 .right .b-place-contact{
@@ -1549,6 +1605,7 @@ background-color: rgba(0,0,0,0.25);
 					top: 3px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
+					background-size: contain;
 					background-image: url('../i/b-9/3.png');
 				}
 .b-10{
@@ -1583,7 +1640,7 @@ background-color: rgba(0,0,0,0.25);
 							text-decoration: none;
 						}
 			.b-11 .b-footer-menu-cont .right{
-				margin-right: 50px;
+				margin-right: 36px;
 			}
 				.b-11 .b-footer-menu-cont .right a{
 
@@ -1592,7 +1649,7 @@ background-color: rgba(0,0,0,0.25);
 						opacity: 0.8;
 					}
 					.b-11 .b-footer-menu-cont .right a img{
-
+						width: 20px;
 					}
 		.b-11 .b-footer-cont{
 			margin-top: 126px;
@@ -1618,6 +1675,7 @@ background-color: rgba(0,0,0,0.25);
 					top: 4px;
 					background-position: 50% 50%;
 					background-repeat: no-repeat;
+					background-size: contain;
 					background-image: url('../i/book.png');
 				}
 			.b-11 .b-footer-cont .b-copy-cont{

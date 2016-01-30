@@ -181,6 +181,17 @@ $(document).ready(function(){
             nextArrow: '<span class="slick-arrow slick-next"></span>'
         });
     }
+
+    $("body").keydown(function(e) {
+      if(e.keyCode == 37) { // left
+        $(".b-about-list").slick('slickPrev');
+      }
+      else if(e.keyCode == 39) { // right
+        $(".b-about-list").slick('slickNext');
+      }
+    });
+    
+
     $( ".tab-text" ).hover(
       function() {
         $(".slide").eq($( this ).index()).addClass("hover");
