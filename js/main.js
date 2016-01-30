@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var myWidth,myHeight;
+    var myWidth,myHeight,k=1;
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -13,13 +13,15 @@ $(document).ready(function(){
             myHeight = document.body.clientHeight;
         }
 
-        var k = (myWidth > 768)?(myWidth/1000):1;
+        var width = 1000+(myWidth/20);
+        k = (myWidth > 768)?(myWidth/width):1
         $("body").css({
             "-webkit-transform" : "scale("+k+")",
                "-moz-transform" : "scale("+k+")",
                 "-ms-transform" : "scale("+k+")",
                  "-o-transform" : "scale("+k+")",
-                    "transform" : "scale("+k+")"
+                    "transform" : "scale("+k+")",
+            "width" : width+5
         });
     }
     $(window).resize(resize);
