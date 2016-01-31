@@ -13,7 +13,7 @@ $(document).ready(function(){
             myHeight = document.body.clientHeight;
         }
 
-        var width = 1000+(myWidth/20);
+        var width = 1000+(myWidth/10);
         k = (myWidth > 768)?(myWidth/width):1
         $("body").css({
             "-webkit-transform" : "scale("+k+")",
