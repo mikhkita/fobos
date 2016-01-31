@@ -48,12 +48,12 @@ $(document).ready(function(){
             $(".b-3 .b-about-list .slick-arrow").css('top',zoomHeight*0.093);
 
             $(".b-8 .b-back .b-icon").css({
-                'padding-top' : investHeight*0.0546,
+                // 'padding-top' : investHeight*0.0546,
                 'margin-bottom' : investHeight*0.0546
             });
             $(".b-8 .b-back .b-icon p").css('margin-top',investHeight*0.0131);
             $(".b-8 .b-back h3").css('margin-top',investHeight*0.0655);
-            $(".b-8 .b-back .b-checkboxes li").css('min-height',investHeight*0.3);
+            // $(".b-8 .b-back .b-checkboxes li").css('min-height',investHeight*0.3);
            
 
             
