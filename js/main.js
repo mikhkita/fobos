@@ -12,7 +12,7 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
-
+        if(myWidth >= 1000) { 
         var width = 1000+(myWidth/10);
         k = (myWidth > 768)?(myWidth/width):1
         $("body").css({
@@ -23,9 +23,46 @@ $(document).ready(function(){
                     "transform" : "scale("+k+")",
             "width" : width+5
         });
+
+        
+            var zoomHeight = myHeight/k;
+            var mainHeight = myHeight/k-$(".b-0").height();
+            var investHeight = myHeight/k-$(".b-8 .b-block").height();
+    
+            $(".b-1").css("height",mainHeight);
+            $(".b-3").css("height",zoomHeight);
+            $(".b-back.invest-test").css("height",investHeight);
+            
+
+            $(".b-1 h1").css('padding-top',mainHeight*0.04);
+            $(".b-1 .b-main-menu").css('margin-top',mainHeight*0.25);
+            $(".b-1-bottom").css('margin-top',mainHeight*0.065);
+
+            $(".b-3 h2.b-title").css({
+                'padding-top' : zoomHeight*0.1,
+                'padding-bottom' : zoomHeight*0.06
+            });
+            $(".b-3 .b-about-list").css('padding-top',zoomHeight*0.15);
+            $(".b-3 .b-about-list .slide-about >span").css('margin-bottom',zoomHeight*0.13);
+            $(".b-3 .b-about-list .slide-about div").css('margin-bottom',zoomHeight*0.02);
+            $(".b-3 .b-about-list .slick-arrow").css('top',zoomHeight*0.093);
+
+            $(".b-8 .b-back .b-icon").css({
+                'padding-top' : investHeight*0.0546,
+                'margin-bottom' : investHeight*0.0546
+            });
+            $(".b-8 .b-back .b-icon p").css('margin-top',investHeight*0.0131);
+            $(".b-8 .b-back h3").css('margin-top',investHeight*0.0655);
+            $(".b-8 .b-back .b-checkboxes li").css('min-height',investHeight*0.3);
+           
+
+            
+            
+        }
     }
     $(window).resize(resize);
     resize();
+
 
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
@@ -320,26 +357,28 @@ $(document).ready(function(){
     });
 
     if($(".b-0 .b-block ul:visible").length) {
-            $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
-            $.ajax({
-                type: "GET",
-                url: "quotes.php",
-                success: function(msg){
-                    var obj = $.parseJSON(msg);
-                    $.each(obj, function(i, item) {
-                        $("li."+i+" .value").text(item.val);
-                        
-                        if(item.change.indexOf("-") == -1) {
-                           $("li."+i+" .update").removeClass("down"); 
-                           $("li."+i+" .update span").text("+ "+item.change);
-                        } else {
-                            $("li."+i+" .update span").text(item.change);
-                            $("li."+i+" .update").addClass("down");
-                        }
-                    });
-                }
-            });
-        }
+        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
+        $.ajax({
+            type: "GET",
+            url: "quotes.php",
+            success: function(msg){
+                var obj = $.parseJSON(msg);
+                $.each(obj, function(i, item) {
+                    $("li."+i+" .value").text(item.val);
+                    
+                    if(item.change.indexOf("-") == -1) {
+                       $("li."+i+" .update").removeClass("down"); 
+                       $("li."+i+" .update span").text("+ "+item.change);
+                    } else {
+                        $("li."+i+" .update span").text(item.change);
+                        $("li."+i+" .update").addClass("down");
+                    }
+                });
+            }
+        });
+    }
+    resize();
+
 });
 
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    

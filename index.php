@@ -55,7 +55,6 @@ $back = rand(1,4);
 		<li class="v" style="margin-left:480px"></li>
 		<li class="v" ></li>
 	</ul> -->
-	
 	<div class="b b-0">
 		<div class="b-block clearfix">
 			<a href="#" class="left b-logo-left"><img src="i/logo.png" alt=""></a>
@@ -150,6 +149,11 @@ $back = rand(1,4);
 		</div>
 	</div>
 	<div class="b b-3">
+		<? if( !$mobile ): ?>
+			<!-- <video autoplay loop muted class="bgvideo" id="bgvideo">
+			   <source src="video.mp4" type="video/mp4"></source>
+			</video> -->
+		<? endif; ?>
 		<div class="b-block">
 			<h2 class="b-title">О нас</h2>
 			<div class="b-about-list clearfix">
@@ -486,7 +490,7 @@ $back = rand(1,4);
 				<li data-block="#invest-6">Ожидаемая прибыль</li>
 			</ul>
 		</div>
-		<div class="b-back" id="invest-1">
+		<div class="b-back invest-test" id="invest-1">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-1"></i>
@@ -503,7 +507,7 @@ $back = rand(1,4);
 				</div>
 			</div>
 		</div>
-		<div class="b-back" id="invest-2">
+		<div class="b-back invest-test" id="invest-2">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-2"></i>
@@ -521,7 +525,7 @@ $back = rand(1,4);
 				</div>
 			</div>
 		</div>
-		<div class="b-back" id="invest-3">
+		<div class="b-back invest-test" id="invest-3">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-3"></i>
@@ -538,7 +542,7 @@ $back = rand(1,4);
 				</div>
 			</div>
 		</div>
-		<div class="b-back" id="invest-4">
+		<div class="b-back invest-test" id="invest-4">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-4"></i>
@@ -555,7 +559,7 @@ $back = rand(1,4);
 				</div>
 			</div>
 		</div>
-		<div class="b-back" id="invest-5">
+		<div class="b-back invest-test" id="invest-5">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-5"></i>
@@ -572,7 +576,7 @@ $back = rand(1,4);
 				</div>
 			</div>
 		</div>
-		<div class="b-back" id="invest-6">
+		<div class="b-back invest-test" id="invest-6">
 			<div class="b-block">
 				<div class="b-icon">
 					<i class="sprite sprite-icon-6"></i>

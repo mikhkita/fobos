@@ -173,11 +173,11 @@ margin-right: 53px;
 			font-size: 12px;
 			color: #565454;
 			text-align: left;
-			padding-top: 24px;
+			padding-top: 20px;
 			padding-left: 29px;
 		}
 		.b-1 .b-main-menu{
-			margin-top: 233px;
+			margin-top: 110px;
 		}
 			.b-1 .b-main-menu>li{
 				float: left;
@@ -235,8 +235,7 @@ float: right;
 							text-decoration: underline;
 						}
 		.b-1-bottom{
-			margin-top: 80px;
-			padding-bottom: 20px;
+			margin-top: 27px;
 		}
 			.b-1-bottom>.left{
 				margin-top: 53px;
@@ -440,10 +439,20 @@ float: right;
 	background-position: 50% 50%;
 	background-size: cover;
 	background-image: url('../i/back-3.jpg');
-	padding-bottom: 92px;
+	/*padding-bottom: 92px;*/
+	position: relative;
 }
+	.b-3 video {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		/*width: auto;*/
+		/*height: auto;*/
+	}
 	.b-3 .b-block{
-
+		z-index: 100;
 	}
 		.b-3 h2.b-title{
 			padding-top: 89px;
@@ -461,7 +470,7 @@ float: right;
 				background-image: url('../i/arrows.png');
 				background-repeat: no-repeat;
 				background-size: 84px 83px;
-				top: 140px;
+				top: 50%;
 				cursor: pointer;
 			}
 			.b-3 .b-about-list .slick-arrow.slick-disabled {
@@ -1070,15 +1079,15 @@ padding: 19px 40px 20px;
 		.b-8 .b-white-block h2.b-title{
 			padding-bottom: 17px;
 			color: #666666;
-			padding-top: 59px;
+			padding-top: 30px;
 		}
 		.b-8 .b-white-block h3{
 			font-size: 16px;
 			color: #666666;
-			padding-bottom: 36px;
+			padding-bottom: 21px;
 		}
 	.b-8 .b-white-block .nav {
-		margin-top: 20px;
+		margin-top: 5px;
 		margin-bottom: 20px;
 		display: none;
 	}
@@ -1113,7 +1122,6 @@ padding: 19px 40px 20px;
 	.b-8 .b-back{
 		background-position: 50% 50%;
 		background-size: cover;
-		padding-bottom: 83px;
 		display: none;
 	}
 	.b-8 #invest-1.b-back {
@@ -1144,8 +1152,8 @@ padding: 19px 40px 20px;
 	}
 
 		.b-8 .b-back .b-icon{
-			padding-top: 60px;
-			margin-bottom: 37px;
+			padding-top: 25px;
+			margin-bottom: 25px;
 		}
 			.b-8 .b-back .b-icon p{
 				font-size: 12px;
@@ -1155,60 +1163,61 @@ padding: 19px 40px 20px;
 			}
 			.b-8 .b-back .b-icon .sprite {
     			background-image: url('../i/spritesheet.png');
-    			background-size: 541px 90px;
+    			background-size: 420px 70px;
     			background-repeat: no-repeat;
     			display: inline-block;
    }
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-1 {
-			    width: 90px;
-			    height: 90px;
+			    width: 70px;
+			    height: 70px;
 			    background-position: 0 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-2 {
-			    width: 90px;
-			    height: 90px;
-			    background-position: -90px 0;
+			    width: 70px;
+			    height: 70px;
+			    background-position: -70px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-3 {
-			    width: 90px;
-			    height: 90px;
-			    background-position: -180px 0;
+			    width: 70px;
+			    height: 70px;
+			    background-position: -140px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-4 {
-			    width: 90px;
-			    height: 90px;
-			    background-position: -270px 0;
+			    width: 70px;
+			    height: 70px;
+			    background-position: -210px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-5 {
-			    width: 90px;
-			    height: 90px;
-			    background-position: -361px 0;
+			    width: 70px;
+			    height: 70px;
+			    background-position: -280px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-6 {
-			    width: 90px;
-			    height: 90px;
-			    background-position: -451px 0;
+			    width: 70px;
+			    height: 70px;
+			    background-position: -350px 0;
 			}
 
 		.b-8 .b-back h3{
-			font-size: 30px;
+			font-size: 26px;
 			color: #000000;
-			margin-bottom: 67px;
+			margin-bottom: 30px;
 		}
 		.b-8 .b-back .b-checkboxes{
 			display: inline-block;
-			margin-bottom: 86px;
+			margin-bottom: 0;
 		}
 			.b-8 .b-back .b-checkboxes li{
 				float: left;
 				margin-right: 103px;
 				cursor: pointer;
+				min-height: 115px;
 			}
 			.b-8 .b-back .b-checkboxes li:last-child{
 				margin-right: 0px;
@@ -1264,8 +1273,8 @@ padding: 19px 40px 20px;
 					display: block;
 				}
 		.b-8 .b-back a.b-red-butt{
-			width: 237px;
-			padding: 19px 0px 20px;
+			width: 200px;
+			padding: 15px 0px 17px;
 		}
 		.b-8 .b-back .final-back h4{
 			font-size: 24px;
@@ -1606,7 +1615,7 @@ padding: 21px 28px;
 			.b-8 .b-back .faq .b-block form {
 				text-align: left;
 				margin-left: 105px;
-				margin-top: 10px;
+				margin-bottom: 50px;
 			}
 			.b-8 .b-back .faq .b-block form > div {
 				margin-bottom: 15px;
