@@ -560,7 +560,7 @@ margin-left: 0;
 			.b-4 .b-block-1 #video-tab.b-tab a.b-play-butt{
 				display: block;
 				position: absolute;
-				background-position: 0% 50%;
+				background-position: 50% 50%;
 				background-repeat: no-repeat;
 				background-image: url('../i/play.png');
 				width: 73px;
@@ -571,7 +571,7 @@ margin-left: 0;
 				z-index: 100;
 			}
 			.b-4 .b-block-1 #video-tab.b-tab a.b-play-butt:hover{
-				background-position: -73px 50%;
+				background-image: url('../i/play-hover.png');
 			}
 		.b-4 .b-block-1 #audio-tab.b-tab {
 			background-image: url('../i/headphones.png');
@@ -771,6 +771,7 @@ margin-left: 0;
 
 	.b-4 .b-block-2{
 		background-color: #FFF;
+		position: relative;
 	}
 		.b-4 .b-block-2 .b-video-list{
 			padding: 0;
@@ -914,11 +915,8 @@ margin-left: 0;
 					color: #F00;
 				}
 				.b-5 .b-service-list li p{
-					text-align: left;
-					font-style: italic;
-					color: #cccccc;
 					font-size: 26px;
-					padding: 0 30px;
+					/*padding: 0 30px;*/
 					/*margin-left: 5px;*/
 				}
 
@@ -977,7 +975,7 @@ margin-left: 0;
 			background-size: contain;
 			background-image: url('../i/partners.jpg');
 			width: 690px;
-			height: 190px;
+			height: 187px;
 			display: inline-block;
 		}
 .b-7{
@@ -1093,7 +1091,7 @@ margin-left: 0;
 		background-position: 50% 0%;
 		background-size: cover;
 		background-image: url('../i/b-8/final-back-mobile.jpg');
-		
+		padding-bottom: 19px; 
 	}
 
 		.b-8 .b-back .b-icon{
@@ -1340,7 +1338,7 @@ width: 330px;
 				border: 2px solid #fff;
 				box-sizing: border-box;
 				margin-right: 25px;
-				padding: 17px 0 18px;
+				    padding: 23px 0 25px;
 			}
 			.b-8 .b-back .final-back .b-block .butts .b-white-butt:hover {
 				background-color: #fff;
@@ -1801,6 +1799,9 @@ width: 40px;
 		background-image: url('../i/back-popup.jpg');
 		padding: 65px 50px 28px;
 	}
+		.b-popup .b-popup-back form {
+			width: 100%;
+		}
 		.b-popup .b-data-cont{
 			margin-bottom: 30px;	
 		}
@@ -1838,6 +1839,7 @@ width: 40px;
 				margin-top: 30px;
 				cursor: pointer;
 				margin-bottom: 35px;
+				padding: 25px 50px;
 			}
 .fancybox-close{
 	background-position: 50% 50%;

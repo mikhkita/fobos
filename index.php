@@ -57,7 +57,7 @@ $back = rand(1,4);
 	</ul> -->
 	<div class="b b-0">
 		<div class="b-block clearfix">
-			<a href="#" class="left b-logo-left"><img src="i/logo.png" alt=""></a>
+			<a href="#" class="left b-logo-left"><img src="i/logo.jpg" alt=""></a>
 			<ul class="clearfix right">
 				<li class="date"></li>
 				<li class="usd">
@@ -150,9 +150,9 @@ $back = rand(1,4);
 	</div>
 	<div class="b b-3">
 		<? if( !$mobile ): ?>
-			<!-- <video autoplay loop muted class="bgvideo" id="bgvideo">
+			<video autoplay loop muted class="bgvideo" id="bgvideo">
 			   <source src="video.mp4" type="video/mp4"></source>
-			</video> -->
+			</video>
 		<? endif; ?>
 		<div class="b-block">
 			<h2 class="b-title">О нас</h2>
@@ -491,12 +491,12 @@ $back = rand(1,4);
 			</ul>
 		</div>
 		<div class="b-back invest-test" id="invest-1">
+			<div class="b-icon">
+				<i class="sprite sprite-icon-1"></i>
+				<p>Вы</p>
+			</div>
 			<div class="b-block">
-				<div>
-					<div class="b-icon">
-						<i class="sprite sprite-icon-1"></i>
-						<p>Вы</p>
-					</div>
+				<div>	
 					<h3>Кем из предложенных ниже Инвесторов Вы являетесь?</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="invest" id="id-1" value="Частное лицо" checked><label for="id-1">Частное лицо</label></li>
@@ -510,12 +510,13 @@ $back = rand(1,4);
 			</div>
 		</div>
 		<div class="b-back invest-test" id="invest-2">
-			<div class="b-block">
-				<div>
-					<div class="b-icon">
+			<div class="b-icon">
 						<i class="sprite sprite-icon-2"></i>
 						<p>Валюта</p>
 					</div>
+			<div class="b-block">
+				<div>
+					
 					<h3>В какой валюте Вы хотите Инвестировать?</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="currency" id="id-4" value="Рубли" checked><label for="id-4">Рубли</label></li>
@@ -530,12 +531,13 @@ $back = rand(1,4);
 			</div>
 		</div>
 		<div class="b-back invest-test" id="invest-3">
-			<div class="b-block">
-				<div>
-					<div class="b-icon">
+			<div class="b-icon">
 						<i class="sprite sprite-icon-3"></i>
 						<p>Срок</p>
 					</div>
+			<div class="b-block">
+				<div>
+					
 					<h3>На какой срок Вы готовы инвестировать?</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="time" id="id-8" value="Краткосрочный" checked><label for="id-8">Краткосрочный<span>(до 1 месяца)</span></label></li>
@@ -549,12 +551,13 @@ $back = rand(1,4);
 			</div>
 		</div>
 		<div class="b-back invest-test" id="invest-4">
-			<div class="b-block">
-				<div>
-					<div class="b-icon">
+			<div class="b-icon">
 						<i class="sprite sprite-icon-4"></i>
 						<p>Риск-профиль</p>
 					</div>
+			<div class="b-block">
+				<div>
+					
 					<h3>Выберите Ваш Риск&ndash;Профиль</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="risk" id="id-11" value="Консервативный" checked><label for="id-11">Консервативный<span>(Портфель составляется из федеральнго займа и квазису эмитентов (ВЭБ, ВТБ, Газпром, Роснефть)</span></label></li>
@@ -568,12 +571,13 @@ $back = rand(1,4);
 			</div>
 		</div>
 		<div class="b-back invest-test" id="invest-5">
-			<div class="b-block">
-				<div>
-					<div class="b-icon">
+			<div class="b-icon">
 						<i class="sprite sprite-icon-5"></i>
 						<p>Объем инвестиций</p>
 					</div>
+			<div class="b-block">
+				<div>
+					
 					<h3>Какой Ваш предполагаемый Объем Инвестиций?</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="size" id="id-14" value="До 1 000 000" checked><label for="id-14">До 1 000 000</label></li>
@@ -587,12 +591,13 @@ $back = rand(1,4);
 			</div>
 		</div>
 		<div class="b-back invest-test" id="invest-6">
-			<div class="b-block">
-				<div>
-					<div class="b-icon">
+			<div class="b-icon">
 						<i class="sprite sprite-icon-6"></i>
 						<p>Ожидаемая прибыль</p>
 					</div>
+			<div class="b-block">
+				<div>
+					
 					<h3>Какую прибыль Вы ожидаете от инвестиций?</h3>
 					<ul class="clearfix b-checkboxes">
 						<li><input type="radio" name="profit" id="id-17" value="1% - 15%" checked><label for="id-17">1% - 15%</label></li>
@@ -623,70 +628,70 @@ $back = rand(1,4);
 					<ul class="stats">
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Сбербанк</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Газпром</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Роснефть</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>ГМК Норникель</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Сургутнефтегаз</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>ВТБ</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Уралсиб</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Северсталь</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>Лукойл</h5>
 						</li>
 						<li>          
 							<div>
-								<span>43%</span>
+								<span>100%</span>
 								<div></div>
 							</div>
 							<h5>РЖД</h5>
@@ -835,9 +840,9 @@ $back = rand(1,4);
 				</div>
 			</div>
 			<div class="b-footer-cont clearfix">
-				<div class="left b-book-cont">
+				<a class="left b-book-cont fancy-img" href="i/back-1.jpg">
 					Наши лицензии
-				</div>
+				</a>
 				<div class="left b-copy-cont">
 					ООО “Фобос Кэпитал”.<br>Профессиональный участник рынка ценных бумаг.
 				</div>

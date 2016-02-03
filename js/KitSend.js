@@ -58,11 +58,28 @@ $(document).ready(function(){
 	$(window).scroll(whenScroll);
 	whenScroll();
 
+	var myWidth,myHeight,k=1;
+	function resize(){
+       if( typeof( window.innerWidth ) == 'number' ) {
+            myWidth = window.innerWidth;
+            myHeight = window.innerHeight;
+        } else if( document.documentElement && ( document.documentElement.clientWidth || 
+        document.documentElement.clientHeight ) ) {
+            myWidth = document.documentElement.clientWidth;
+            myHeight = document.documentElement.clientHeight;
+        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+            myWidth = document.body.clientWidth;
+            myHeight = document.body.clientHeight;
+        }	
+    };
+    resize();
 	$(".fancy").each(function(){
 		var $popup = $($(this).attr("data-block")),
 			$this = $(this);
 		$this.fancybox({
 			padding : 0,
+			topRatio: 0,
+			fitToView: false,
 			content : $popup,
 			helpers: {
 	         	overlay: {
@@ -70,6 +87,11 @@ $(document).ready(function(){
 	         	}
 	      	},
 			beforeShow: function(){
+				if(myWidth >= 1000) { 
+					var width = 1000+(myWidth/10);
+	        		var k = (myWidth > 768)?(myWidth/width):1;
+					$popup.css("margin-top",$(window).scrollTop()/k+(myHeight/k*0.1));
+				}
 				$popup.find(".custom-field").remove();
 				if( $this.attr("data-value") ){
 					var name = getNextField($popup.find("form"));
@@ -107,7 +129,14 @@ $(document).ready(function(){
 	});
 
 	$(".fancy-img").fancybox({
-		padding : 0
+		padding : 0,
+		beforeShow: function(){
+			if(myWidth >= 1000) { 
+				var width = 1000+(myWidth/10);
+        		var k = (myWidth > 768)?(myWidth/width):1;
+				$(".fancybox-inner").css("margin-top",$(window).scrollTop()/k);
+			}
+		}
 	});
 
 	$(".ajax").parents("form").submit(function(){
