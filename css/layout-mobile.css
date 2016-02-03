@@ -177,7 +177,8 @@ input:-moz-placeholder {
 						margin-bottom: 5px;
 					}
 						.b-1 .b-main-menu .b-main-submenu li:hover{
-							text-decoration: underline;
+							text-decoration: none;
+							border-bottom: 1px solid rgba(0,0,0,0);
 						}
 		.b-1-bottom{
 			margin-top: 0;

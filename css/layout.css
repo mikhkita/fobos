@@ -232,9 +232,11 @@ float: right;
 						cursor: pointer;
 						display: inline-block;
 						margin-bottom: 5px;
+						border-bottom: 1px solid rgba(0,0,0,0);
 					}
 						.b-1 .b-main-menu .b-main-submenu li:hover{
-							text-decoration: underline;
+							/* text-decoration: underline; */
+							border-bottom: 1px solid red;
 						}
 		.b-1-bottom{
 			margin-top: 27px;
