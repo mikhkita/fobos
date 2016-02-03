@@ -214,6 +214,7 @@ float: right;
 				}
 				.b-1 .b-main-menu li:hover span{
 					color: #F00;
+					border-bottom: 3px solid rgba(0,0,0,0);
 				}
 				.b-1 .b-main-menu .b-main-submenu{
 					display: none;
@@ -232,11 +233,11 @@ float: right;
 						cursor: pointer;
 						display: inline-block;
 						margin-bottom: 5px;
-						border-bottom: 1px solid rgba(0,0,0,0);
+						/*border-bottom: 1px solid rgba(0,0,0);*/
 					}
 						.b-1 .b-main-menu .b-main-submenu li:hover{
-							/* text-decoration: underline; */
-							border-bottom: 1px solid red;
+							 text-decoration: underline; 
+							/*border-bottom: 1px solid red;*/
 						}
 		.b-1-bottom{
 			margin-top: 27px;
@@ -514,6 +515,7 @@ float: right;
 					background-repeat: repeat-x;
 					top: 3px;
 					right: -158px;
+					display: none;
 				}
 
 				.b-3 .b-about-list .slide-about div{
