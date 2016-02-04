@@ -97,6 +97,23 @@ input:-moz-placeholder {
 	.b-orange-butt:hover{
 		
 	}
+.up-arrow {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	background-position: 50%;
+	right: 60px;
+	top: 0;
+	z-index: 1000;
+	opacity: 1;
+	-webkit-transition: all 1s ease-out 0.5s;
+     -moz-transition: all 1s ease-out 0.5s;
+     -o-transition: all 1s ease-out 0.5s;
+     transition: all 1s ease-out 0.5s;
+	background-image: url("../i/up.png");
+	cursor: pointer;
+}
 .b-0{
 
 }

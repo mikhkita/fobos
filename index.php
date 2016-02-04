@@ -49,12 +49,14 @@ $back = rand(1,4);
 	<script type="text/javascript" src="js/main.js"></script>
 
 </head>
+
 <body>
 	<!-- <ul class="ps-lines">
 		<li class="v" style="margin-left:-481px"></li>
 		<li class="v" style="margin-left:480px"></li>
 		<li class="v" ></li>
 	</ul> -->
+	<div class="up-arrow b-go" data-block=".b-0"></div>
 	<div class="b b-0">
 		<div class="b-block clearfix">
 			<a href="#" class="left b-logo-left"><img src="i/logo.jpg" alt=""></a>
@@ -698,7 +700,7 @@ $back = rand(1,4);
 						</li>
 					</ul>
 					<div class="clearfix butts">
-						<a href="#" class="b-white-butt b-red-butt fancy" data-block="#b-popup-1">Изменить ответы</a>
+						<a href="#" class="b-white-butt b-red-butt b-next-butt"  data-next="#invest-1">Изменить ответы</a>
 						<a href="#" class="b-red-butt fancy" data-block="#b-popup-1">Мне подходит</a>
 					</div>
 				</div>

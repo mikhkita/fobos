@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+
+
+
     var myWidth,myHeight,k=1;
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
@@ -114,7 +118,12 @@ $(document).ready(function(){
     }
     $(window).resize(resize);
     resize();
+    $(window).scroll(function(){
+        if($(window).scrollTop()/k >= 500) {
+            $(".up-arrow").show().css("margin-top",$(window).scrollTop()/k+myHeight/k-80);
 
+        } else $(".up-arrow").hide();
+    });
 
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
