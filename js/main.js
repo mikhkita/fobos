@@ -119,7 +119,7 @@ $(document).ready(function(){
     $(window).resize(resize);
     resize();
     $(window).scroll(function(){
-        if($(window).scrollTop()/k >= 500) {
+        if($(window).scrollTop()/k >= 1000/k) {
             $(".up-arrow").show().css("margin-top",$(window).scrollTop()/k+myHeight/k-80);
 
         } else $(".up-arrow").hide();
