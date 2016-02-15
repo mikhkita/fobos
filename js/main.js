@@ -1,9 +1,5 @@
 $(document).ready(function(){
-
-
-
-
-    var myWidth,myHeight,k=1;
+    var myWidth,myHeight,k=1,date;
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -125,6 +121,7 @@ $(document).ready(function(){
         } else $(".up-arrow").hide();
     });
 
+
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
             $('[placeholder]').focus(function() {
@@ -220,24 +217,36 @@ $(document).ready(function(){
 
     $( "#datepicker-inline" ).datepicker({
         altField: "#actualDate",
+        defaultDate: 0,
         onSelect: function() {
-            dateChange();
+            dateChange(date);
             $("#date-popup").click();
            
         }
     });
-
+    
+    date = $( "#actualDate" ).val();
+    
     $( "#actualDate" ).datepicker({
         autoSize: true,
         onSelect: function() {
-            dateChange();
+            dateChange(date);
         }
     });
 
     $("#actualDate").change(function(){
-        dateChange();
+        dateChange(date);
     });
-    dateChange();
+    dateChange(date);
+
+
+    if(myWidth >= 1000) {
+        $( "body" ).on("click","#actualDate",function(){
+                $("#ui-datepicker-div").css("left","50%");
+                $("#ui-datepicker-div").css("top",$(window).scrollTop()/k+$("#b-popup-1").height()/2+"px");
+        });
+    }
+
     if(myWidth < 1000) {
         $(".b-video-list").slick({
             slidesToShow: 2,
@@ -419,38 +428,22 @@ $(document).ready(function(){
         heightStyle: "content"
     });
 
-    if($(".b-0 .b-block ul:visible").length) {
-        $("li.date").text($.datepicker.formatDate( "d.mm.yy", new Date() ));
-        $.ajax({
-            type: "GET",
-            url: "quotes.php",
-            success: function(msg){
-                var obj = $.parseJSON(msg);
-                $.each(obj, function(i, item) {
-                    $("li."+i+" .value").text(item.val);
-                    
-                    if(item.change.indexOf("-") == -1) {
-                       $("li."+i+" .update").removeClass("down"); 
-                       $("li."+i+" .update span").text("+ "+item.change);
-                    } else {
-                        $("li."+i+" .update span").text(item.change);
-                        $("li."+i+" .update").addClass("down");
-                    }
-                });
-            }
-        });
-    }
     resize();
 
-});
+    
+    $("#refresh-date").click(function(){
+        $( "#actualDate" ).val(date);
+        dateChange(date);
+    });
 
+    
+});
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
-function dateChange() {
+function dateChange(date) {
     var arr = $("#actualDate").val().split(".");
-    if(arr[0] !="" && arr[0] <= 31 && arr[1] <=12 && arr[2] <= 2050) {
-        $("#date-text").text(parseInt(arr[0])+" "+months[parseInt(arr[1])]+" "+arr[2]);
-    } else {
-        $("#date-text").text("");
-        $("#actualDate").val("");
+    if(!(arr[0] !="" && arr[0] <= 31 && arr[1] <=12 && arr[2] <= 2050)) {
+        $( "#actualDate" ).val(date);
+        arr = $("#actualDate").val().split(".");
     }
+    $("#date-text").text(parseInt(arr[0])+" "+months[parseInt(arr[1])]+" "+arr[2]);
 }

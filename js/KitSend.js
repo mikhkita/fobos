@@ -6,49 +6,11 @@ function getNextField($form){
 	return j;
 }
 
-function fancyOpen(el){
-    $.fancybox(el,{
-        scrolling: 'no',
-        afterShow:function(){
-            setTimeout(function(){
-                $('.fancybox-wrap').css({
-                    'position':'absolute'
-                });
-                $('.fancybox-inner').css('height','auto');
-            },200);
-        },
-        padding:0
-    }); 
-    $('html').addClass('fancybox-lock'); 
-    $('.fancybox-overlay').html($('.fancybox-wrap')); 
-    return false;
-}
+
 
 var customHandlers = [];
 
 $(document).ready(function(){	
-	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
-		tePhone = '+7 (999) 999-99-99';
-
-	$.validator.addMethod('customPhone', function (value) {
-		return rePhone.test(value);
-	});
-
-	$(".ajax").parents("form").each(function(){
-		$(this).validate({
-			rules: {
-				email: 'email',
-				phone: 'customPhone'
-			}
-		});
-		if( $(this).find("input[name=phone]").length ){
-			$(this).find("input[name=phone]").mask(tePhone,{placeholder:"_"});
-		}
-		if( $(this).find("#actualDate").length ){
-			$(this).find("#actualDate").mask("99.99.9999",{placeholder:"_"});
-		}
-	});
-
 	function whenScroll(){
 		var scroll = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 		if( customHandlers["onScroll"] ){
@@ -73,12 +35,84 @@ $(document).ready(function(){
         }	
     };
     resize();
+    function fancyOpen(el){
+    	if(myWidth >= 1000) {
+	    	var k;
+		    $.fancybox(el,{
+		        scrolling: 'no',
+		        topRatio: 0,
+		        beforeShow: function(){
+					var width = 1000+(myWidth/10);
+	        		k = (myWidth > 768)?(myWidth/width):1;
+					el.css("margin-top",$(window).scrollTop()/k+(myHeight/k*0.1));
+				},
+				openEffect: "none",
+		        afterShow:function(){
+		        	var margin = el.width()/2;
+		            setTimeout(function(){
+		                $('.fancybox-wrap').css({
+		                    'position':'absolute',
+		                    'top': 0,
+		                    'left' : "50%",
+		                    'margin-left': '-'+margin+"px"
+		                });
+		                $('.fancybox-inner').css('height','auto');
+		            },1);
+		        },
+		        padding:0
+		    }); 
+		} else {
+			$.fancybox(el,{
+		        scrolling: 'no',
+		        afterShow:function(){
+		            setTimeout(function(){
+		                $('.fancybox-wrap').css({
+		                    'position':'absolute'
+		                });
+		                $('.fancybox-inner').css('height','auto');
+		            },200);
+		        },
+		        padding:0
+		    }); 
+		}
+	    $('html').addClass('fancybox-lock'); 
+	    $('.fancybox-overlay').html($('.fancybox-wrap')); 
+	    return false;
+	}
+	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+		tePhone = '+7 (999) 999-99-99';
+
+	$.validator.addMethod('customPhone', function (value) {
+		return rePhone.test(value);
+	});
+
+	$(".ajax").parents("form").each(function(){
+		$(this).validate({
+			rules: {
+				email: 'email',
+				phone: 'customPhone'
+			}
+		});
+		if( $(this).find("input[name=phone]").length ){
+			$(this).find("input[name=phone]").mask(tePhone,{placeholder:"_"});
+		}
+		if( $(this).find("#actualDate").length ){
+			$(this).find("#actualDate").mask("99.99.9999",{placeholder:"_"});
+		}
+	});
+
+	
 	$(".fancy").each(function(){
+		var k;
 		var $popup = $($(this).attr("data-block")),
 			$this = $(this);
+		var top = 0.5;
+		if(myWidth >= 1000) {
+			top = 0;
+		}
 		$this.fancybox({
 			padding : 0,
-			topRatio: 0,
+			topRatio: top,
 			fitToView: false,
 			content : $popup,
 			helpers: {
@@ -89,7 +123,7 @@ $(document).ready(function(){
 			beforeShow: function(){
 				if(myWidth >= 1000) { 
 					var width = 1000+(myWidth/10);
-	        		var k = (myWidth > 768)?(myWidth/width):1;
+	        		k = (myWidth > 768)?(myWidth/width):1;
 					$popup.css("margin-top",$(window).scrollTop()/k+(myHeight/k*0.1));
 				}
 				$popup.find(".custom-field").remove();
@@ -105,6 +139,7 @@ $(document).ready(function(){
 				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
 					customHandlers[$this.attr("data-afterShow")]($this);
 				}
+				
 			},
 			beforeClose: function(){
 				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
@@ -118,7 +153,7 @@ $(document).ready(function(){
 			}
 		});
 	});
-
+	
 	$(".b-go").click(function(){
 		var block = $( $(this).attr("data-block") ),
 			off = $(this).attr("data-offset")||0;
@@ -142,7 +177,8 @@ $(document).ready(function(){
 	$(".ajax").parents("form").submit(function(){
   		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
   			var $this = $(this),
-  				$thanks = $($this.attr("data-block"));
+  				$thanks = $($this.attr("data-block")),
+  				text = $(this).attr("data-thank");
 
   			if( $this.attr("data-beforeAjax") && customHandlers[$this.attr("data-beforeAjax")] ){
 				customHandlers[$this.attr("data-beforeAjax")]($this);
@@ -155,6 +191,7 @@ $(document).ready(function(){
 				success: function(msg){
 					var $form;
 					if( msg == "1" ){
+						$("#b-popup-2 h3").text(text);
 						$form = $thanks.clone();
 					}else{
 						$form = $("#b-popup-error");

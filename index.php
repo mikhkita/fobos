@@ -87,7 +87,7 @@ $back = rand(1,4);
 		<div class="b b-1" style="background-image: url('i/back-main-<?=$back?>-mobile.jpg');">
 	<? endif; ?>
 		<div class="b-block">
-			<h1>Профессиональный участник рынка ценных бумаг</h1>
+			<h1>Инвестируя в будущее</h1>
 			<ul class="b-main-menu clearfix">
 				<li><span>МЫ</span>
 					<ul class="b-main-submenu">
@@ -118,12 +118,12 @@ $back = rand(1,4);
 					<div class="right"><span>%</span>годовых</div>
 				</div>
 				<div class="right clearfix">
-					<div class="b-red-button callback" data-block="#b-popup-1">
+					<div class="b-red-button callback">
 						<div class="b-but b-but-1">
 
 							<!-- <i></i> -->
 							<p>Обсудить<br>по телефону</p>
-							<form action="kitsend.php" method="POST" id="b-form-callback" data-block="#b-popup-2">
+							<form action="kitsend.php" method="POST" id="b-form-callback" data-thank="Вы оставили заявку на звонок" data-block="#b-popup-2">
 								<label for="callback-phone">Ваш телефон</label>
 								<input id="callback-phone" type="text" name="phone" required>
 								<input type="hidden" name="subject" value="Обсудить по телефону"/>
@@ -145,9 +145,16 @@ $back = rand(1,4);
 	</div>
 	<div class="b b-2">
 		<div class="b-block">
-			<h2 class="b-title">SEO-текст</h2>
-			<p>На этом месте было бы неплохо разместить небольшой SEO-текст. Он поможет в продвижении сайта и первичном знакомстве с компанией. EVRAZ представил отчетность по МСФО за 1П15. Результаты оказались ожидаемо слабыми на фоне падения экспортных и внутренних цен на сталь, что было компенсировано ослаблением рубля, которое позволило сохранить рентабельность почти на прежнем уровне – 19% (-1 пп к 2п14). При этом специализация на сортовом прокате и удаленность от основных рынков сбыта обусловила худшую динамику в секторе: EBITDA EVRAZ сократилась на 26% -п против -5% у Северстали и -16% у НЛМК. Рост долговой нагрузки по показателю.<br><br>
-			Чистый долг/EBITDA оказался несущественным – до 2.6х, однако ускорится во 2П15, поскольку финансовые результаты компании останутся под давлением из-за негативной конъюнктуры рынка стали. Тем не менее мы ожидаем, что по итогаиски рефинансирования в 2015-2016 гг. мы считаем умеренно низкими: несмотря на крупные погашения</p>
+			<h2 class="b-title">СТРАТЕГИЯ УСПЕХА</h2>
+			<p>Мы&nbsp;с&nbsp;Вами живем в&nbsp;интересное и&nbsp;очень непростое время для всего финансового мира. Для России это время больших потрясений и&nbsp;перемен, начиная с&nbsp;курса национальной валюты вплоть до&nbsp;глубоких структурных изменений нашего общества. В&nbsp;данных условиях сильно возрастает вероятность совершения ошибок и&nbsp;связанных с&nbsp;ними неминуемых финансовых потерь. Напротив, наличие знаний о&nbsp;природе финансовых кризисов, их&nbsp;причинах и&nbsp;последствиях предоставляет широчайшие возможности по&nbsp;сохранению и&nbsp;приумножению своего капитала. Но&nbsp;где&nbsp;же можно их&nbsp;получить?</p>
+			<p>Где достать те&nbsp;ценные сведение, которые уберегут наши средства и&nbsp;обеспечат финансовое благополучие? Разумеется, способов очень много. <nobr>Кто-то</nobr> выбирает путь самостоятельного освоения основ фондового рынка путем проб и&nbsp;ошибок. Другие решают для себя получить профессиональное образование в&nbsp;сфере финансов и&nbsp;рынка ценных бумаг.&nbsp;Скажу откровенно: это прекрасные способы, действенные в&nbsp;итоге и&nbsp;весьма эффективные. Однако потраченные на&nbsp;них время и&nbsp;средства могут не&nbsp;устроить большинство из&nbsp;нас, тем более, когда нужно действовать уже здесь и&nbsp;сейчас, пока возможности не&nbsp;упущены, а&nbsp;деньги не&nbsp;потеряны.</p>
+			<p>В&nbsp;нашем фонде мы&nbsp;придерживаемся четкого правила: каждый из&nbsp;нас должен заниматься тем, что ему больше всего по&nbsp;душе. Следуя этому принципу, я&nbsp;считаю, человек достигнет не&nbsp;только финансового благополучия, но&nbsp;и&nbsp;самоудовлетворения, признания других, да&nbsp;и&nbsp;вообще всего, чего он&nbsp;пожелает. Поэтому, на&nbsp;мой взгляд, наиболее эффективным способом борьбы с&nbsp;тяжелой текущей финансовой ситуацией в&nbsp;нашей стране, да&nbsp;и&nbsp;в&nbsp;мире в&nbsp;целом, будет обратиться к&nbsp;тем людям, у&nbsp;которых уже есть накопленный опыт в&nbsp;решении таких задач. Обращайтесь к&nbsp;Профессионалам! Не&nbsp;бойтесь того, что сперва у&nbsp;Вас будет много вопросов, Вы&nbsp;не&nbsp;будете улавливать <nobr>какие-то</nobr> детали или вообще смысл всего что Вам говорят. В&nbsp;конченом счете Вы&nbsp;во&nbsp;всем разберетесь, а&nbsp;грамотный высококвалифицированный специалист Вам в&nbsp;этом поможет.</p>
+			<p>Единственное, что следует всегда четко помнить: никогда не&nbsp;принимайте инвестиционного решения без полного его понимания. Я&nbsp;считаю, что абсолютно любой Профессионал сможет объяснить простым языком любые сложные вещи так, чтобы они были понятны нам с&nbsp;вами, никогда раньше с&nbsp;этим не&nbsp;сталкивавшимися. В&nbsp;противном случае, ищите других специалистов, и, как говорят, &laquo;<i>дорогу осилит идущий</i>&raquo;.</p>
+			<p>Желаю Вам успеха и финансового благополучия!</p>
+			<p class="sign">Управляющий директор «Фобос Кэпитал»<br><br>Алексей Соколов</p>
+			<span style="display: block;border-bottom: 1px dashed #333333; margin-left: 27px; margin-right: 35px;">&nbsp;</span>
+			<h3><i>Краткая справка</i></h3>
+			<p>&laquo;<i>Фобос Кэпитал</i>&raquo;&nbsp;&mdash; инвестиционный фонд, образованный в&nbsp;начале 2012 года специалистами инвестиционных подразделений крупнейших российских банков. С&nbsp;момента образования компания успела зарекомендовать себя как надежного управляющего и&nbsp;достойного контрагента, не&nbsp;только сохранив капитал своих инвесторов, но&nbsp;и&nbsp;сумев показать доходность значительно выше рыночной. За&nbsp;три года размер собственных средств компании вырос с&nbsp;50 до&nbsp;150&nbsp;миллионов рублей, а&nbsp;размер активов под управлением на&nbsp;третий квартал 2015 года превысил 2&nbsp;миллиарда.</p>
 		</div>
 	</div>
 	<div class="b b-3">
@@ -417,51 +424,51 @@ $back = rand(1,4);
 					<div class="clearfix">
 						<h4>Готовые торговые стратегии</h4>
 						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
-						<a href="#" class="b-red-butt">К стратегиям</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">К стратегиям</a>
 					</div>
 					<div class="clearfix">
 						<h4>Индивидуальные инвестиционные решения</h4>
 						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
-						<a href="#" class="b-red-butt">Пример решений</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Пример решений</a>
 					</div>
 					<div class="clearfix">
 						<h4>Структурные продукты</h4>
 						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
-						<a href="#" class="b-red-butt">Обзор продуктов</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Обзор продуктов</a>
 					</div>
 				</div>
 				<div class="service" id="yr">
 					<div class="clearfix">
 						<h4>Готовые торговые стратегии</h4>
 						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
-						<a href="#" class="b-red-butt">К стратегиям</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">К стратегиям</a>
 					</div>
 					<div class="clearfix">
 						<h4>Индивидуальные инвестиционные решения</h4>
 						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
-						<a href="#" class="b-red-butt">Пример решений</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Пример решений</a>
 					</div>
 					<div class="clearfix">
 						<h4>Структурные продукты</h4>
 						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
-						<a href="#" class="b-red-butt">Обзор продуктов</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Обзор продуктов</a>
 					</div>
 				</div>
 				<div class="service" id="fin">
 					<div class="clearfix">
 						<h4>Готовые торговые стратегии</h4>
 						<p>Для физических лиц мы представляем готовые торговые стратегии с заранее определенными уровнем доходности.</p>
-						<a href="#" class="b-red-butt">К стратегиям</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">К стратегиям</a>
 					</div>
 					<div class="clearfix">
 						<h4>Индивидуальные инвестиционные решения</h4>
 						<p>Мы разрабатываем стратегию инвестирования для каждого клиента, исходя из его пожеланий по уровню ожидаемой доходности и горизонту инвестирования.</p>
-						<a href="#" class="b-red-butt">Пример решений</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Пример решений</a>
 					</div>
 					<div class="clearfix">
 						<h4>Структурные продукты</h4>
 						<p>Предварительно сформированные портфели, компоненты которых подобраны по отраслям. Заранее определены уровни доходности и риски.</p>
-						<a href="#" class="b-red-butt">Обзор продуктов</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Обзор продуктов</a>
 					</div>
 				</div>
 			</div>
@@ -470,13 +477,13 @@ $back = rand(1,4);
 	<div class="b b-6">
 		<div class="b-block">
 			<h2 class="b-title">НАМ ДОВЕРЯЮТ</h2>
-			<div class="b-partners"></div>
+			<div class="b-partners"><p>В&nbsp;настоящий момент мы&nbsp;работаем с&nbsp;широким кругом контрагентов, от&nbsp;маленьких фондов до&nbsp;крупнейших банков. И&nbsp;этот список постоянно расширяется. Мы&nbsp;всегда открыты к&nbsp;сотрудничеству и&nbsp;будем рады Вашим предложениям.</p></div>
 		</div>
 	</div>
 	<div class="b b-7">
 		<div class="b-block">
 			<p>Наши клиенты и партнеры - это крупнейшие банки России и всего мира. Мы их очень любим и уважаем, поэтому делаем все, что в наших силах, чтобы с каждым днем их состоянии увеличивалось, ведь их прибыль - это и наша прибыль. Станьте и Вы нашим партнером, и мы поможем Вам стать  чуточку богаче!</p>
-			<a href="#" class="b-red-butt fancy" data-block="#b-popup-1">Стать партнером</a>
+			<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Стать партнером</a>
 		</div>
 	</div>
 	<div class="b b-8">
@@ -630,78 +637,78 @@ $back = rand(1,4);
 					<ul class="stats">
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>43%</span>
+								<div style="height:43px;"></div>
 							</div>
 							<h5>Сбербанк</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>19%</span>
+								<div style="height:19px;"></div>
 							</div>
 							<h5>Газпром</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>17%</span>
+								<div style="height:17px;"></div>
 							</div>
 							<h5>Роснефть</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>13%</span>
+								<div style="height:13px;"></div>
 							</div>
 							<h5>ГМК Норникель</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>10%</span>
+								<div style="height:10px;"></div>
 							</div>
 							<h5>Сургутнефтегаз</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>9%</span>
+								<div style="height:9px;"></div>
 							</div>
 							<h5>ВТБ</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>8.5%</span>
+								<div style="height:8.5px;"></div>
 							</div>
 							<h5>Уралсиб</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>6%</span>
+								<div style="height:6px;"></div>
 							</div>
 							<h5>Северсталь</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>5%</span>
+								<div style="height:5px;"></div>
 							</div>
 							<h5>Лукойл</h5>
 						</li>
 						<li>          
 							<div>
-								<span>100%</span>
-								<div></div>
+								<span>3%</span>
+								<div style="height:3px;"></div>
 							</div>
 							<h5>РЖД</h5>
 						</li>
 					</ul>
 					<div class="clearfix butts">
 						<a href="#" class="b-white-butt b-red-butt b-next-butt"  data-next="#invest-1">Изменить ответы</a>
-						<a href="#" class="b-red-butt fancy" data-block="#b-popup-1">Мне подходит</a>
+						<a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Мне подходит</a>
 					</div>
 				</div>
 			</div>
@@ -749,7 +756,7 @@ $back = rand(1,4);
 						</li>
 					</ul>
 				</div>
-				<div class="sol-butt"><a href="#" class="b-red-butt fancy" data-block="#b-popup-1">Готовые решения</a></div>
+				<div class="sol-butt"><a href="#" class="b-red-butt fancy" data-block="#b-popup-consult">Готовые решения</a></div>
 			</div>
 			<div class="faq">
 				<div class="b-block">
@@ -785,7 +792,7 @@ $back = rand(1,4);
 						</div>
 					</div>
 					<h4>Заполните заявку для получения консультации</h4>
-					<form action="kitsend.php" method="POST" id="b-form-ticket" data-block="#b-popup-2">
+					<form action="kitsend.php" method="POST" id="b-form-ticket" data-thank="Вы оставили заявку на консультацию" data-block="#b-popup-2">
 						<div class="clearfix">
 							<label>Ваш город</label><input type="text" name="1">
 							<input type="hidden" name="1-name" value="Город">
@@ -803,7 +810,7 @@ $back = rand(1,4);
 						<div class="clearfix">
 							<label>Электронная почта</label><input type="text" name="email">
 						</div>
-						<input type="hidden" name="subject" value="Заявка">
+						<input type="hidden" name="subject" value="Заявка на консультацию">
 						<div class="form-butt">
 							<a class="ajax b-red-butt" onclick="$('#b-form-ticket').submit(); return false;" >Отправить заявку</a>
 						</div>
@@ -842,9 +849,9 @@ $back = rand(1,4);
 				</div>
 			</div>
 			<div class="b-footer-cont clearfix">
-				<a class="left b-book-cont fancy-img" href="i/back-1.jpg">
+				<!-- <a class="left b-book-cont fancy-img" href="i/back-1.jpg">
 					Наши лицензии
-				</a>
+				</a> -->
 				<div class="left b-copy-cont">
 					ООО “Фобос Кэпитал”.<br>Профессиональный участник рынка ценных бумаг.
 				</div>
@@ -857,11 +864,12 @@ $back = rand(1,4);
 			<div class="b-popup">
 				<div class="b-head">Вы выбрали дату</div>
 				<div class="b-popup-back">
-					<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2">
+					<form action="kitsend.php" method="POST" id="b-form-1" data-block="#b-popup-2" data-thank="Вы оставили заявку на встречу">
 						<div class="clearfix b-data-cont">
 							<h3 class="left" id="date-text"></h3>
 							<input type="text" name="1" class="b-data-input right" id="actualDate" placeholder="Укажите дату" required>
 							<input type="hidden" name="1-name" value="Дата">
+							<span id="refresh-date"></span>
 						</div>
 						<div class="b-popup-form">
 							<input type="text" class="b-input-name" id="name" name="name" placeholder="Представьтесь пожалуйста" required/>
@@ -869,6 +877,28 @@ $back = rand(1,4);
 							<input type="text" name="email" placeholder="Ваш email" required/>
 							<input type="hidden" name="subject" value="Назначить встречу"/>
 							<a class="ajax b-red-butt" onclick="$('#b-form-1').submit(); return false;" >Назначить встречу</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="b-popup-consult">
+			<div class="b-popup">
+				<div class="b-head">Заполните заявку для получения консультации</div>
+				<div class="b-popup-back">
+					<form action="kitsend.php" method="POST" id="b-form-consult" data-thank="Вы оставили заявку на консультацию" data-block="#b-popup-2">
+						<div class="b-popup-form consult">
+							<input type="text" name="1" placeholder="Ваш город">
+							<input type="hidden" name="1-name" value="Город">
+							<input type="text" name="name" placeholder="Ваше имя">
+							<select name="2"><option>Частное лицо</option></select>
+							<input type="hidden" name="2-name" value="Клиент">
+							<input type="text" name="phone" placeholder="Ваш телефон" required>
+							<input type="text" name="email" placeholder="Ваш E-mail">
+							<input type="hidden" name="subject" value="Заявка на консультацию">
+							<div class="form-butt">
+								<a class="ajax b-red-butt" onclick="$('#b-form-consult').submit(); return false;" >Отправить заявку</a>
+							</div>
 						</div>
 					</form>
 				</div>

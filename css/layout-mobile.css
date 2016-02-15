@@ -391,6 +391,14 @@ margin-left: 0;
 			text-align: left;
 			font-size: 28px;
 			line-height: 44px;
+			text-indent: 0;
+		}
+
+		.b-2 p.sign:after {
+			top: 55px;
+		}
+		.b-2 h3 {
+			font-size: 32px;
 		}
 .b-3{
 	background-position: 50% 50%;
@@ -979,6 +987,9 @@ margin-left: 0;
 			height: 187px;
 			display: inline-block;
 		}
+	.b-6 .b-partners p {
+		display: none;
+	}
 .b-7{
 	background-position: 50% 50%;
 	background-size: cover;
@@ -1804,7 +1815,7 @@ width: 40px;
 			width: 100%;
 		}
 		.b-popup .b-data-cont{
-			margin-bottom: 30px;	
+			margin-bottom: 50px;	
 		}
 			.b-popup .b-data-cont h3{
 				font-size: 38px;
@@ -1822,7 +1833,7 @@ width: 40px;
 		.b-popup .b-popup-form{
 			width: 100%;
 		}
-			.b-popup .b-popup-form input[type="text"]{
+			.b-popup .b-popup-form input[type="text"],.b-popup .b-popup-form select{
 				border: 1px solid #e1e1e1;
 				border-radius: 4px / 5px;
 				font-size: 26px;
@@ -1832,7 +1843,7 @@ width: 40px;
 				width: 270px;
 				margin-bottom: 15px;
 			}
-			.b-popup .b-popup-form input[type="text"].b-input-name{
+			.b-popup .b-popup-form input[type="text"].b-input-name,.b-popup .b-popup-form select{
 				width: 100%;
 				box-sizing: border-box;
 			}
@@ -1842,6 +1853,11 @@ width: 40px;
 				margin-bottom: 35px;
 				padding: 25px 50px;
 			}
+.b-popup .b-data-cont span {
+	width: 40px;
+	height: 40px;
+	bottom: -43px;
+}
 .fancybox-close{
 	background-position: 50% 50%;
 	background-repeat: no-repeat;

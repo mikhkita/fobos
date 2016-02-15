@@ -14,11 +14,11 @@ body {
 	color: #333333;
 	font-size: 14px;
 	-webkit-transform-origin: 0% 0%;
-       -moz-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-       	 -o-transform-origin: 0% 0%;
-    		transform-origin: 0% 0%;
-    		
+	   -moz-transform-origin: 0% 0%;
+		-ms-transform-origin: 0% 0%;
+		 -o-transform-origin: 0% 0%;
+			transform-origin: 0% 0%;
+			
 }
 a{
 	text-decoration: none;
@@ -108,9 +108,9 @@ input:-moz-placeholder {
 	z-index: 1000;
 	display: none;
 	-webkit-transition: all 0.3s ease-out 0.3s;
-     -moz-transition: all 0.3s ease-out 0.3s;
-     -o-transition: all 0.3s ease-out 0.3s;
-     transition: all 0.3s ease-out 0.3s;
+	 -moz-transition: all 0.3s ease-out 0.3s;
+	 -o-transition: all 0.3s ease-out 0.3s;
+	 transition: all 0.3s ease-out 0.3s;
 	background-image: url("../i/up.png");
 	cursor: pointer;
 }
@@ -145,13 +145,13 @@ margin-right: 53px;
 				content: "";
 				font-size: 0;
 				width: 11px;
-			    height: 13px;
-			    background-position: 50%;
-			    background-repeat: no-repeat;
-			    background-image: url("../i/calendar.png");
-			    background-size: contain;
-			    top: -1px;
-			    left: -20px;
+				height: 13px;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-image: url("../i/calendar.png");
+				background-size: contain;
+				top: -1px;
+				left: -20px;
 
 			}
 
@@ -168,13 +168,13 @@ margin-right: 53px;
 				font-size: 0;
 				content: "";
 				width: 10px;
-			    height: 10px;
-			    background-image: url("../i/update.png");
-			    background-position: 0% 50%;
-			    background-size: 20px 10px;
-			    background-repeat: no-repeat;
-			    left: 0;
-			    top: 2px;
+				height: 10px;
+				background-image: url("../i/update.png");
+				background-position: 0% 50%;
+				background-size: 20px 10px;
+				background-repeat: no-repeat;
+				left: 0;
+				top: 2px;
 			}
 			.b-0 .b-block ul li .update.down:before {
 				background-position: -10px 50%;
@@ -452,11 +452,33 @@ float: right;
 			color: #333333;
 		}
 		.b-2 p{
-			text-align: left;
+			text-align: justify;
 			font-size: 12px;
 			padding-left: 27px;
 			padding-right: 35px;
+			text-indent: 16px;
+			margin-bottom: 12px;	
 		}
+		.b-2 p.sign {
+			text-indent: 0px;
+			position: relative;
+			margin-top: 35px;
+		}
+		.b-2 p.sign:after {
+			position: absolute;
+			font-size: 0;
+			content: "";
+			top: -35px;
+			right: 100px;
+			width: 212px;
+			height: 81px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("../i/sign.jpg");
+		} 
+		.b-2 h3 {
+			margin: 20px 0;
+		}    
 .b-3{
 	background-position: 50% 50%;
 	background-size: cover;
@@ -602,7 +624,7 @@ width: 100%;
 				.b-4 .b-block-1 .b-tabs li a {
 					color: #fff;
 					padding: 5px 22px;
-    				display: block;
+					display: block;
 				}
 			.b-4 .b-block-1 .b-tabs li.ui-tabs-active,.b-4 .b-block-1 .b-tabs li.ui-state-hover{
 				cursor: default;
@@ -683,10 +705,10 @@ width: 100%;
 			position: absolute;
 			font-size: 0;
 			content: "";
-		    width: 200%;
-		    height: 100%;
-		    left: -50%;
-		    top: 0;
+			width: 200%;
+			height: 100%;
+			left: -50%;
+			top: 0;
 			background: #515258;
 		}
 			.b-4 .b-block-1 #text-tab.b-tab .tab-text {
@@ -865,8 +887,8 @@ width: 100%;
 	.b-4 .b-block-2{
 		background-color: #FFF;
 		position: absolute;
-	    bottom: 0;
-	    width: 100%;
+		bottom: 0;
+		width: 100%;
 	}
 		.b-4 .b-block-2 .b-video-list{
 			padding: 0px 31px;
@@ -1081,6 +1103,12 @@ width: 100%;
 			height: 260px;
 			display: inline-block;
 		}
+			.b-6 .b-partners p {
+				position: absolute;
+				bottom: 40px;
+				text-align: left;
+				text-indent: 20px;
+			}
 .b-7{
 	background-position: 50% 50%;
 	background-size: cover;
@@ -1154,7 +1182,7 @@ padding: 19px 40px 20px;
 			background-repeat: no-repeat;
 			background-image: url('../i/nav.png');
 			top: 5px;
-    		left: -14px;
+			left: -14px;
 		}
 		.b-8 .b-white-block .nav li:last-child {
 			margin-right: 0;
@@ -1209,46 +1237,46 @@ padding: 19px 40px 20px;
 				margin-top: 6px;
 			}
 			.b-8 .b-back .b-icon .sprite {
-    			background-image: url('../i/spritesheet.png');
-    			background-size: 420px 70px;
-    			background-repeat: no-repeat;
-    			display: inline-block;
+				background-image: url('../i/spritesheet.png');
+				background-size: 420px 70px;
+				background-repeat: no-repeat;
+				display: inline-block;
    }
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-1 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: 0 0;
+				width: 70px;
+				height: 70px;
+				background-position: 0 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-2 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: -70px 0;
+				width: 70px;
+				height: 70px;
+				background-position: -70px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-3 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: -140px 0;
+				width: 70px;
+				height: 70px;
+				background-position: -140px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-4 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: -210px 0;
+				width: 70px;
+				height: 70px;
+				background-position: -210px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-5 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: -280px 0;
+				width: 70px;
+				height: 70px;
+				background-position: -280px 0;
 			}
 
 			.b-8 .b-back .b-icon .sprite.sprite-icon-6 {
-			    width: 70px;
-			    height: 70px;
-			    background-position: -350px 0;
+				width: 70px;
+				height: 70px;
+				background-position: -350px 0;
 			}
 
 		.b-8 .b-back h3{
@@ -1290,7 +1318,7 @@ padding: 19px 40px 20px;
 					max-width: 220px;
 					display: block;
 					margin-top: 5px;
-    				font-weight: 500;
+					font-weight: 500;
 				}
 				.b-8 .b-back .b-checkboxes li label:before {
 					position: absolute;
@@ -1381,6 +1409,7 @@ font-size: 0;
 /* margin-top: 37px; */
 
 display: inline-block;
+    /*padding-top: 57px;*/
 
 margin-bottom: 27px;
 }
@@ -1402,7 +1431,7 @@ position: relative;
 					height: 4px;
 					width: 100%;
 					bottom: 25px;
-    				left: 0;
+					left: 0;
 					background-color: #fff;
 				}
 			.b-8 .b-back .final-back .b-block .stats li > div{
@@ -1856,7 +1885,7 @@ padding: 21px 28px;
 				}
 			.b-11 .b-footer-cont .b-copy-cont{
 				font-size: 12px;
-				margin-left: 83px;
+				margin-left: 27px;
 				text-align: left;
 				line-height: 1.5;
 			}
@@ -1892,7 +1921,8 @@ padding: 21px 28px;
 			width: 402px;
 		}
 		.b-popup .b-data-cont{
-			margin-bottom: 30px;	
+			margin-bottom: 30px;
+			position: relative;	
 		}
 			.b-popup .b-data-cont h3{
 				font-size: 24px;
@@ -1907,10 +1937,22 @@ padding: 21px 28px;
 				padding: 5px 10px;
 				margin-right: 2px;
 			}
+			.b-popup .b-data-cont span {
+				position: absolute;
+				background-image: url("../i/refresh.png");	
+				background-size: contain;
+				width: 26px;
+				height: 26px;
+				background-position: 50%;
+				right: 2px;
+				bottom: -25px;
+				cursor: pointer;
+
+			}
 		.b-popup .b-popup-form{
 			/*width: 402px;*/
 		}
-			.b-popup .b-popup-form input[type="text"]{
+			.b-popup .b-popup-form input[type="text"],.b-popup .b-popup-form select{
 				border: 1px solid #e1e1e1;
 				border-radius: 4px / 5px;
 				font-size: 12px;
@@ -1920,6 +1962,14 @@ padding: 21px 28px;
 				width: 176px;
 				margin-bottom: 15px;
 			}
+			.b-popup .b-popup-form.consult input[type="text"],.b-popup .b-popup-form select {
+				width: 100%;
+    			box-sizing: border-box;
+			}
+			.b-popup .b-popup-form.consult select{
+				padding: 4px 10px;
+			}    
+			
 			.b-popup .b-popup-form input[type="text"].b-input-name{
 				width: 378px;
 			}
@@ -1929,6 +1979,10 @@ padding: 21px 28px;
 				margin-bottom: 35px;
 				padding: 19px 25px;
 			}
+	#b-popup-consult .b-popup-back{
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
 .fancybox-close{
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -1951,7 +2005,7 @@ padding: 21px 28px;
 		border-radius: 3px;
 	}
 	.b-thanks h4 {
-		padding: 50px 110px;
+		padding: 50px 50px 50px 110px;
 		font-size: 24px;
 		color: rgb(58, 58, 58);
 		position: relative;
