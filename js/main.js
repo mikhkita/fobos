@@ -114,6 +114,9 @@ $(document).ready(function(){
     }
     $(window).resize(resize);
     resize();
+    $("body").on("click",".fancybox-close",function(){
+        $.fancybox.close();
+    });
     $(window).scroll(function(){
         if($(window).scrollTop()/k >= 1000/k) {
             $(".up-arrow").show().css("margin-top",$(window).scrollTop()/k+myHeight/k-80);
@@ -241,9 +244,9 @@ $(document).ready(function(){
 
 
     if(myWidth >= 1000) {
-        $( "body" ).on("click","#actualDate",function(){
-                $("#ui-datepicker-div").css("left","50%");
-                $("#ui-datepicker-div").css("top",$(window).scrollTop()/k+$("#b-popup-1").height()/2+"px");
+        $( "body" ).on("click","#actualDate",function(){  
+            $("#ui-datepicker-div").css("left","50%");
+            $("#ui-datepicker-div").css("top",$(window).scrollTop()/k+$("#b-popup-1").height()/2+"px");
         });
     }
 

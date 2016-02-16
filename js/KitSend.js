@@ -49,8 +49,10 @@ $(document).ready(function(){
 				openEffect: "none",
 		        afterShow:function(){
 		        	var margin = el.width()/2;
+		        	$('.fancybox-wrap').css('opacity',0);
 		            setTimeout(function(){
 		                $('.fancybox-wrap').css({
+		                	'opacity': 1,
 		                    'position':'absolute',
 		                    'top': 0,
 		                    'left' : "50%",
