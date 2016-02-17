@@ -129,7 +129,7 @@ input:-moz-placeholder {
 			text-align: left;
 			padding-top: 25px;
 			text-align: left;
-			color: #FFF;
+			// color: #FFF;
 			padding-left: 0;
 		}
 		.b-1 .b-main-menu{
@@ -863,6 +863,7 @@ margin-left: 0;
 		.b-5 .b-service-list{
 			display: block;
 			margin-top: 60px;
+			padding-left: 0;
 		}
 			.b-5 .b-service-list li{
 				float: none;
@@ -986,6 +987,7 @@ margin-left: 0;
 			width: 690px;
 			height: 187px;
 			display: inline-block;
+			margin: 0;
 		}
 	.b-6 .b-partners p {
 		display: none;

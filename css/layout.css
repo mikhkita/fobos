@@ -456,11 +456,9 @@ float: right;
 			font-size: 12px;
 			padding-left: 27px;
 			padding-right: 35px;
-			text-indent: 16px;
 			margin-bottom: 12px;	
 		}
 		.b-2 p.sign {
-			text-indent: 0px;
 			position: relative;
 			margin-top: 35px;
 		}
@@ -523,7 +521,7 @@ float: right;
 			}
 			.b-3 .b-about-list .slick-arrow.slick-prev {
 				background-position: 0% 50%;
-				left: -35px;
+				left: -45px;
 			}
 			.b-3 .b-about-list .slick-arrow.slick-next {
 				background-position: -42px 50%;
@@ -532,10 +530,12 @@ float: right;
 
 			.b-3 .b-about-list .slide-about{
 				text-align: left;
-				padding-left: 10px;
+				// padding-left: 10px;
 				overflow: hidden;
 			}	
-
+			// .b-3 .b-about-list .slide-about:nth-child(5n),.b-3 .b-about-list .slide-about:first-child(5n){
+			// 	padding-left: 0;
+			// }
 				.b-3 .b-about-list .slide-about >span {
 					font-size: 12px;
 					color: red;
@@ -891,7 +891,7 @@ width: 100%;
 		width: 100%;
 	}
 		.b-4 .b-block-2 .b-video-list{
-			padding: 0px 31px;
+			padding: 0px 27px;
 		}
 
 			.b-4 .b-block-2 .b-video-list .slide{
@@ -1099,9 +1099,10 @@ width: 100%;
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../i/partners.jpg');
-			width: 100%;
+			width: 898px;
 			height: 260px;
 			display: inline-block;
+			margin: 0 35px 0 27px;
 		}
 			.b-6 .b-partners p {
 				position: absolute;
