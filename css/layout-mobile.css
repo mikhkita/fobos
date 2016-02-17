@@ -558,7 +558,7 @@ margin-left: 0;
 				position: absolute;
 				top: 15px;
 				left: 17px;
-				height: 277px;
+				height: 283px;
 			}
 			.b-4 .b-block-1 #video-tab.b-tab p{
 				font-size: 24px;
@@ -1381,6 +1381,7 @@ padding: 37px 0 55px;
 					padding: 0 40px;
 					box-sizing: border-box;
 					margin-bottom: 64px;
+					margin-right: 0;
 				}
 				.b-8 .b-back .solution .b-block ul li:nth-child(n+2):before {
 					position: absolute;
@@ -1399,7 +1400,7 @@ padding: 37px 0 55px;
 						height: 120px;
 						background-size: contain;
 						background-position: 50%;
-						margin: 0 auto 22px;
+						margin: 0 auto 25px;
 					}
 					.b-8 .b-back .solution .b-block ul li h5 {
 						
@@ -1414,6 +1415,7 @@ margin-bottom: 25px;
 						color: rgb(102, 102, 102);
 						line-height: 1.2;
 						padding: 0;
+						width: 100%;
 					}
 			.b-8 .b-back .solution-back {
 				background-size: cover;
@@ -1539,7 +1541,7 @@ background-color: rgba(255,255,255,0.4);
 					text-align: left;
 					padding: 10px 28px 11px;
 					color: #333333;
-					padding-right: 45px;
+					padding-right: 55px;
 					background: #e7e7e7;
 					border-radius: 3px;
 				}
@@ -1558,6 +1560,12 @@ padding: 21px 28px;
 						text-align: left;
 						line-height: 1.5;
 					}
+					.b-8 .b-back .faq .b-block #accordion div ul {
+
+					}
+						.b-8 .b-back .faq .b-block #accordion div ul li {
+							font-size: 26px
+						}
 					.b-8 .b-back .faq .b-block #accordion .ui-accordion-header-active {
 						background: #333333;
 						color: #fff;
@@ -1665,8 +1673,9 @@ padding: 21px 28px;
 				}
 			.b-9 .right .b-email-contact{
 				font-size: 28px;
-				margin-bottom: 25px;
+				margin-bottom: 30px;
 				position: relative;
+				padding-top: 15px;
 			}
 				.b-9 .right .b-email-contact:after{
 					position: absolute;
@@ -1879,7 +1888,6 @@ width: 40px;
 		color: #fff;
 		background: red;
 		font-size: 28px;
-		border-radius: 3px;
 	}
 	.b-thanks h4 {
 		padding: 50px 110px;

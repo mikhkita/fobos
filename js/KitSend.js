@@ -123,6 +123,7 @@ $(document).ready(function(){
 	         	}
 	      	},
 			beforeShow: function(){
+				$( "#datepicker-inline" ).datepicker( "hide" );
 				if(myWidth >= 1000) { 
 					var width = 1000+(myWidth/10);
 	        		k = (myWidth > 768)?(myWidth/width):1;
@@ -204,7 +205,19 @@ $(document).ready(function(){
 					}
 
 					$this.find("input[type=text],textarea").val("");
-					fancyOpen($form);
+					$.fancybox.open({
+						content : $form,
+						padding : 0
+					});	
+					
+					if(myWidth >= 1000) {
+						fancyOpen($form);
+					} else {
+						$.fancybox.open({
+							content : $form,
+							padding : 0
+						});	
+					}
 				}
 			});
   		}
