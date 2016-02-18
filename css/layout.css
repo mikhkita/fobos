@@ -456,7 +456,9 @@ float: right;
 			font-size: 12px;
 			padding-left: 27px;
 			padding-right: 35px;
-			margin-bottom: 12px;	
+			margin-bottom: 12px;
+			font-family: "Trebuchet MS";
+			font-style: italic;	
 		}
 		.b-2 p.sign {
 			position: relative;
@@ -1050,32 +1052,36 @@ width: 100%;
 			padding-bottom: 80px;
 		}
 		.b-5 .service {
-			
 			display: none;
-		}
-			.b-5 .service > div {
+		}    
+    .b-5 .service  > div {
+	    width: 880px;
+	    display: inline-block;
+	    margin-bottom: 5px;
+	   }
+			.b-5 .service .service-title {
 				padding: 35px;
-				margin-bottom: 5px;
 				width: 880px;
 				display: inline-block;
 				box-sizing: border-box;
 				text-align: left;
 				background-color: rgba(255,255,255,0.1);
+				cursor: pointer;
 			}
-				.b-5 .service > div h4 {
+				.b-5 .service .service-title h4 {
 					float: left;
-					width: 155px;
+					width: 220px;
 					text-transform: uppercase;
 					color: red;
 					margin-right: 55px;
 				}
-				.b-5 .service > div p {
+				.b-5 .service .service-title p {
 					float: left;
 					width: 380px;
 					color: #fff;
 					font-size: 12px;
 				}
-				.b-5 .service > div a {
+				.b-5 .service .service-title a {
 					text-align: center;
 					float: right;
 					font-size: 14px;
@@ -1083,6 +1089,19 @@ width: 100%;
 					width: 180px;
 					box-shadow: 0px 1px 6px 0px rgba(1, 1, 1, 0.32);
 				}
+				.b-5 .service ul {
+					text-align: left;
+					margin: 25px 45px;
+					display: none;
+				}
+					.b-5 .service ul li {
+						color: #fff;
+						font-size: 12px;
+						list-style: circle;
+						list-style-position: outside;
+						line-height: 2;
+						padding-left: 15px;
+					}
 .b-6{
 	/*padding-bottom: 82px;*/
 }

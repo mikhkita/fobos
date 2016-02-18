@@ -439,6 +439,17 @@ $(document).ready(function(){
         dateChange(date);
     });
 
+    $(".service-title").click(function(){
+        if(!$(this).hasClass("active")) {
+            $(".service-title.active").parent().find("ul").slideUp();
+            $(".service-title.active").removeClass("active");
+            $(this).parent().find("ul").slideDown();
+            $(this).addClass("active");
+        } else {
+            $(this).removeClass("active");
+            $(this).parent().find("ul").slideUp();
+        }
+    });
     
 });
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
