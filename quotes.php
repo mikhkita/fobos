@@ -10,5 +10,7 @@
 	$temp['micex']['change'] = str_replace("-", "- ", $html->find("[id*='MICEXChange']",0)->plaintext);
 	$temp['rtsi']['val'] = $html->find("[id*='RTSIPrice']",0)->plaintext;
 	$temp['rtsi']['change'] = str_replace("-", "- ", $html->find("[id*='RTSIChange']",0)->plaintext);
+	$temp['brent']['val'] = $html->find("[id*='BrentPrice']",0)->plaintext;
+	$temp['brent']['change'] = str_replace("-", "- ", $html->find("[id*='BrentChange']",0)->plaintext);
 	echo json_encode($temp);
 ?>
