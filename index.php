@@ -221,7 +221,7 @@ $back = rand(1,4);
 				</div>
 				<div class="b-tab" id="audio-tab">
 					<div></div>
-					<audio src="1.mp3" controls></audio>
+					<audio src="1.mp3" controls preload="auto"></audio>
 				</div>
 				<div class="b-tab full-text" id="full-text-1">
 					<div class="text-back" style="background-image: url('i/text-image-1.jpg');">

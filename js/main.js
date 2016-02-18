@@ -335,6 +335,7 @@ $(document).ready(function(){
             $(".iframe").empty();
             $(".iframe").css("background","none");
             $("#text-tab").slick('setPosition');   
+            document.getElementsByTagName('audio')[0].pause();
             // var selectedTab = $("#tabs").tabs('option', 'active');
             // if(selectedTab == 2) {
             //     $(".slide .text").show();
