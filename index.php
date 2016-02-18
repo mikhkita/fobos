@@ -79,7 +79,7 @@ $back = rand(1,4);
 					<div class="update"><span>0</span>%</div>
 				</li>
 				<li class="brent">
-					<div><b>Brent</b><span class="value">0</span></div>
+					<div><b>Brent</b><span class="value">0</span> $</div>
 					<div class="update"><span>0</span></div>
 				</li>
 			</ul>
