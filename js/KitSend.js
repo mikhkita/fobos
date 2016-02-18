@@ -123,7 +123,7 @@ $(document).ready(function(){
 	         	}
 	      	},
 			beforeShow: function(){
-				$( "#datepicker-inline" ).datepicker( "hide" );
+				
 				if(myWidth >= 1000) { 
 					var width = 1000+(myWidth/10);
 	        		k = (myWidth > 768)?(myWidth/width):1;
@@ -142,7 +142,7 @@ $(document).ready(function(){
 				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
 					customHandlers[$this.attr("data-afterShow")]($this);
 				}
-				
+				$( "#datepicker-inline" ).datepicker( "hide" );
 			},
 			beforeClose: function(){
 				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
@@ -205,10 +205,6 @@ $(document).ready(function(){
 					}
 
 					$this.find("input[type=text],textarea").val("");
-					$.fancybox.open({
-						content : $form,
-						padding : 0
-					});	
 					
 					if(myWidth >= 1000) {
 						fancyOpen($form);
