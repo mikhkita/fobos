@@ -8,7 +8,7 @@ $back = rand(1,4);
 	<title></title>
 	<meta name="keywords" content=''>
 	<meta name="description" content=''>
-
+	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
