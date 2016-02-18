@@ -121,6 +121,13 @@ $(document).ready(function(){
 		         	}
 		      	},
 				beforeShow: function(){
+			        // $(".b-but-2").css({
+			        //     '-webkit-transform': 'translateY(0px)',
+			        //     '-moz-transform': 'translateY(0px)',
+			        //     '-ms-transform': 'translateY(0px)',
+			        //     '-o-transform': 'translateY(0px)',
+			        //     'transform': 'translateY(0px)'
+			        // });
 					if(myWidth >= 1000) { 
 						var width = 1000+(myWidth/10);
 		        		k = (myWidth > 768)?(myWidth/width):1;

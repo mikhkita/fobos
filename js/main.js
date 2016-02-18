@@ -207,6 +207,16 @@ $(document).ready(function(){
     // };
 
     // var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+    $( "#datepicker-inline" ).datepicker({
+        altField: "#actualDate",
+        defaultDate: 0,
+        onSelect: function() {
+            dateChange(date);
+            $("#date-popup").click();
+            $(".b-red-button .b-but-2").click();
+        }
+    });
+
     if(myWidth < 1000) {
         $(".b-main-menu li").click(function(){
             if(!$(this).hasClass("active")) {
@@ -214,19 +224,37 @@ $(document).ready(function(){
                 $(this).addClass("active").find("ul").slideDown();
             }
         });
+        $(".b-red-button .b-but-2").click(function(){
+            if($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(".b-but-2").css({
+                    '-webkit-transform': 'translateY(0px)',
+                    '-moz-transform': 'translateY(0px)',
+                    '-ms-transform': 'translateY(0px)',
+                    '-o-transform': 'translateY(0px)',
+                    'transform': 'translateY(0px)'
+                });
+                $(".b-but-2 p").show();
+            } else {
+                $(this).addClass("active");
+                $(".b-but-2").css({
+                    '-webkit-transform': 'translateY(-165px)',
+                    '-moz-transform': 'translateY(-165px)',
+                    '-ms-transform': 'translateY(-165px)',
+                    '-o-transform': 'translateY(-165px)',
+                    'transform': 'translateY(-165px)'
+                });
+                $(".b-but-2 p").hide();
+            }
+        });
     }
 
     
 
-    $( "#datepicker-inline" ).datepicker({
-        altField: "#actualDate",
-        defaultDate: 0,
-        onSelect: function() {
-            dateChange(date);
-            $("#date-popup").click();
-        }
-    });
+    
 
+   
+                
     date = $( "#actualDate" ).val();
     
     $( "#actualDate" ).datepicker({
@@ -332,6 +360,7 @@ $(document).ready(function(){
         activate: function( event, ui ) {
             $("#video-tab a").show();
             $(".iframe").empty();
+            $(".tab-text p").css("opacity",1);
             $(".iframe").css("background","none");
             $("#text-tab").slick('setPosition');   
             document.getElementsByTagName('audio')[0].pause();
@@ -341,7 +370,10 @@ $(document).ready(function(){
             // }
             $(".full-text").hide();
             $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"80px");
-            $(".tab-text,.slide").removeClass("active");
+            $(".tab-text").removeClass("active");
+            if($("#tabs").tabs('option', 'active') == 2) {
+                $(".slide.active").removeClass("active");
+            }
         }
     });
 
@@ -352,6 +384,8 @@ $(document).ready(function(){
             $("#video-tab p").html($(this).find("span").html());
             $("#video-tab a").attr("data-video",$(this).find("span").attr("data-video"));
             var selectedTab = $("#tabs").tabs('option', 'active');
+            $("#audio-tab audio").remove();
+            $("#audio-tab").append('<audio src="'+$(this).find("span").attr("data-audio")+'" controls></audio>');
             if(selectedTab == 0) {
                 $("#video-tab a").hide();
                 $(".iframe").css("background","#000");
@@ -372,8 +406,7 @@ $(document).ready(function(){
                 },800);
             }
             if(selectedTab == 1) {
-                $("#audio-tab audio").remove();
-                $("#audio-tab").append('<audio src="'+$(this).find("span").attr("data-audio")+'" controls></audio>')
+                document.getElementsByTagName('audio')[0].play();
             }
         }
     });
@@ -409,6 +442,7 @@ $(document).ready(function(){
             $(".b-4 .b-block-1 #text-tab.b-tab").css('margin-top',"0px");
             var number = $(this).index()+1;
             $("#full-text-"+number).show();
+            $(".tab-text p").css('opacity',0);
             $("body, html").animate({
                 scrollTop : $("#full-text-"+number).offset().top
             },800);
@@ -451,6 +485,8 @@ $(document).ready(function(){
         }
     });
     
+    
+
 });
 var months = ["","января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];    
 function dateChange(date) {

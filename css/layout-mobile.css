@@ -254,7 +254,7 @@ margin-left: 0;
 					-o-transform: translateY(-186px);
 					transform: translateY(-186px);
 				}
-				.b-1-bottom>.right .b-red-button .b-but-2:hover {
+				/*.b-1-bottom>.right .b-red-button .b-but-2:hover {
 					-webkit-transform: translateY(-165px);
 					-moz-transform: translateY(-165px);
 					-ms-transform: translateY(-165px);
@@ -263,7 +263,7 @@ margin-left: 0;
 				}
 				.b-1-bottom>.right .b-red-button .b-but-2:hover p {
 					display: none;
-				}
+				}*/
 					.b-1-bottom>.right .b-red-button .b-but-1 label {
 						display: block;
 						text-align: left;
