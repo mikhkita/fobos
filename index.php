@@ -137,7 +137,6 @@ $back = rand(1,4);
 					</div>
 					<div class="b-red-button">
 						<div class="b-but b-but-2">
-							<!-- <i></i> -->
 							<p>Назначить<br>встречу</p>
 							<div class="datepicker" id="datepicker-inline"></div>
 						</div>

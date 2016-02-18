@@ -593,8 +593,8 @@ margin-left: 0;
 			background-image: url('../i/player.png');*/
 			position: absolute;
 			width: 532px;
-			/*height: 40px;*/
-			top: 160px;
+			height: 100px !important;
+			top: 100px;
 			left: 50%;
 			margin-left: -266px;
 		}

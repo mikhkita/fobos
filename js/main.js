@@ -224,10 +224,9 @@ $(document).ready(function(){
         onSelect: function() {
             dateChange(date);
             $("#date-popup").click();
-           
         }
     });
-    
+
     date = $( "#actualDate" ).val();
     
     $( "#actualDate" ).datepicker({

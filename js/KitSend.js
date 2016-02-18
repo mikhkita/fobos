@@ -108,53 +108,83 @@ $(document).ready(function(){
 		var k;
 		var $popup = $($(this).attr("data-block")),
 			$this = $(this);
-		var top = 0.5;
 		if(myWidth >= 1000) {
-			top = 0;
+			var top = 0;
+			$this.fancybox({
+				padding : 0,
+				topRatio: top,
+				fitToView: false,
+				content : $popup,
+				helpers: {
+		         	overlay: {
+		            	locked: true
+		         	}
+		      	},
+				beforeShow: function(){
+					if(myWidth >= 1000) { 
+						var width = 1000+(myWidth/10);
+		        		k = (myWidth > 768)?(myWidth/width):1;
+						$popup.css("margin-top",$(window).scrollTop()/k+(myHeight/k*0.1));
+					}
+					$popup.find(".custom-field").remove();
+					if( $this.attr("data-value") ){
+						var name = getNextField($popup.find("form"));
+						$popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+					}
+					if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+						customHandlers[$this.attr("data-beforeShow")]($this);
+					}
+				},
+				afterShow: function(){
+					if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+						customHandlers[$this.attr("data-afterShow")]($this);
+					}
+				},
+				beforeClose: function(){
+					if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+						customHandlers[$this.attr("data-beforeClose")]($this);
+					}
+				},
+				afterClose: function(){
+					if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+						customHandlers[$this.attr("data-afterClose")]($this);
+					}
+				}
+			});
+		} else {
+			$this.fancybox({
+				padding : 0,
+				fitToView: false,
+				content : $popup,
+				beforeShow: function(){
+
+					// $(".b-1-bottom .right").append('<div class="b-red-button"><div class="b-but b-but-2"><p>Назначить<br>встречу</p><div class="datepicker" id="datepicker-inline"></div></div><span style="display:none;" id="date-popup" class="fancy" data-block="#b-popup-1"></span></div>');
+					$popup.find(".custom-field").remove();
+					if( $this.attr("data-value") ){
+						var name = getNextField($popup.find("form"));
+						$popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+					}
+					if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+						customHandlers[$this.attr("data-beforeShow")]($this);
+					}
+				},
+				afterShow: function(){
+					if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+						customHandlers[$this.attr("data-afterShow")]($this);
+					}
+				},
+				beforeClose: function(){
+					if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+						customHandlers[$this.attr("data-beforeClose")]($this);
+					}
+				},
+				afterClose: function(){
+					if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+						customHandlers[$this.attr("data-afterClose")]($this);
+					}
+				}
+			});
 		}
-		$this.fancybox({
-			padding : 0,
-			topRatio: top,
-			fitToView: false,
-			content : $popup,
-			helpers: {
-	         	overlay: {
-	            	locked: true 
-	         	}
-	      	},
-			beforeShow: function(){
-				
-				if(myWidth >= 1000) { 
-					var width = 1000+(myWidth/10);
-	        		k = (myWidth > 768)?(myWidth/width):1;
-					$popup.css("margin-top",$(window).scrollTop()/k+(myHeight/k*0.1));
-				}
-				$popup.find(".custom-field").remove();
-				if( $this.attr("data-value") ){
-					var name = getNextField($popup.find("form"));
-					$popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
-				}
-				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
-					customHandlers[$this.attr("data-beforeShow")]($this);
-				}
-			},
-			afterShow: function(){
-				if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
-					customHandlers[$this.attr("data-afterShow")]($this);
-				}
-				$( "#datepicker-inline" ).datepicker( "hide" );
-			},
-			beforeClose: function(){
-				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
-					customHandlers[$this.attr("data-beforeClose")]($this);
-				}
-			},
-			afterClose: function(){
-				if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
-					customHandlers[$this.attr("data-afterClose")]($this);
-				}
-			}
-		});
 	});
 	
 	$(".b-go").click(function(){
@@ -205,7 +235,7 @@ $(document).ready(function(){
 					}
 
 					$this.find("input[type=text],textarea").val("");
-					
+
 					if(myWidth >= 1000) {
 						fancyOpen($form);
 					} else {
