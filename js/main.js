@@ -213,6 +213,7 @@ $(document).ready(function(){
         $( "#datepicker-inline" ).datepicker({
             altField: "#actualDate",
             defaultDate: 0,
+            minDate: 0,
             onSelect: function() {
                 dateChange(date);
                 $("#date-popup").click();
@@ -223,6 +224,7 @@ $(document).ready(function(){
         $( "#datepicker-inline" ).datepicker({
         altField: "#actualDate",
         defaultDate: 0,
+        minDate: 0,
         onSelect: function() {
             dateChange(date);
             $("#date-popup").click();
@@ -272,6 +274,8 @@ $(document).ready(function(){
     
     $( "#actualDate" ).datepicker({
         autoSize: true,
+        defaultDate: 0,
+        minDate: 0,
         onSelect: function() {
             dateChange(date);
         }

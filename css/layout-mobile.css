@@ -855,9 +855,9 @@ margin-left: 0;
 			}
 .b-5{
 	background-position: 50% 50%;
-	mbackground-size: cover;
+	background-size: cover;
 	background-image: url('../i/back-5-mobile.jpg');
-	padding-bottom: 130px;
+	padding-bottom: 50px;
 }
 	.b-5 .b-block{
 
@@ -885,6 +885,10 @@ margin-left: 0;
 				.b-5 .b-service-list li > div {
 					opacity: 1;
 					cursor: pointer;
+					
+				}
+				.b-5 .b-service-list li > div .mobile-service {
+					display: inline-block;
 				}
 				.b-5 .b-service-list li.active >div {
 					cursor: default;
@@ -892,46 +896,55 @@ margin-left: 0;
 				
 				.b-5 .b-service-list li .img{
 					background-repeat: no-repeat;
-					height: 258px;
+					height: 104px;
 					margin: 0 auto 30px;
+					float: left;
 				}
 				
 				.b-5 .b-service-list li:hover >div,.b-5 .b-service-list li.active > div {
 					opacity: 1;
 				}
-
+				// .b-5 .mobile-service {
+				// 	margin-left: 30px;
+				// }
 				.b-5 .b-service-list li:nth-child(1) .img {
 					background-image: url('../i/b-5/1.png');
-					background-position: -255px 50%;
-					background-size: 508px 254px;
-					width: 254px;
+					background-position: -104px 50%;
+					background-size: 206px 102px;
+					width: 102px;
 				}
 				.b-5 .b-service-list li:nth-child(2) .img {
 					background-image: url('../i/b-5/2.png');
-					background-position: -222px 50%;
-					width: 221px;
-					background-size: 443px 258px;
+					background-position: -91px 50%;
+					width: 89px;
+					background-size: 180px 104px;
+					margin-right: 6px;
 				}
 				.b-5 .b-service-list li:nth-child(3) .img {
 					background-image: url('../i/b-5/3.png');
-					background-position: -260px 50%;
-					background-size: 520px 258px;
-					width: 258px;
+					background-position: -104px 50%;
+					background-size: 208px 104px;
+					width: 104px;
 				}
 
 				.b-5 .b-service-list li h3{
 					font-size: 38px;
-					font-weight: bold;
+					font-weight: normal;
 					color: #fff;
+					margin-left: 30px;
+					margin-top: 20px;
 					margin-bottom: 0px;
 					line-height: 1.2;
+					float: left;
+					text-align: left;
 				}
 		
 				.b-5 .b-service-list .mobile-service.active .img {
-					background-position: 0 50%;
+					background-position: 0px 50%;
 				}
 				.b-5 .b-service-list .mobile-service.active h3 {
 					color: red;
+					text-align: left;
 				}
 				.b-5 .b-service-list li p.desc-mobile{
 					font-size: 26px;
@@ -943,7 +956,9 @@ margin-left: 0;
 					display: none;
 					margin-top: 20px;
 				}
-
+				.b-service-list li:nth-child(2) .mobile-service{
+					margin-left: 30px;
+				}
 		.b-5 .service-cont {
 			min-height: 365px;
 			display: none;

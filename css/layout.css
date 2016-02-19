@@ -2053,7 +2053,21 @@ padding: 21px 28px;
 			background-repeat: no-repeat;
 			background-image: url("../i/thanks.png");
 		}
-
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	border: 1px solid #fff;
+    background: #fff url("images/ui-bg_flat_75_fff_40x100.png") 50% 50% repeat-x;
+}
+	.ui-state-highlight, .ui-widget-content .ui-state-highlight:hover, .ui-widget-header .ui-state-highlight:hover {
+		border: 1px solid #ff0000;
+    	background: #ff0000 url("images/ui-bg_flat_55_ff0000_40x100.png") 50% 50% repeat-x;
+	}
+	.ui-state-highlight, .ui-widget-content .ui-state-highlight.ui-state-active, .ui-widget-header .ui-state-highlight.ui-state-active {
+		border: 1px solid #4a4a4a;
+	    background: #4a4a4a url("images/ui-bg_flat_65_4a4a4a_40x100.png") 50% 50% repeat-x;
+	    font-weight: normal;
+	    color: #fff;
+	}
+        
 @media (min-width: 1000px) {
 
 	.b-1-bottom>.right .b-red-button .b-but-2:hover {

@@ -399,7 +399,7 @@ $back = rand(1,4);
 			<ul class="b-service-list clearfix">
 				<li data-block="#fiz">
 					<div>	
-						<div class="mobile-service">	
+						<div class="mobile-service clearfix">	
 							<div class="img"></div>
 							<!-- <img src="i/b-5/1.png" alt=""> -->
 							<h3>Физическим<br>лицам</h3>
@@ -478,7 +478,7 @@ $back = rand(1,4);
 				</li>
 				<li data-block="#yr">
 					<div>
-						<div class="mobile-service">
+						<div class="mobile-service clearfix">
 							<div class="img"></div>
 							<h3>Юридическим<br>лицам</h3>
 							<p class="desc-mobile">А, может быть, Вы&nbsp;&mdash; признанная компания, безусловный лидер своего рынка, заботящаяся об&nbsp;эффективности своей работы и&nbsp;финансовых ресурсов.</p>
@@ -561,7 +561,7 @@ $back = rand(1,4);
 				</li>
 				<li data-block="#fin">
 					<div>
-						<div class="mobile-service">
+						<div class="mobile-service clearfix">
 							<div class="img"></div>
 							<h3>Финансовым<br>институтам</h3>
 							<p class="desc-mobile">Или&nbsp;же Вы&nbsp;&mdash; незыблемый Финансовый Институт, ответственно подходящий ко&nbsp;всем бизнес процессам и, прежде всего, к&nbsp;инвестициям.</p>
