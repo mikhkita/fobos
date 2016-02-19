@@ -133,7 +133,7 @@ input:-moz-placeholder {
 			padding-left: 0;
 		}
 		.b-1 .b-main-menu{
-			margin-top: 130px;
+			margin-top: 40px;
 			text-align: left;
 		}
 			.b-1 .b-main-menu>li{
@@ -154,9 +154,7 @@ input:-moz-placeholder {
 					cursor: pointer;
 					display: inline-block;
 				}
-				.b-1 .b-main-menu li:hover span{
-					color: #F00;
-				}
+				
 				.b-1 .b-main-menu .b-main-submenu{
 					display: none;
 					position: relative;
@@ -166,6 +164,14 @@ input:-moz-placeholder {
 					color: #FFF;
 					text-align: left;
 					width: 100%;
+				}
+				.b-1 .b-main-menu li:hover span{
+					color: #FFF;
+					border-bottom: 3px solid rgb(255,255,255);
+				}
+				.b-1 .b-main-menu li.active span {
+					color: red;
+					border-bottom: none;
 				}
 				.b-1 .b-main-menu li:hover .b-main-submenu{
 					display: none;
@@ -177,8 +183,8 @@ input:-moz-placeholder {
 						margin-bottom: 5px;
 					}
 						.b-1 .b-main-menu .b-main-submenu li:hover{
-							text-decoration: none;
-							border-bottom: 1px solid rgba(0,0,0,0);
+							text-decoration: underline;
+							border-bottom: 1px solid rgb(0,0,0,0);
 						}
 		.b-1-bottom{
 			margin-top: 0;
@@ -619,9 +625,9 @@ margin-left: 0;
 					box-sizing: border-box;	
 					height: inherit;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active > div  {
-					background-color: rgba(0,0,0,0.4); 
-				}
+				// .b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active > div  {
+				// 	background-color: rgba(0,0,0,0.4); 
+				// }
 			.b-4 .b-block-1 #text-tab.b-tab #text-1 {
 				background-image: url('../i/text-1.jpg');
 			}
@@ -650,9 +656,9 @@ margin-left: 0;
 					display: none !important;
 					font-style: italic;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active p {
-					display: block;
-				}
+				// .b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active p {
+				// 	display: block;
+				// }
 		.b-4 .b-block-1 .full-text {
 			margin-top: 80px;
 			display: none;
@@ -803,9 +809,9 @@ margin-left: 0;
 					width: 245px;
 					padding-left: 20px;
 				}
-				.b-4 .b-block-2 .b-video-list .slide span:hover,.b-4 .b-block-2 .b-video-list .slide.active span,.b-4 .b-block-2 .b-video-list .slide.hover span{
-					color: #ff0000;
-				}
+				// .b-4 .b-block-2 .b-video-list .slide span:hover,.b-4 .b-block-2 .b-video-list .slide.active span,.b-4 .b-block-2 .b-video-list .slide.hover span{
+				// 	color: #ff0000;
+				// }
 				.b-4 .b-block-2 .b-video-list .slide.active span {
 					cursor:	default;
 				}
@@ -823,9 +829,9 @@ margin-left: 0;
 						background-image: url('../i/play-red.png');
 						opacity: 0.000001;
 					}
-					.b-4 .b-block-2 .b-video-list .slide:hover span:after,.b-4 .b-block-2 .b-video-list .slide.active span:after,.b-4 .b-block-2 .b-video-list .slide.hover span:after{
-						opacity: 1;
-					}
+					// .b-4 .b-block-2 .b-video-list .slide:hover span:after,.b-4 .b-block-2 .b-video-list .slide.active span:after,.b-4 .b-block-2 .b-video-list .slide.hover span:after{
+					// 	opacity: 1;
+					// }
 			.b-4 .b-block-2 .b-video-list .slick-arrow {
 				position: absolute;
 				width: 18px;
@@ -849,7 +855,7 @@ margin-left: 0;
 			}
 .b-5{
 	background-position: 50% 50%;
-	background-size: cover;
+	mbackground-size: cover;
 	background-image: url('../i/back-5-mobile.jpg');
 	padding-bottom: 130px;
 }
@@ -870,7 +876,7 @@ margin-left: 0;
 				margin-right: 0;
 				width: 100%;
 				color: #FFF;
-				margin-bottom: 60px;
+				margin-bottom: 80px;
 			}
 			.b-5 .b-service-list li:last-child{
 				margin-right: 0px;
@@ -883,6 +889,7 @@ margin-left: 0;
 				.b-5 .b-service-list li.active >div {
 					cursor: default;
 				}
+				
 				.b-5 .b-service-list li .img{
 					background-repeat: no-repeat;
 					height: 258px;
@@ -911,23 +918,30 @@ margin-left: 0;
 					background-size: 520px 258px;
 					width: 258px;
 				}
-				.b-5 .b-service-list li:not(.active):hover .img{
-					background-position: 0% 50%;
-				}
 
 				.b-5 .b-service-list li h3{
 					font-size: 38px;
 					font-weight: bold;
 					color: #fff;
-					margin-bottom: 40px;
+					margin-bottom: 0px;
+					line-height: 1.2;
 				}
-				.b-5 .b-service-list li:not(.active):hover h3 {
-					color: #F00;
+		
+				.b-5 .b-service-list .mobile-service.active .img {
+					background-position: 0 50%;
 				}
-				.b-5 .b-service-list li p{
+				.b-5 .b-service-list .mobile-service.active h3 {
+					color: red;
+				}
+				.b-5 .b-service-list li p.desc-mobile{
 					font-size: 26px;
+					display: none;
 					/*padding: 0 30px;*/
 					/*margin-left: 5px;*/
+				}
+				.b-5 .b-service-list li .service-mobile {
+					display: none;
+					margin-top: 20px;
 				}
 
 		.b-5 .service-cont {
@@ -939,36 +953,61 @@ margin-left: 0;
 			
 			display: none;
 		}
-			.b-5 .service > div {
-				padding: 35px;
-				margin-bottom: 5px;
-				width: 880px;
-				display: inline-block;
-				box-sizing: border-box;
-				text-align: left;
-				background-color: rgba(255,255,255,0.1);
+			 .b-5 .service-mobile  > div {
+			    width: 100%;
+			    margin-bottom: 10px;
 			}
-				.b-5 .service > div h4 {
-					float: left;
-					width: 155px;
-					text-transform: uppercase;
-					color: red;
-					margin-right: 55px;
+				.b-5 .service-mobile .service-title {
+					padding: 30px;
+					box-sizing: border-box;
+					text-align: left;
+					background-color: rgba(255,255,255,0.1);
+					cursor: pointer;
 				}
-				.b-5 .service > div p {
-					float: left;
-					width: 380px;
+					.b-5 .service-mobile .service-title h4 {
+						font-size: 34px;
+						text-transform: uppercase;
+						color: red;
+					}
+					.b-5 .service-mobile ul {
+						text-align: left;
+						margin: 0;
+						margin-left: 85px;
+						margin-bottom: 55px;
+					}
+				.b-5 .b-service-list li .service-mobile p {
+					font-size: 24px;
 					color: #fff;
-					font-size: 12px;
+					text-align: left;
+					line-height: 1.2;
+					padding: 30px;
+					font-style: normal;
 				}
-				.b-5 .service > div a {
-					text-align: center;
-					float: right;
-					font-size: 14px;
-					padding: 12px 0;
-					width: 180px;
-					box-shadow: 0px 1px 6px 0px rgba(1, 1, 1, 0.32);
+				.b-5 .service-mobile .mobile-service-content {
+					display: none;
 				}
+					.b-5 .service-mobile ul li {
+						color: #fff;
+						font-size: 22px;
+						list-style: none;
+						padding-left: 0;
+						margin-bottom: 0;
+						font-style: italic;
+						font-family: "Trebuchet MS";
+						line-height: 1.3;
+						position: relative;
+					}	
+						.b-5 .service-mobile ul li:before {
+							position: absolute;
+							font-size: 0;
+							content: "";
+							background-image: url("../i/mobile-list.png");
+							background-size: contain;
+							width: 6px;
+							height: 7px;
+							top: 11px;
+							left: -18px;
+						}
 .b-6{
 	padding-bottom: 85px;
 }
@@ -1043,9 +1082,9 @@ margin-left: 0;
 			padding-bottom: 40px;
 		}
 	.b-8 .b-white-block .nav {
-		margin-top: 20px;
+		// margin-top: 20px;
 		margin-bottom: 20px;
-		display: none !important;
+		// display: none !important;
 	}
 		.b-8 .b-white-block .nav li {
 			position: relative;
@@ -1305,7 +1344,7 @@ position: relative;
 					content: "";
 					height: 4px;
 					width: 100%;
-					bottom: 71px;
+					bottom: 74px;
 					left: 0;
 					background-color: #fff;
 				}
@@ -1560,11 +1599,10 @@ padding: 21px 28px;
 						text-align: left;
 						line-height: 1.5;
 					}
-					.b-8 .b-back .faq .b-block #accordion div ul {
-
-					}
+					.b-8 .b-back .faq .b-block #accordion div ul {margin-left: 25px;}
 						.b-8 .b-back .faq .b-block #accordion div ul li {
-							font-size: 26px
+							font-size: 26px;
+							margin-bottom: 15px;
 						}
 					.b-8 .b-back .faq .b-block #accordion .ui-accordion-header-active {
 						background: #333333;
@@ -1907,9 +1945,6 @@ width: 40px;
 			background-repeat: no-repeat;
 			background-image: url("../i/thanks.png");
 		}		
-.up-arrow {
-	display: none;
-}	
 @media screen and (max-width: 1250px){
 	
 }

@@ -722,9 +722,10 @@ width: 100%;
 					box-sizing: border-box;	
 					height: inherit;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active > div  {
+				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover > div,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active > div  {
 					background-color: rgba(0,0,0,0.4); 
 				}
+				
 			.b-4 .b-block-1 #text-tab.b-tab #text-1 {
 				background-image: url('../i/text-1.jpg');
 			}
@@ -751,7 +752,7 @@ width: 100%;
 					display: none;
 					font-style: italic;
 				}
-				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active p {
+				.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.hover p,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text.active p {
 					display: block;
 				}
 		.b-4 .b-block-1 .full-text {
@@ -907,7 +908,7 @@ width: 100%;
 					padding: 4px 0;
 					padding-left: 20px;
 				}
-				.b-4 .b-block-2 .b-video-list .slide span:hover,.b-4 .b-block-2 .b-video-list .slide.active span,.b-4 .b-block-2 .b-video-list .slide.hover span{
+				.b-4 .b-block-2 .b-video-list .slide.active span,.b-4 .b-block-2 .b-video-list .slide.hover span{
 					color: #ff0000;
 				}
 				.b-4 .b-block-2 .b-video-list .slide.active span {
@@ -927,7 +928,7 @@ width: 100%;
 						background-image: url('../i/play-red.png');
 						opacity: 0.000001;
 					}
-					.b-4 .b-block-2 .b-video-list .slide:hover span:after,.b-4 .b-block-2 .b-video-list .slide.active span:after,.b-4 .b-block-2 .b-video-list .slide.hover span:after{
+					.b-4 .b-block-2 .b-video-list .slide.active span:after,.b-4 .b-block-2 .b-video-list .slide.hover span:after{
 						opacity: 1;
 					}
 			.b-4 .b-block-2 .b-video-list .slick-arrow {
@@ -1016,9 +1017,7 @@ width: 100%;
 					width: 113px;
 					background-size: 226px 112px;
 				}
-				.b-5 .b-service-list li:not(.active):hover .img{
-					background-position: 0% 50%;
-				}
+				
 
 				.b-5 .b-service-list li h3{
 					font-size: 24px;
@@ -1027,9 +1026,7 @@ width: 100%;
 					margin-bottom: 40px;
 					line-height: 1;
 				}
-				.b-5 .b-service-list li:not(.active):hover h3 {
-					color: #F00;
-				}
+
 				.b-5 .b-service-list li p{
 					text-align: center;
 					font-style: italic;
@@ -1444,7 +1441,7 @@ position: relative;
 					content: "";
 					height: 4px;
 					width: 100%;
-					bottom: 25px;
+					bottom: 26px;
 					left: 0;
 					background-color: #fff;
 				}
@@ -1696,7 +1693,7 @@ padding: 21px 28px;
 						line-height: 1.5;
 					}
 					.b-8 .b-back .faq .b-block #accordion div ul {
-
+						margin-left: 15px;
 					}
 						.b-8 .b-back .faq .b-block #accordion div ul li {
 							color: #666666;					
@@ -1704,6 +1701,7 @@ padding: 21px 28px;
 							text-align: left;						
 							line-height: 1.5;
 							list-style: disc;
+							margin-bottom: 5px;
 						}
 					.b-8 .b-back .faq .b-block #accordion .ui-accordion-header-active {
 						background: #333333;
@@ -2057,12 +2055,32 @@ padding: 21px 28px;
 		}
 
 @media (min-width: 1000px) {
+
 	.b-1-bottom>.right .b-red-button .b-but-2:hover {
 		-webkit-transform: translateY(-129px);
 		-moz-transform: translateY(-129px);
 		-ms-transform: translateY(-129px);
 		-o-transform: translateY(-129px);
 		transform:translateY(-129px);
+	}
+	.b-4 .b-block-2 .b-video-list .slide span:hover{
+		color: #ff0000;
+	}
+	.b-4 .b-block-2 .b-video-list .slide:hover span:after{
+		opacity: 1;
+	}		
+	.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover > div {
+		background-color: rgba(0,0,0,0.4); 
+	}	
+	.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover h3,.b-4 .b-block-1 #text-tab.b-tab .tab-text:hover p {
+		display: block;
+	}
+	.b-5 .b-service-list li:not(.active):hover .img{
+		background-position: 0% 50%;
+	}
+	
+	.b-5 .b-service-list li:not(.active):hover h3 {
+		color: #F00;
 	}
 }
 
