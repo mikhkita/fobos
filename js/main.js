@@ -101,7 +101,7 @@ $(document).ready(function(){
                 'width': zoomHeight*0.615*0.68
                 
             });
-            $(".b-4 .b-block-1 #text-tab.b-tab .tab-text").css('height',zoomHeight*0.48);
+            $(".b-4 .b-block-1 #text-tab.b-tab .tab-text").css('height',zoomHeight*0.5);
             $(".b-4 .b-block-1 #text-tab.b-tab .tab-text > div").css('padding',zoomHeight*0.035+"px "+zoomHeight*0.035+"px");
             
             $(".b-5 h2.b-title").css('padding-top',zoomHeight*0.08);
@@ -475,6 +475,10 @@ $(document).ready(function(){
                 $(this).addClass("active");
                 var block = $(this).attr("data-block");
                 $(block).slideDown();
+                $("body, html").animate({
+                    scrollTop : $(".service-cont").offset().top
+                },800);
+                
             }
         });    
     } else {

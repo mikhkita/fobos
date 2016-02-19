@@ -132,7 +132,7 @@ input:-moz-placeholder {
 			}
 	.b-0 .b-block ul {
 
-// margin-right: 53px;
+margin-right: 2px;
 }
 		.b-0 .b-block ul li {
 			float: left;
@@ -215,7 +215,7 @@ margin-left: 130px;
 				
 margin-left: 0;
 				
-// margin-right: 2px;
+ margin-right: 2px;
 				
 float: right;
 			}
@@ -261,7 +261,7 @@ float: right;
 		}
 			.b-1-bottom>.left{
 				margin-top: 53px;
-				margin-left: 25px;
+				margin-left: 22px;
 			}
 				.b-1-bottom>.left .left{
 					font-size: 188px;
@@ -340,7 +340,7 @@ float: right;
 						margin-bottom: 12px;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 input.error {
-						background-color: rgb(255,155,255);
+						background-color: #FF8888;
 						border: 1px solid #fff !important;
 					}
 					.b-1-bottom>.right .b-red-button .b-but-1 a {
@@ -1039,7 +1039,7 @@ width: 100%;
 		.b-5 .service-cont {
 			min-height: 365px;
 			display: none;
-			margin-top: 50px;
+			padding-top: 50px;
 			padding-bottom: 80px;
 		}
 		.b-5 .service {
@@ -2081,6 +2081,9 @@ padding: 21px 28px;
 	
 	.b-5 .b-service-list li:not(.active):hover h3 {
 		color: #F00;
+	}
+	.b-5 .service .service-title:hover {
+		background-color: rgba(255,255,255,0.3);
 	}
 }
 
