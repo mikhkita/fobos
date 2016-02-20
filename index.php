@@ -1171,7 +1171,7 @@ $back = rand(1,4);
 					Наши лицензии
 				</a> -->
 				<div class="left b-copy-cont">
-					ООО “Фобос Кэпитал”.<br>Профессиональный участник рынка ценных бумаг.
+					ООО “Фобос Кэпитал”
 				</div>
 				<div class="right b-dev-cont">Дизайн сайта <a href="http://www.vikagrits.ru/" target="_blank">www.vikagrits.ru</a></div>
 			</div>
